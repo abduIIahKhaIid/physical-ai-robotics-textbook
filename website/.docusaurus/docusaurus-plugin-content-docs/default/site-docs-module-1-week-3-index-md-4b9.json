@@ -1,0 +1,56 @@
+{
+  "id": "module-1/week-3/index",
+  "title": "Module 1, Week 3: Embodied Cognition and Environmental Interaction",
+  "description": "Embodied cognition and environmental interaction in physical AI",
+  "source": "@site/docs/module-1/week-3/index.md",
+  "sourceDirName": "module-1/week-3",
+  "slug": "/module-1/week-3",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-3",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-1/week-3/index.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "week",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/week"
+    },
+    {
+      "inline": true,
+      "label": "embodied-cognition",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/embodied-cognition"
+    },
+    {
+      "inline": true,
+      "label": "environmental-interaction",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/environmental-interaction"
+    },
+    {
+      "inline": true,
+      "label": "physical-ai",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/physical-ai"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 1, Week 3: Embodied Cognition and Environmental Interaction",
+    "sidebar_label": "Week 3",
+    "slug": "/module-1/week-3",
+    "description": "Embodied cognition and environmental interaction in physical AI",
+    "tags": [
+      "week",
+      "embodied-cognition",
+      "environmental-interaction",
+      "physical-ai"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 2",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-2"
+  },
+  "next": {
+    "title": "Module 2",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2"
+  }
+}

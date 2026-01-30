@@ -1,0 +1,50 @@
+{
+  "id": "course-overview",
+  "title": "Course Overview",
+  "description": "Complete overview of the Physical AI & Humanoid Robotics course",
+  "source": "@site/docs/course-overview.md",
+  "sourceDirName": ".",
+  "slug": "/course-overview",
+  "permalink": "/physical-ai-robotics-textbook/docs/course-overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/course-overview.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "course",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/course"
+    },
+    {
+      "inline": true,
+      "label": "overview",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/overview"
+    },
+    {
+      "inline": true,
+      "label": "introduction",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/introduction"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Course Overview",
+    "sidebar_label": "Overview",
+    "slug": "/course-overview",
+    "description": "Complete overview of the Physical AI & Humanoid Robotics course",
+    "tags": [
+      "course",
+      "overview",
+      "introduction"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/physical-ai-robotics-textbook/docs/intro"
+  },
+  "next": {
+    "title": "Learning Objectives",
+    "permalink": "/physical-ai-robotics-textbook/docs/learning-objectives"
+  }
+}

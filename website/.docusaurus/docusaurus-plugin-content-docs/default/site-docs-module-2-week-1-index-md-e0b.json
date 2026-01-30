@@ -1,0 +1,62 @@
+{
+  "id": "module-2/week-1/index",
+  "title": "Module 2, Week 4: Forward and Inverse Kinematics",
+  "description": "Forward and inverse kinematics for robot manipulation",
+  "source": "@site/docs/module-2/week-1/index.md",
+  "sourceDirName": "module-2/week-1",
+  "slug": "/module-2/week-4",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-4",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-2/week-1/index.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "week",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/week"
+    },
+    {
+      "inline": true,
+      "label": "kinematics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/kinematics"
+    },
+    {
+      "inline": true,
+      "label": "forward-kinematics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/forward-kinematics"
+    },
+    {
+      "inline": true,
+      "label": "inverse-kinematics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/inverse-kinematics"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 2, Week 4: Forward and Inverse Kinematics",
+    "sidebar_label": "Week 4",
+    "slug": "/module-2/week-4",
+    "description": "Forward and inverse kinematics for robot manipulation",
+    "tags": [
+      "week",
+      "kinematics",
+      "forward-kinematics",
+      "inverse-kinematics",
+      "robotics"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 2",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2"
+  },
+  "next": {
+    "title": "Week 5",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-5"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/physical-ai-robotics-textbook/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/physical-ai-robotics-textbook/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "assessments",
+              "path": "/physical-ai-robotics-textbook/docs/assessments",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "course-conclusion",
+              "path": "/physical-ai-robotics-textbook/docs/course-conclusion"
+            },
+            {
+              "id": "course-overview",
+              "path": "/physical-ai-robotics-textbook/docs/course-overview",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "hardware-requirements",
+              "path": "/physical-ai-robotics-textbook/docs/hardware-requirements",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "hello",
+              "path": "/physical-ai-robotics-textbook/docs/hello",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/physical-ai-robotics-textbook/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "learning-objectives",
+              "path": "/physical-ai-robotics-textbook/docs/learning-objectives",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-1",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/week-1/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-1/week-1",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/week-2/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-1/week-2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/week-3/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-1/week-3",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/week-1/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/week-4",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/week-2/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/week-5",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/week-3/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/week-6",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-3",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3/week-1/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-7",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3/week-2/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-8"
+            },
+            {
+              "id": "module-3/week-3/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-9"
+            },
+            {
+              "id": "module-3/week-4/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-10"
+            },
+            {
+              "id": "module-4/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-4",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-4/week-1/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-4/week-11"
+            },
+            {
+              "id": "module-4/week-2/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-4/week-12"
+            },
+            {
+              "id": "module-4/week-3/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-4/week-13"
+            },
+            {
+              "id": "syllabus",
+              "path": "/physical-ai-robotics-textbook/docs/syllabus",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/physical-ai-robotics-textbook/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

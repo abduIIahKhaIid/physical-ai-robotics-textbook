@@ -1,0 +1,86 @@
+{
+  "rules": [
+    {
+      "id": "low_hardware_path",
+      "condition": {
+        "hardware_tier": "low"
+      },
+      "transformations": [
+        {
+          "type": "swap_lab_variant",
+          "variant": "low_gpu"
+        },
+        "add_cloud_alternative",
+        {
+          "type": "optimize_settings",
+          "settings": {
+            "reduce_physics_rate": true,
+            "disable_rtx": true,
+            "lower_resolution": true
+          }
+        }
+      ],
+      "priority": 20,
+      "description": "Optimize for systems without dedicated GPU"
+    },
+    {
+      "id": "mid_hardware_path",
+      "condition": {
+        "hardware_tier": "mid"
+      },
+      "transformations": [
+        {
+          "type": "swap_lab_variant",
+          "variant": "mid_gpu"
+        },
+        {
+          "type": "suggest_optimization",
+          "tips": ["balance_quality_performance", "selective_gpu_usage"]
+        }
+      ],
+      "priority": 20,
+      "description": "Balanced approach for mid-range systems"
+    },
+    {
+      "id": "high_hardware_path",
+      "condition": {
+        "hardware_tier": "high"
+      },
+      "transformations": [
+        {
+          "type": "swap_lab_variant",
+          "variant": "high_gpu"
+        },
+        {
+          "type": "enable_features",
+          "features": ["rtx_raytracing", "high_physics_rate", "multi_robot"]
+        }
+      ],
+      "priority": 20,
+      "description": "Full features for high-end systems"
+    },
+    {
+      "id": "jetson_available",
+      "condition": {
+        "has_jetson": true
+      },
+      "transformations": [
+        {
+          "type": "add_hardware_labs",
+          "labs": ["jetson_deployment", "edge_inference", "real_sensors"]
+        },
+        {
+          "type": "highlight_sections",
+          "sections": ["isaac_ros", "deployment", "optimization"]
+        }
+      ],
+      "priority": 15,
+      "description": "Add Jetson-specific content"
+    }
+  ],
+  "metadata": {
+    "name": "Hardware-Specific Rules",
+    "version": "1.0.0",
+    "description": "Adapt content based on available hardware resources"
+  }
+}

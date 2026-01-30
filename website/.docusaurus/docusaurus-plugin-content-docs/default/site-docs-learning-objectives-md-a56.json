@@ -1,0 +1,50 @@
+{
+  "id": "learning-objectives",
+  "title": "Learning Objectives",
+  "description": "Learning objectives for the Physical AI & Humanoid Robotics course",
+  "source": "@site/docs/learning-objectives.md",
+  "sourceDirName": ".",
+  "slug": "/learning-objectives",
+  "permalink": "/physical-ai-robotics-textbook/docs/learning-objectives",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/learning-objectives.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "course",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/course"
+    },
+    {
+      "inline": true,
+      "label": "objectives",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/objectives"
+    },
+    {
+      "inline": true,
+      "label": "learning-outcomes",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/learning-outcomes"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Learning Objectives",
+    "sidebar_label": "Learning Objectives",
+    "slug": "/learning-objectives",
+    "description": "Learning objectives for the Physical AI & Humanoid Robotics course",
+    "tags": [
+      "course",
+      "objectives",
+      "learning-outcomes"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/physical-ai-robotics-textbook/docs/course-overview"
+  },
+  "next": {
+    "title": "Syllabus",
+    "permalink": "/physical-ai-robotics-textbook/docs/syllabus"
+  }
+}

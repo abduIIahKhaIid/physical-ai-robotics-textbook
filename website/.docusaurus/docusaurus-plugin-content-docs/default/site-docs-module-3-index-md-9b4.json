@@ -1,0 +1,62 @@
+{
+  "id": "module-3/index",
+  "title": "Module 3: Control Systems and Locomotion",
+  "description": "Control systems and locomotion for humanoid robots",
+  "source": "@site/docs/module-3/index.md",
+  "sourceDirName": "module-3",
+  "slug": "/module-3",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-3",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-3/index.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "module",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/module"
+    },
+    {
+      "inline": true,
+      "label": "control-systems",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/control-systems"
+    },
+    {
+      "inline": true,
+      "label": "locomotion",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/locomotion"
+    },
+    {
+      "inline": true,
+      "label": "balance",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/balance"
+    },
+    {
+      "inline": true,
+      "label": "humanoid-robots",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/humanoid-robots"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 3: Control Systems and Locomotion",
+    "sidebar_label": "Module 3",
+    "slug": "/module-3",
+    "description": "Control systems and locomotion for humanoid robots",
+    "tags": [
+      "module",
+      "control-systems",
+      "locomotion",
+      "balance",
+      "humanoid-robots"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 6",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-6"
+  },
+  "next": {
+    "title": "Week 7",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-3/week-7"
+  }
+}

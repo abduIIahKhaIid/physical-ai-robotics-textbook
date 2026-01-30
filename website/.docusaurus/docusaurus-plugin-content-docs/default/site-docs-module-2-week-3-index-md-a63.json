@@ -1,0 +1,56 @@
+{
+  "id": "module-2/week-3/index",
+  "title": "Module 2, Week 6: Degrees of Freedom and Stability Analysis",
+  "description": "Degrees of freedom and stability analysis in robotic systems",
+  "source": "@site/docs/module-2/week-3/index.md",
+  "sourceDirName": "module-2/week-3",
+  "slug": "/module-2/week-6",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-6",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-2/week-3/index.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "week",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/week"
+    },
+    {
+      "inline": true,
+      "label": "degrees-of-freedom",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/degrees-of-freedom"
+    },
+    {
+      "inline": true,
+      "label": "stability",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/stability"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 2, Week 6: Degrees of Freedom and Stability Analysis",
+    "sidebar_label": "Week 6",
+    "slug": "/module-2/week-6",
+    "description": "Degrees of freedom and stability analysis in robotic systems",
+    "tags": [
+      "week",
+      "degrees-of-freedom",
+      "stability",
+      "robotics"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 5",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-5"
+  },
+  "next": {
+    "title": "Module 3",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-3"
+  }
+}

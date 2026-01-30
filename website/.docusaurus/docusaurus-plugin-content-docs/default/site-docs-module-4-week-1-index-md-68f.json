@@ -1,0 +1,47 @@
+{
+  "id": "module-4/week-1/index",
+  "title": "Module 4, Week 11: Machine Learning for Humanoid Control",
+  "description": "Machine learning techniques for humanoid robot control",
+  "source": "@site/docs/module-4/week-1/index.md",
+  "sourceDirName": "module-4/week-1",
+  "slug": "/module-4/week-11",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-4/week-11",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-4/week-1/index.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "week",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/week"
+    },
+    {
+      "inline": true,
+      "label": "machine-learning",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/machine-learning"
+    },
+    {
+      "inline": true,
+      "label": "robot-control",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robot-control"
+    },
+    {
+      "inline": true,
+      "label": "humanoid-robots",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/humanoid-robots"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 4, Week 11: Machine Learning for Humanoid Control",
+    "sidebar_label": "Week 11",
+    "slug": "/module-4/week-11",
+    "description": "Machine learning techniques for humanoid robot control",
+    "tags": [
+      "week",
+      "machine-learning",
+      "robot-control",
+      "humanoid-robots"
+    ]
+  }
+}

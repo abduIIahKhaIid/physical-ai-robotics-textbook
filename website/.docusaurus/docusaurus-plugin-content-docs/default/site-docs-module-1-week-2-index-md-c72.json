@@ -1,0 +1,62 @@
+{
+  "id": "module-1/week-2/index",
+  "title": "Module 1, Week 2: Sensorimotor Learning and Perception",
+  "description": "Sensorimotor learning and perception in physical AI systems",
+  "source": "@site/docs/module-1/week-2/index.md",
+  "sourceDirName": "module-1/week-2",
+  "slug": "/module-1/week-2",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-1/week-2/index.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "week",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/week"
+    },
+    {
+      "inline": true,
+      "label": "sensorimotor",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/sensorimotor"
+    },
+    {
+      "inline": true,
+      "label": "learning",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/learning"
+    },
+    {
+      "inline": true,
+      "label": "perception",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/perception"
+    },
+    {
+      "inline": true,
+      "label": "physical-ai",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/physical-ai"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 1, Week 2: Sensorimotor Learning and Perception",
+    "sidebar_label": "Week 2",
+    "slug": "/module-1/week-2",
+    "description": "Sensorimotor learning and perception in physical AI systems",
+    "tags": [
+      "week",
+      "sensorimotor",
+      "learning",
+      "perception",
+      "physical-ai"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 1",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-1"
+  },
+  "next": {
+    "title": "Week 3",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-3"
+  }
+}

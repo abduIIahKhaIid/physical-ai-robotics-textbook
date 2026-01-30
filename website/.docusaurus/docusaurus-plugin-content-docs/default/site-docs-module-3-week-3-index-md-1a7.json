@@ -1,0 +1,47 @@
+{
+  "id": "module-3/week-3/index",
+  "title": "Module 3, Week 9: Gait Generation and Adaptation",
+  "description": "Gait generation and adaptation techniques for humanoid robots",
+  "source": "@site/docs/module-3/week-3/index.md",
+  "sourceDirName": "module-3/week-3",
+  "slug": "/module-3/week-9",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-3/week-9",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-3/week-3/index.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "week",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/week"
+    },
+    {
+      "inline": true,
+      "label": "gait-generation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/gait-generation"
+    },
+    {
+      "inline": true,
+      "label": "adaptation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/adaptation"
+    },
+    {
+      "inline": true,
+      "label": "humanoid-robots",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/humanoid-robots"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 3, Week 9: Gait Generation and Adaptation",
+    "sidebar_label": "Week 9",
+    "slug": "/module-3/week-9",
+    "description": "Gait generation and adaptation techniques for humanoid robots",
+    "tags": [
+      "week",
+      "gait-generation",
+      "adaptation",
+      "humanoid-robots"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "rules": [
+    {
+      "id": "advanced_concise",
+      "condition": {
+        "experience_level": "advanced"
+      },
+      "transformations": [
+        "hide_beginner_explanations",
+        "simplify_navigation"
+      ],
+      "priority": 10,
+      "description": "Remove unnecessary explanations for experienced users"
+    },
+    {
+      "id": "advanced_content",
+      "condition": {
+        "experience_level": "advanced"
+      },
+      "transformations": [
+        {
+          "type": "add_advanced_content",
+          "topics": ["performance_tuning", "edge_cases", "production_tips"]
+        },
+        {
+          "type": "suggest_readings",
+          "readings": ["research_papers", "design_docs", "source_code"]
+        }
+      ],
+      "priority": 9,
+      "description": "Add advanced topics and references"
+    },
+    {
+      "id": "advanced_labs",
+      "condition": {
+        "experience_level": "advanced"
+      },
+      "transformations": [
+        {
+          "type": "add_challenge_labs",
+          "difficulty": "hard"
+        }
+      ],
+      "priority": 8,
+      "description": "Include challenging lab exercises"
+    }
+  ],
+  "metadata": {
+    "name": "Advanced Rules Configuration",
+    "version": "1.0.0",
+    "target_audience": "Experienced developers with ROS/robotics background",
+    "description": "Optimized for efficiency and depth"
+  }
+}

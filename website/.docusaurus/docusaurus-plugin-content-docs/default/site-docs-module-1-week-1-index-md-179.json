@@ -1,0 +1,56 @@
+{
+  "id": "module-1/week-1/index",
+  "title": "Module 1, Week 1: Introduction to Physical AI and Embodied Intelligence",
+  "description": "Introduction to Physical AI and embodied intelligence concepts",
+  "source": "@site/docs/module-1/week-1/index.md",
+  "sourceDirName": "module-1/week-1",
+  "slug": "/module-1/week-1",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-1/week-1/index.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "week",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/week"
+    },
+    {
+      "inline": true,
+      "label": "physical-ai",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/physical-ai"
+    },
+    {
+      "inline": true,
+      "label": "introduction",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/introduction"
+    },
+    {
+      "inline": true,
+      "label": "embodied-intelligence",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/embodied-intelligence"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 1, Week 1: Introduction to Physical AI and Embodied Intelligence",
+    "sidebar_label": "Week 1",
+    "slug": "/module-1/week-1",
+    "description": "Introduction to Physical AI and embodied intelligence concepts",
+    "tags": [
+      "week",
+      "physical-ai",
+      "introduction",
+      "embodied-intelligence"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 1",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1"
+  },
+  "next": {
+    "title": "Week 2",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-2"
+  }
+}

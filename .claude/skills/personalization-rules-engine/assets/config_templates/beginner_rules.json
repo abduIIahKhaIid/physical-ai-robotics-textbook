@@ -1,0 +1,53 @@
+{
+  "rules": [
+    {
+      "id": "beginner_expand",
+      "condition": {
+        "experience_level": "beginner"
+      },
+      "transformations": [
+        "expand_explanations",
+        "add_glossary_hints",
+        "insert_prereq_links",
+        "hide_advanced_blocks"
+      ],
+      "priority": 10,
+      "description": "Add detailed explanations and guidance for beginners"
+    },
+    {
+      "id": "beginner_examples",
+      "condition": {
+        "experience_level": "beginner"
+      },
+      "transformations": [
+        {
+          "type": "add_examples",
+          "examples": ["hello_world", "simple_patterns"]
+        }
+      ],
+      "priority": 9,
+      "description": "Add extra code examples for beginners"
+    },
+    {
+      "id": "beginner_navigation",
+      "condition": {
+        "experience_level": "beginner"
+      },
+      "transformations": [
+        "add_recommended_next",
+        {
+          "type": "add_progress_indicator",
+          "style": "detailed"
+        }
+      ],
+      "priority": 5,
+      "description": "Help beginners navigate the course"
+    }
+  ],
+  "metadata": {
+    "name": "Beginner Rules Configuration",
+    "version": "1.0.0",
+    "target_audience": "New learners with no robotics experience",
+    "description": "Optimized for maximum guidance and support"
+  }
+}
