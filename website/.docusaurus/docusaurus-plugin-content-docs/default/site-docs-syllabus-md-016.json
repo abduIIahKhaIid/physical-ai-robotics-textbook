@@ -1,0 +1,56 @@
+{
+  "id": "syllabus",
+  "title": "Course Syllabus",
+  "description": "Detailed syllabus for the Physical AI & Humanoid Robotics course",
+  "source": "@site/docs/syllabus.md",
+  "sourceDirName": ".",
+  "slug": "/syllabus",
+  "permalink": "/physical-ai-robotics-textbook/docs/syllabus",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/syllabus.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "course",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/course"
+    },
+    {
+      "inline": true,
+      "label": "syllabus",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/syllabus"
+    },
+    {
+      "inline": true,
+      "label": "schedule",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/schedule"
+    },
+    {
+      "inline": true,
+      "label": "weekly-breakdown",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/weekly-breakdown"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Course Syllabus",
+    "sidebar_label": "Syllabus",
+    "slug": "/syllabus",
+    "description": "Detailed syllabus for the Physical AI & Humanoid Robotics course",
+    "tags": [
+      "course",
+      "syllabus",
+      "schedule",
+      "weekly-breakdown"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Learning Objectives",
+    "permalink": "/physical-ai-robotics-textbook/docs/learning-objectives"
+  },
+  "next": {
+    "title": "Assessments",
+    "permalink": "/physical-ai-robotics-textbook/docs/assessments"
+  }
+}

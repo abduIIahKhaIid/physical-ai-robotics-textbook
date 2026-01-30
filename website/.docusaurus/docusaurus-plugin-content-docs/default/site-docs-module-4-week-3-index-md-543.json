@@ -1,0 +1,47 @@
+{
+  "id": "module-4/week-3/index",
+  "title": "Module 4, Week 13: Real-World Applications and Evaluation",
+  "description": "Real-world applications and evaluation of humanoid AI systems",
+  "source": "@site/docs/module-4/week-3/index.md",
+  "sourceDirName": "module-4/week-3",
+  "slug": "/module-4/week-13",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-4/week-13",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-4/week-3/index.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "week",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/week"
+    },
+    {
+      "inline": true,
+      "label": "real-world-applications",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/real-world-applications"
+    },
+    {
+      "inline": true,
+      "label": "evaluation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/evaluation"
+    },
+    {
+      "inline": true,
+      "label": "humanoid-ai",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/humanoid-ai"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 4, Week 13: Real-World Applications and Evaluation",
+    "sidebar_label": "Week 13",
+    "slug": "/module-4/week-13",
+    "description": "Real-world applications and evaluation of humanoid AI systems",
+    "tags": [
+      "week",
+      "real-world-applications",
+      "evaluation",
+      "humanoid-ai"
+    ]
+  }
+}

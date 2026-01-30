@@ -1,0 +1,47 @@
+{
+  "id": "module-3/week-4/index",
+  "title": "Module 3, Week 10: Energy Efficiency in Locomotion",
+  "description": "Energy efficiency considerations in humanoid robot locomotion",
+  "source": "@site/docs/module-3/week-4/index.md",
+  "sourceDirName": "module-3/week-4",
+  "slug": "/module-3/week-10",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-3/week-10",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-3/week-4/index.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "week",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/week"
+    },
+    {
+      "inline": true,
+      "label": "energy-efficiency",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/energy-efficiency"
+    },
+    {
+      "inline": true,
+      "label": "locomotion",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/locomotion"
+    },
+    {
+      "inline": true,
+      "label": "humanoid-robots",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/humanoid-robots"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 3, Week 10: Energy Efficiency in Locomotion",
+    "sidebar_label": "Week 10",
+    "slug": "/module-3/week-10",
+    "description": "Energy efficiency considerations in humanoid robot locomotion",
+    "tags": [
+      "week",
+      "energy-efficiency",
+      "locomotion",
+      "humanoid-robots"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "hello",
+  "title": "Hello",
+  "description": "This is a sample document to demonstrate the Docusaurus documentation structure for the Physical AI & Humanoid Robotics textbook.",
+  "source": "@site/docs/hello.md",
+  "sourceDirName": ".",
+  "slug": "/hello",
+  "permalink": "/physical-ai-robotics-textbook/docs/hello",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/hello.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_label": "Hello",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 4",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-4"
+  }
+}

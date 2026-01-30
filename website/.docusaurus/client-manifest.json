@@ -1,0 +1,1129 @@
+{
+  "entrypoints": [
+    "main"
+  ],
+  "origins": {
+    "2237": [
+      2237
+    ],
+    "17896441": [
+      1869,
+      8401
+    ],
+    "21576274": [
+      1917
+    ],
+    "51279860": [
+      4513
+    ],
+    "55094196": [
+      672
+    ],
+    "main": [
+      1869,
+      5354,
+      8792
+    ],
+    "runtime~main": [
+      1869,
+      8792,
+      5354
+    ],
+    "016e1340": [
+      7753
+    ],
+    "077a50f5": [
+      4648
+    ],
+    "0d04b5c6": [
+      4087
+    ],
+    "0e384e19": [
+      3976
+    ],
+    "122dbed4": [
+      2367
+    ],
+    "12d8586a": [
+      8382
+    ],
+    "151db9f3": [
+      2176
+    ],
+    "15a015bc": [
+      3297
+    ],
+    "1799ab13": [
+      6836
+    ],
+    "1a710425": [
+      1434
+    ],
+    "1d63c5a3": [
+      8953
+    ],
+    "20a7acde": [
+      6656
+    ],
+    "2205cb57": [
+      385
+    ],
+    "2eb63535": [
+      5216
+    ],
+    "309586b1": [
+      3289
+    ],
+    "33186d00": [
+      1104
+    ],
+    "33d9eba8": [
+      3102
+    ],
+    "3720c009": [
+      1869,
+      4787
+    ],
+    "3def68c1": [
+      45
+    ],
+    "4355c381": [
+      5989
+    ],
+    "482d7dbd": [
+      3646
+    ],
+    "48fa83c9": [
+      4667
+    ],
+    "4b984f4b": [
+      8842
+    ],
+    "4ca9479a": [
+      7839
+    ],
+    "4d93935c": [
+      2059
+    ],
+    "51b4a234": [
+      6743
+    ],
+    "5433d974": [
+      1265
+    ],
+    "5469e49a": [
+      8654
+    ],
+    "54c44f52": [
+      8974
+    ],
+    "55c971cd": [
+      7812
+    ],
+    "5ad232c4": [
+      853
+    ],
+    "5e95c892": [
+      9647
+    ],
+    "6445ef16": [
+      7884
+    ],
+    "65ea7a3f": [
+      5137
+    ],
+    "676fc519": [
+      3956
+    ],
+    "68f92dfa": [
+      1607
+    ],
+    "6d4765b2": [
+      7241
+    ],
+    "7b348ad8": [
+      2572
+    ],
+    "7bb1395d": [
+      3788
+    ],
+    "84d5055f": [
+      7174
+    ],
+    "87981eaa": [
+      9899
+    ],
+    "9b44c66f": [
+      4213
+    ],
+    "9dfd250b": [
+      2887
+    ],
+    "a0f3a7f3": [
+      6464
+    ],
+    "a4a88951": [
+      3216
+    ],
+    "a56988e1": [
+      4476
+    ],
+    "a63c2628": [
+      9834
+    ],
+    "a7456010": [
+      1235
+    ],
+    "a7bd4aaa": [
+      7098
+    ],
+    "a94703ab": [
+      1869,
+      9048
+    ],
+    "aba21aa0": [
+      5742
+    ],
+    "ad026c26": [
+      4695
+    ],
+    "b16f233a": [
+      9029
+    ],
+    "b1fedd0a": [
+      8626
+    ],
+    "b4c984ec": [
+      1837
+    ],
+    "bc50bafb": [
+      702
+    ],
+    "bd627952": [
+      7416
+    ],
+    "c4f5d8e4": [
+      1869,
+      2634
+    ],
+    "c72f4a6d": [
+      234
+    ],
+    "c7dfbc38": [
+      3267
+    ],
+    "c9629587": [
+      6854
+    ],
+    "ca6fb8b7": [
+      9188
+    ],
+    "cddcc84f": [
+      8066
+    ],
+    "d16c5452": [
+      9765
+    ],
+    "d32e39e2": [
+      1266
+    ],
+    "d49498c9": [
+      8287
+    ],
+    "d7b9a571": [
+      681
+    ],
+    "d9379f80": [
+      9141
+    ],
+    "d9f14b88": [
+      8143
+    ],
+    "da6356f4": [
+      6212
+    ],
+    "dbca9204": [
+      6168
+    ],
+    "dd044d29": [
+      2272
+    ],
+    "df203c0f": [
+      1869,
+      4279
+    ],
+    "e0b755f1": [
+      1368
+    ],
+    "e39590ff": [
+      5926
+    ],
+    "e67ddf33": [
+      7923
+    ],
+    "e856a2e0": [
+      4035
+    ],
+    "e918dfc5": [
+      3288
+    ],
+    "f1ce328b": [
+      4661
+    ],
+    "f23e2ea3": [
+      9300
+    ],
+    "f6396170": [
+      1329
+    ],
+    "f7b0c089": [
+      4760
+    ],
+    "fd6c8b11": [
+      8572
+    ],
+    "fec7e8a7": [
+      9369
+    ],
+    "styles": [
+      2634,
+      4279,
+      4787,
+      5354,
+      8401,
+      8792,
+      9048,
+      1869
+    ]
+  },
+  "assets": {
+    "45": {
+      "js": [
+        {
+          "file": "assets/js/3def68c1.83d4608c.js",
+          "hash": "0facb260483b2659",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/3def68c1.83d4608c.js"
+        }
+      ]
+    },
+    "234": {
+      "js": [
+        {
+          "file": "assets/js/c72f4a6d.9573f07f.js",
+          "hash": "587953ff3d58caca",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/c72f4a6d.9573f07f.js"
+        }
+      ]
+    },
+    "385": {
+      "js": [
+        {
+          "file": "assets/js/2205cb57.544dd8c8.js",
+          "hash": "15e43cbfe50f21f4",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/2205cb57.544dd8c8.js"
+        }
+      ]
+    },
+    "672": {
+      "js": [
+        {
+          "file": "assets/js/55094196.f893b1f9.js",
+          "hash": "ac7a5f3294c154a9",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/55094196.f893b1f9.js"
+        }
+      ]
+    },
+    "681": {
+      "js": [
+        {
+          "file": "assets/js/d7b9a571.2764e202.js",
+          "hash": "11ecba18e305c6b7",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/d7b9a571.2764e202.js"
+        }
+      ]
+    },
+    "702": {
+      "js": [
+        {
+          "file": "assets/js/bc50bafb.15984e5b.js",
+          "hash": "7a7df7f0141d79bf",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/bc50bafb.15984e5b.js"
+        }
+      ]
+    },
+    "853": {
+      "js": [
+        {
+          "file": "assets/js/5ad232c4.223c16c1.js",
+          "hash": "7551e761a93e9828",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/5ad232c4.223c16c1.js"
+        }
+      ]
+    },
+    "1104": {
+      "js": [
+        {
+          "file": "assets/js/33186d00.3fa449cf.js",
+          "hash": "5776eaab32709b90",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/33186d00.3fa449cf.js"
+        }
+      ]
+    },
+    "1235": {
+      "js": [
+        {
+          "file": "assets/js/a7456010.708dc033.js",
+          "hash": "5dfcff7ecf2e8899",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/a7456010.708dc033.js"
+        }
+      ]
+    },
+    "1265": {
+      "js": [
+        {
+          "file": "assets/js/5433d974.4c6dd791.js",
+          "hash": "a69eacebed7ebdbf",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/5433d974.4c6dd791.js"
+        }
+      ]
+    },
+    "1266": {
+      "js": [
+        {
+          "file": "assets/js/d32e39e2.70863707.js",
+          "hash": "73ed84b6d2ab7476",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/d32e39e2.70863707.js"
+        }
+      ]
+    },
+    "1329": {
+      "js": [
+        {
+          "file": "assets/js/f6396170.0f2169ed.js",
+          "hash": "d63eec575c2a05db",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/f6396170.0f2169ed.js"
+        }
+      ]
+    },
+    "1368": {
+      "js": [
+        {
+          "file": "assets/js/e0b755f1.7a7991ee.js",
+          "hash": "19f0d457bfaaebb2",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/e0b755f1.7a7991ee.js"
+        }
+      ]
+    },
+    "1434": {
+      "js": [
+        {
+          "file": "assets/js/1a710425.4cb68bbe.js",
+          "hash": "316919c25af70712",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/1a710425.4cb68bbe.js"
+        }
+      ]
+    },
+    "1607": {
+      "js": [
+        {
+          "file": "assets/js/68f92dfa.469d2ac7.js",
+          "hash": "a905df55e3b86dfe",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/68f92dfa.469d2ac7.js"
+        }
+      ]
+    },
+    "1837": {
+      "js": [
+        {
+          "file": "assets/js/b4c984ec.4c455fb2.js",
+          "hash": "531759f922f320ed",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/b4c984ec.4c455fb2.js"
+        }
+      ]
+    },
+    "1869": {
+      "css": [
+        {
+          "file": "assets/css/styles.3b06eb77.css",
+          "hash": "7e044392023a4dd9",
+          "publicPath": "/physical-ai-robotics-textbook/assets/css/styles.3b06eb77.css"
+        }
+      ]
+    },
+    "1917": {
+      "js": [
+        {
+          "file": "assets/js/21576274.a1983078.js",
+          "hash": "54f5380243cf5c81",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/21576274.a1983078.js"
+        }
+      ]
+    },
+    "2059": {
+      "js": [
+        {
+          "file": "assets/js/4d93935c.92b45639.js",
+          "hash": "f4ae4df9f1e99981",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/4d93935c.92b45639.js"
+        }
+      ]
+    },
+    "2176": {
+      "js": [
+        {
+          "file": "assets/js/151db9f3.6d1082bc.js",
+          "hash": "a7798e74107d66ec",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/151db9f3.6d1082bc.js"
+        }
+      ]
+    },
+    "2237": {
+      "js": [
+        {
+          "file": "assets/js/2237.b66bd7e6.js",
+          "hash": "b39eaf45a5b68aee",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/2237.b66bd7e6.js"
+        }
+      ]
+    },
+    "2272": {
+      "js": [
+        {
+          "file": "assets/js/dd044d29.d89df5b4.js",
+          "hash": "75a873e1c313d897",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/dd044d29.d89df5b4.js"
+        }
+      ]
+    },
+    "2367": {
+      "js": [
+        {
+          "file": "assets/js/122dbed4.3ab3227d.js",
+          "hash": "ae40542eabda2091",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/122dbed4.3ab3227d.js"
+        }
+      ]
+    },
+    "2572": {
+      "js": [
+        {
+          "file": "assets/js/7b348ad8.96eaa653.js",
+          "hash": "035bbdc6fbf6ad65",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/7b348ad8.96eaa653.js"
+        }
+      ]
+    },
+    "2634": {
+      "js": [
+        {
+          "file": "assets/js/c4f5d8e4.45aa5f57.js",
+          "hash": "286856be35ee38a0",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/c4f5d8e4.45aa5f57.js"
+        }
+      ]
+    },
+    "2887": {
+      "js": [
+        {
+          "file": "assets/js/9dfd250b.787ec7ce.js",
+          "hash": "574e37c9a7690962",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/9dfd250b.787ec7ce.js"
+        }
+      ]
+    },
+    "3102": {
+      "js": [
+        {
+          "file": "assets/js/33d9eba8.4ef8a608.js",
+          "hash": "d41cd56067b93381",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/33d9eba8.4ef8a608.js"
+        }
+      ]
+    },
+    "3216": {
+      "js": [
+        {
+          "file": "assets/js/a4a88951.26228fe1.js",
+          "hash": "cb284ded4d057fdb",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/a4a88951.26228fe1.js"
+        }
+      ]
+    },
+    "3267": {
+      "js": [
+        {
+          "file": "assets/js/c7dfbc38.734037e1.js",
+          "hash": "ff15831e334e3269",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/c7dfbc38.734037e1.js"
+        }
+      ]
+    },
+    "3288": {
+      "js": [
+        {
+          "file": "assets/js/e918dfc5.2fef8658.js",
+          "hash": "37107bb0b9592b83",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/e918dfc5.2fef8658.js"
+        }
+      ]
+    },
+    "3289": {
+      "js": [
+        {
+          "file": "assets/js/309586b1.236a826e.js",
+          "hash": "7dbdfea46500877c",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/309586b1.236a826e.js"
+        }
+      ]
+    },
+    "3297": {
+      "js": [
+        {
+          "file": "assets/js/15a015bc.ef4fcbbd.js",
+          "hash": "35749bc24f541439",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/15a015bc.ef4fcbbd.js"
+        }
+      ]
+    },
+    "3646": {
+      "js": [
+        {
+          "file": "assets/js/482d7dbd.23507374.js",
+          "hash": "57436d5e808e5af9",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/482d7dbd.23507374.js"
+        }
+      ]
+    },
+    "3788": {
+      "js": [
+        {
+          "file": "assets/js/7bb1395d.9cc4b129.js",
+          "hash": "2031f9f062a06fac",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/7bb1395d.9cc4b129.js"
+        }
+      ]
+    },
+    "3956": {
+      "js": [
+        {
+          "file": "assets/js/676fc519.15b9aa0d.js",
+          "hash": "e1335ca5bae32b37",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/676fc519.15b9aa0d.js"
+        }
+      ]
+    },
+    "3976": {
+      "js": [
+        {
+          "file": "assets/js/0e384e19.17a42f55.js",
+          "hash": "0a6209fa20482f52",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/0e384e19.17a42f55.js"
+        }
+      ]
+    },
+    "4035": {
+      "js": [
+        {
+          "file": "assets/js/e856a2e0.80238eb8.js",
+          "hash": "e01564f0514e1c22",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/e856a2e0.80238eb8.js"
+        }
+      ]
+    },
+    "4087": {
+      "js": [
+        {
+          "file": "assets/js/0d04b5c6.7d70afad.js",
+          "hash": "112c97df431a70ab",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/0d04b5c6.7d70afad.js"
+        }
+      ]
+    },
+    "4213": {
+      "js": [
+        {
+          "file": "assets/js/9b44c66f.933594cd.js",
+          "hash": "44a30a8a31fa567f",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/9b44c66f.933594cd.js"
+        }
+      ]
+    },
+    "4279": {
+      "js": [
+        {
+          "file": "assets/js/df203c0f.92378e9d.js",
+          "hash": "93aab59d5e791c33",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/df203c0f.92378e9d.js"
+        }
+      ]
+    },
+    "4476": {
+      "js": [
+        {
+          "file": "assets/js/a56988e1.8ffdb111.js",
+          "hash": "d7a566278abefc1f",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/a56988e1.8ffdb111.js"
+        }
+      ]
+    },
+    "4513": {
+      "js": [
+        {
+          "file": "assets/js/51279860.bd26b96f.js",
+          "hash": "97d24587d267e920",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/51279860.bd26b96f.js"
+        }
+      ]
+    },
+    "4648": {
+      "js": [
+        {
+          "file": "assets/js/077a50f5.42171210.js",
+          "hash": "d38fd24f77a55a1b",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/077a50f5.42171210.js"
+        }
+      ]
+    },
+    "4661": {
+      "js": [
+        {
+          "file": "assets/js/f1ce328b.7b46a056.js",
+          "hash": "5ae253ddfb06611f",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/f1ce328b.7b46a056.js"
+        }
+      ]
+    },
+    "4667": {
+      "js": [
+        {
+          "file": "assets/js/48fa83c9.98b56cef.js",
+          "hash": "b45770d6aeb3e4bc",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/48fa83c9.98b56cef.js"
+        }
+      ]
+    },
+    "4695": {
+      "js": [
+        {
+          "file": "assets/js/ad026c26.94f63396.js",
+          "hash": "a87f940c60bcef83",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/ad026c26.94f63396.js"
+        }
+      ]
+    },
+    "4760": {
+      "js": [
+        {
+          "file": "assets/js/f7b0c089.736f8a5d.js",
+          "hash": "6bc3678e77d10229",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/f7b0c089.736f8a5d.js"
+        }
+      ]
+    },
+    "4787": {
+      "js": [
+        {
+          "file": "assets/js/3720c009.2d5ef305.js",
+          "hash": "67b8f6db4e876ed3",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/3720c009.2d5ef305.js"
+        }
+      ]
+    },
+    "5137": {
+      "js": [
+        {
+          "file": "assets/js/65ea7a3f.e78b40e0.js",
+          "hash": "abc6b8f10e55e818",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/65ea7a3f.e78b40e0.js"
+        }
+      ]
+    },
+    "5216": {
+      "js": [
+        {
+          "file": "assets/js/2eb63535.c60a3508.js",
+          "hash": "e0298be908cccc26",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/2eb63535.c60a3508.js"
+        }
+      ]
+    },
+    "5354": {
+      "js": [
+        {
+          "file": "assets/js/runtime~main.d8ff0a75.js",
+          "hash": "58c29d11bf433cec",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/runtime~main.d8ff0a75.js"
+        }
+      ]
+    },
+    "5742": {
+      "js": [
+        {
+          "file": "assets/js/aba21aa0.b556cf80.js",
+          "hash": "66bf428551940b8e",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/aba21aa0.b556cf80.js"
+        }
+      ]
+    },
+    "5926": {
+      "js": [
+        {
+          "file": "assets/js/e39590ff.59b43e51.js",
+          "hash": "b7b969dd966c9f76",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/e39590ff.59b43e51.js"
+        }
+      ]
+    },
+    "5989": {
+      "js": [
+        {
+          "file": "assets/js/4355c381.a622e3e0.js",
+          "hash": "6e9ea1351a71d8c4",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/4355c381.a622e3e0.js"
+        }
+      ]
+    },
+    "6168": {
+      "js": [
+        {
+          "file": "assets/js/dbca9204.ec463f22.js",
+          "hash": "5e84812fd130b5a4",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/dbca9204.ec463f22.js"
+        }
+      ]
+    },
+    "6212": {
+      "js": [
+        {
+          "file": "assets/js/da6356f4.2b1f628c.js",
+          "hash": "3f5d1e0306dcdb0a",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/da6356f4.2b1f628c.js"
+        }
+      ]
+    },
+    "6464": {
+      "js": [
+        {
+          "file": "assets/js/a0f3a7f3.86d491a5.js",
+          "hash": "e12c60a79f96bdcb",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/a0f3a7f3.86d491a5.js"
+        }
+      ]
+    },
+    "6656": {
+      "js": [
+        {
+          "file": "assets/js/20a7acde.63d3ea40.js",
+          "hash": "0600fe8141cd3e2b",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/20a7acde.63d3ea40.js"
+        }
+      ]
+    },
+    "6743": {
+      "js": [
+        {
+          "file": "assets/js/51b4a234.bec5dc1c.js",
+          "hash": "0aea2e9c35ff137f",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/51b4a234.bec5dc1c.js"
+        }
+      ]
+    },
+    "6836": {
+      "js": [
+        {
+          "file": "assets/js/1799ab13.75ab0969.js",
+          "hash": "f2f66467c75c8c5f",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/1799ab13.75ab0969.js"
+        }
+      ]
+    },
+    "6854": {
+      "js": [
+        {
+          "file": "assets/js/c9629587.dd64db0d.js",
+          "hash": "b5d164c75da36cd0",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/c9629587.dd64db0d.js"
+        }
+      ]
+    },
+    "7098": {
+      "js": [
+        {
+          "file": "assets/js/a7bd4aaa.374a34d5.js",
+          "hash": "a86f28cb79bcb667",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/a7bd4aaa.374a34d5.js"
+        }
+      ]
+    },
+    "7174": {
+      "js": [
+        {
+          "file": "assets/js/84d5055f.fba2f304.js",
+          "hash": "393686610d77901e",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/84d5055f.fba2f304.js"
+        }
+      ]
+    },
+    "7241": {
+      "js": [
+        {
+          "file": "assets/js/6d4765b2.9d2cd5d9.js",
+          "hash": "d3e3064a17bcbeec",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/6d4765b2.9d2cd5d9.js"
+        }
+      ]
+    },
+    "7416": {
+      "js": [
+        {
+          "file": "assets/js/bd627952.34784af9.js",
+          "hash": "093a62911c404ece",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/bd627952.34784af9.js"
+        }
+      ]
+    },
+    "7753": {
+      "js": [
+        {
+          "file": "assets/js/016e1340.4c4e1199.js",
+          "hash": "e11a8d279910522e",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/016e1340.4c4e1199.js"
+        }
+      ]
+    },
+    "7812": {
+      "js": [
+        {
+          "file": "assets/js/55c971cd.d9b72690.js",
+          "hash": "ea78c5cca767e8ef",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/55c971cd.d9b72690.js"
+        }
+      ]
+    },
+    "7839": {
+      "js": [
+        {
+          "file": "assets/js/4ca9479a.8040dc45.js",
+          "hash": "545d5cf11945eef3",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/4ca9479a.8040dc45.js"
+        }
+      ]
+    },
+    "7884": {
+      "js": [
+        {
+          "file": "assets/js/6445ef16.3e442d5e.js",
+          "hash": "2e0182f8cadc5460",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/6445ef16.3e442d5e.js"
+        }
+      ]
+    },
+    "7923": {
+      "js": [
+        {
+          "file": "assets/js/e67ddf33.39ef1534.js",
+          "hash": "e941e3a5f94e9735",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/e67ddf33.39ef1534.js"
+        }
+      ]
+    },
+    "8066": {
+      "js": [
+        {
+          "file": "assets/js/cddcc84f.daf5f61d.js",
+          "hash": "a7d168314c6fdbfe",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/cddcc84f.daf5f61d.js"
+        }
+      ]
+    },
+    "8143": {
+      "js": [
+        {
+          "file": "assets/js/d9f14b88.5f0de1e8.js",
+          "hash": "43862fcac2b3cff7",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/d9f14b88.5f0de1e8.js"
+        }
+      ]
+    },
+    "8287": {
+      "js": [
+        {
+          "file": "assets/js/d49498c9.14160e83.js",
+          "hash": "fdfc561a2f03cc3f",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/d49498c9.14160e83.js"
+        }
+      ]
+    },
+    "8382": {
+      "js": [
+        {
+          "file": "assets/js/12d8586a.ea9b97a3.js",
+          "hash": "1d7f1194aee7f575",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/12d8586a.ea9b97a3.js"
+        }
+      ]
+    },
+    "8401": {
+      "js": [
+        {
+          "file": "assets/js/17896441.28b226e8.js",
+          "hash": "c05f84f1bfcde56e",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/17896441.28b226e8.js"
+        }
+      ]
+    },
+    "8572": {
+      "js": [
+        {
+          "file": "assets/js/fd6c8b11.31f5f8c5.js",
+          "hash": "ddc2af6b9a151e18",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/fd6c8b11.31f5f8c5.js"
+        }
+      ]
+    },
+    "8626": {
+      "js": [
+        {
+          "file": "assets/js/b1fedd0a.60adc0c4.js",
+          "hash": "6cdf2e24024c0197",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/b1fedd0a.60adc0c4.js"
+        }
+      ]
+    },
+    "8654": {
+      "js": [
+        {
+          "file": "assets/js/5469e49a.d93aba11.js",
+          "hash": "931b786ad9923f6d",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/5469e49a.d93aba11.js"
+        }
+      ]
+    },
+    "8792": {
+      "js": [
+        {
+          "file": "assets/js/main.0daac048.js",
+          "hash": "27468bff871e3583",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/main.0daac048.js"
+        }
+      ]
+    },
+    "8842": {
+      "js": [
+        {
+          "file": "assets/js/4b984f4b.8926599a.js",
+          "hash": "4f3b56135c9cbf15",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/4b984f4b.8926599a.js"
+        }
+      ]
+    },
+    "8953": {
+      "js": [
+        {
+          "file": "assets/js/1d63c5a3.0ea51f40.js",
+          "hash": "3fe654d09271e39a",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/1d63c5a3.0ea51f40.js"
+        }
+      ]
+    },
+    "8974": {
+      "js": [
+        {
+          "file": "assets/js/54c44f52.0115f5a8.js",
+          "hash": "bd54e19ba0f79dbe",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/54c44f52.0115f5a8.js"
+        }
+      ]
+    },
+    "9029": {
+      "js": [
+        {
+          "file": "assets/js/b16f233a.8c51fe74.js",
+          "hash": "dd75bfd2f5c4620b",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/b16f233a.8c51fe74.js"
+        }
+      ]
+    },
+    "9048": {
+      "js": [
+        {
+          "file": "assets/js/a94703ab.282e15bf.js",
+          "hash": "b5be1236adbcdbaa",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/a94703ab.282e15bf.js"
+        }
+      ]
+    },
+    "9141": {
+      "js": [
+        {
+          "file": "assets/js/d9379f80.d9e426f3.js",
+          "hash": "e7c16f7b3fd0b458",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/d9379f80.d9e426f3.js"
+        }
+      ]
+    },
+    "9188": {
+      "js": [
+        {
+          "file": "assets/js/ca6fb8b7.2234d24e.js",
+          "hash": "bf5fd560ccb08c63",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/ca6fb8b7.2234d24e.js"
+        }
+      ]
+    },
+    "9300": {
+      "js": [
+        {
+          "file": "assets/js/f23e2ea3.3d3f0ab7.js",
+          "hash": "31e2e2c26a435c33",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/f23e2ea3.3d3f0ab7.js"
+        }
+      ]
+    },
+    "9369": {
+      "js": [
+        {
+          "file": "assets/js/fec7e8a7.5f5dddef.js",
+          "hash": "24a1f3b721a2dd20",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/fec7e8a7.5f5dddef.js"
+        }
+      ]
+    },
+    "9647": {
+      "js": [
+        {
+          "file": "assets/js/5e95c892.415ccd74.js",
+          "hash": "b4f8ee95f09696dc",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/5e95c892.415ccd74.js"
+        }
+      ]
+    },
+    "9765": {
+      "js": [
+        {
+          "file": "assets/js/d16c5452.b490b34a.js",
+          "hash": "d22a67bf6f7e8894",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/d16c5452.b490b34a.js"
+        }
+      ]
+    },
+    "9834": {
+      "js": [
+        {
+          "file": "assets/js/a63c2628.10d73d72.js",
+          "hash": "ecf7e66f607bf5a0",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/a63c2628.10d73d72.js"
+        }
+      ]
+    },
+    "9899": {
+      "js": [
+        {
+          "file": "assets/js/87981eaa.4cdad961.js",
+          "hash": "4d1455f0c6e95828",
+          "publicPath": "/physical-ai-robotics-textbook/assets/js/87981eaa.4cdad961.js"
+        }
+      ]
+    }
+  }
+}

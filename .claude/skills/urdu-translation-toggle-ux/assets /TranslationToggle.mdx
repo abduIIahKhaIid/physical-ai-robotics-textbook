@@ -1,0 +1,89 @@
+```tsx
+import React, { useState } from 'react';
+
+interface TranslationToggleProps {
+  docId: string;
+  version?: string;
+  onTranslate?: (translatedContent: string) => void;
+}
+
+export default function TranslationToggle({
+  docId,
+  version = '1.0',
+  onTranslate,
+}: TranslationToggleProps) {
+  const [isUrdu, setIsUrdu] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [translatedContent, setTranslatedContent] = useState<string | null>(null);
+
+  const handleToggle = async () => {
+    if (isUrdu) {
+      // Switch back to English
+      setIsUrdu(false);
+      return;
+    }
+
+    // Check cache first
+    const cached = localStorage.getItem(`translation_${docId}_${version}_ur`);
+    if (cached) {
+      setTranslatedContent(cached);
+      setIsUrdu(true);
+      onTranslate?.(cached);
+      return;
+    }
+
+    // Fetch translation
+    setLoading(true);
+    try {
+      const response = await fetch('/api/translate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          doc_id: docId,
+          version,
+          lang: 'ur',
+          content: document.querySelector('.markdown')?.textContent || '',
+        }),
+      });
+
+      const data = await response.json();
+
+      // Cache the translation
+      localStorage.setItem(`translation_${docId}_${version}_ur`, data.translated);
+
+      setTranslatedContent(data.translated);
+      setIsUrdu(true);
+      onTranslate?.(data.translated);
+    } catch (error) {
+      console.error('Translation failed:', error);
+      alert('Translation failed. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="translation-toggle">
+      <button
+        onClick={handleToggle}
+        disabled={loading}
+        className="button button--secondary button--sm"
+      >
+        {loading ? '⏳ Translating...' : isUrdu ? '🇬🇧 English' : '🇵🇰 اردو'}
+      </button>
+
+      {isUrdu && (
+        <div
+          className="translation-notice"
+          style={{
+            fontSize: '0.85em',
+            color: '#666',
+            marginTop: '0.5rem',
+          }}
+        >
+          🤖 Machine translated from English
+        </div>
+      )}
+    </div>
+  );
+}

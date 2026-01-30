@@ -1,0 +1,47 @@
+{
+  "id": "module-3/week-2/index",
+  "title": "Module 3, Week 8: Walking Algorithms and Balance Control",
+  "description": "Walking algorithms and balance control for humanoid robots",
+  "source": "@site/docs/module-3/week-2/index.md",
+  "sourceDirName": "module-3/week-2",
+  "slug": "/module-3/week-8",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-3/week-8",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-3/week-2/index.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "week",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/week"
+    },
+    {
+      "inline": true,
+      "label": "walking-algorithms",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/walking-algorithms"
+    },
+    {
+      "inline": true,
+      "label": "balance-control",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/balance-control"
+    },
+    {
+      "inline": true,
+      "label": "humanoid-robots",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/humanoid-robots"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 3, Week 8: Walking Algorithms and Balance Control",
+    "sidebar_label": "Week 8",
+    "slug": "/module-3/week-8",
+    "description": "Walking algorithms and balance control for humanoid robots",
+    "tags": [
+      "week",
+      "walking-algorithms",
+      "balance-control",
+      "humanoid-robots"
+    ]
+  }
+}

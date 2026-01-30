@@ -1,0 +1,56 @@
+{
+  "id": "module-2/week-2/index",
+  "title": "Module 2, Week 5: Robot Dynamics and Motion Planning",
+  "description": "Robot dynamics and motion planning fundamentals",
+  "source": "@site/docs/module-2/week-2/index.md",
+  "sourceDirName": "module-2/week-2",
+  "slug": "/module-2/week-5",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-5",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-2/week-2/index.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "week",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/week"
+    },
+    {
+      "inline": true,
+      "label": "dynamics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/dynamics"
+    },
+    {
+      "inline": true,
+      "label": "motion-planning",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/motion-planning"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 2, Week 5: Robot Dynamics and Motion Planning",
+    "sidebar_label": "Week 5",
+    "slug": "/module-2/week-5",
+    "description": "Robot dynamics and motion planning fundamentals",
+    "tags": [
+      "week",
+      "dynamics",
+      "motion-planning",
+      "robotics"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 4",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-4"
+  },
+  "next": {
+    "title": "Week 6",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-6"
+  }
+}
