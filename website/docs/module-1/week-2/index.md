@@ -50,17 +50,22 @@ By the end of this week, students will be able to:
 
 ## Resources
 
-- **Readings**: [TBD - Weekly reading list]
+- **Readings**:
+  - [1.2 Introduction to ROS2](./ros2-intro.md)
+  - [1.3 ROS2 Core Concepts and Implementation](./ros2-core-concepts.md)
 - **Videos**: [TBD - Lecture videos]
-- **Assignments**: [TBD - Weekly assignments]
+- **Assignments**:
+  - [Week 2 Exercises](./exercises.md)
+- **Assessment**:
+  - [Week 2 Quiz](./quiz.md)
 - **Discussion Forum**: [TBD - Week 2 discussion topics]
 
 ## Activities
 
-- **Lecture**: Sensorimotor learning concepts
-- **Lab**: Implement basic sensorimotor loop
-- **Simulation**: Interactive learning exercise
-- **Discussion**: Sensorimotor approaches comparison
+- **Lecture**: ROS2 concepts and architecture
+- **Lab**: Implement ROS2 nodes and communication
+- **Simulation**: ROS2 system integration exercise
+- **Discussion**: ROS2 vs traditional robotics frameworks
 
 ## Assessment
 
@@ -71,11 +76,11 @@ By the end of this week, students will be able to:
 ## Prerequisites
 
 Students should have completed:
-- [Week 1: Introduction to Physical AI](/module-1/week-1/)
+- [Week 1: Introduction to Physical AI](../module-1/week-1/)
 
 ## Next Week
 
-Continue to [Week 3: Embodied Cognition and Environmental Interaction](/module-1/week-3/)
+Continue to [Week 3: Embodied Cognition and Environmental Interaction](../module-1/week-3/)
 
 ---
 

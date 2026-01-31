@@ -50,9 +50,14 @@ By the end of this week, students will be able to:
 
 ## Resources
 
-- **Readings**: [TBD - Weekly reading list]
+- **Readings**:
+  - [1.4 Embodied Cognition in Physical AI](./embodied-cognition.md)
+  - [1.5 Environmental Interaction in Physical AI](./environmental-interaction.md)
 - **Videos**: [TBD - Lecture videos]
-- **Assignments**: [TBD - Weekly assignments]
+- **Assignments**:
+  - [Week 3 Exercises](./exercises.md)
+- **Assessment**:
+  - [Week 3 Quiz](./quiz.md)
 - **Discussion Forum**: [TBD - Week 3 discussion topics]
 
 ## Activities
@@ -71,12 +76,12 @@ By the end of this week, students will be able to:
 ## Prerequisites
 
 Students should have completed:
-- [Week 1: Introduction to Physical AI](/module-1/week-1/)
-- [Week 2: Sensorimotor Learning and Perception](/module-1/week-2/)
+- [Week 1: Introduction to Physical AI](../module-1/week-1/)
+- [Week 2: Sensorimotor Learning and Perception](../module-1/week-2/)
 
 ## Next Module
 
-Proceed to [Module 2: Robot Kinematics and Dynamics](/module-2/)
+Proceed to [Module 2: Robot Kinematics and Dynamics](../module-2/)
 
 ---
 

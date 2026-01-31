@@ -1,0 +1,147 @@
+# Homepage Component Contract
+
+## Overview
+This contract defines the interface and behavior of the homepage components for the Physical AI & Humanoid Robotics textbook website.
+
+## Components
+
+### Homepage Component (`src/pages/index.js`)
+
+#### Props Interface
+```javascript
+{
+  // No props required - this is a standalone page component
+}
+```
+
+#### Expected Behavior
+- Renders a responsive layout with hero section and module cards
+- Displays course summary highlighting Physical AI & Humanoid Robotics content
+- Shows 4 module cards for Modules 1-4 with appropriate descriptions
+- Provides "Start Here" CTA that navigates to Module 1
+- Responsive design that works on mobile and desktop
+- Accessible markup with proper semantic HTML
+
+#### DOM Structure
+```html
+<div class="homepage-layout">
+  <header class="hero-section">
+    <h1>Physical AI & Humanoid Robotics</h1>
+    <p>Educational textbook on advanced robotics</p>
+    <button class="start-here-cta">Start with Module 1</button>
+  </header>
+  <main class="modules-grid">
+    <article class="module-card" data-module="1">
+      <h2>Module 1 Title</h2>
+      <p>Module 1 description</p>
+      <a href="/docs/module-1/">Go to Module</a>
+    </article>
+    <!-- Additional module cards -->
+  </main>
+</div>
+```
+
+### ModuleCard Component (`src/components/ModuleCard/index.js`)
+
+#### Props Interface
+```javascript
+{
+  id: string,           // Unique identifier for the module
+  title: string,        // Display title of the module
+  description: string,  // Brief description of the module content
+  path: string,         // Navigation path to the module
+  position: number,     // Position in the grid (for layout)
+  isCompleted?: boolean // Optional - indicates completion status
+}
+```
+
+#### Expected Behavior
+- Renders a visually distinct card for the module
+- Includes title, description, and navigation link
+- Responsive design that works in grid layout
+- Accessible with proper ARIA attributes
+- Handles hover and focus states appropriately
+
+#### DOM Structure
+```html
+<article class="module-card" role="region" aria-labelledby="card-title">
+  <header>
+    <h3 id="card-title">Module Title</h3>
+  </header>
+  <div class="module-card-body">
+    <p>Module description text</p>
+  </div>
+  <footer class="module-card-footer">
+    <a href="/docs/module-path/" class="module-link">
+      Explore Module
+    </a>
+  </footer>
+</article>
+```
+
+## Navigation Contract
+
+### Internal Linking
+- All internal links must use Docusaurus Link component
+- Paths must be relative to site base URL (`/physical-ai-robotics-textbook/`)
+- Navigation should preserve Docusaurus routing behavior
+
+### URL Patterns
+- Module links: `/docs/module-{number}/`
+- Course overview: `/docs/course-overview/`
+- Individual lessons: `/docs/module-{number}/week-{number}/`
+
+## Accessibility Contract
+
+### WCAG 2.1 AA Compliance
+- All interactive elements must have sufficient color contrast (4.5:1 minimum)
+- Keyboard navigation must work for all interactive elements
+- Proper semantic HTML structure with headings hierarchy
+- ARIA attributes where needed for screen readers
+- Focus indicators for keyboard users
+
+### Screen Reader Compatibility
+- All images have appropriate alt text or are decorative
+- Landmark regions properly labeled
+- Interactive elements have clear labels
+- Content logically ordered in DOM
+
+## Responsive Design Contract
+
+### Breakpoints
+- Mobile: up to 768px (single column layout)
+- Tablet: 769px to 1024px (2-column layout)
+- Desktop: 1025px+ (multi-column layout)
+
+### Touch Target Sizes
+- All interactive elements must be at least 44px by 44px
+- Adequate spacing between touch targets
+- Mobile-first approach to design
+
+## Performance Contract
+
+### Load Time Requirements
+- Initial page load under 3 seconds
+- All assets optimized for web delivery
+- Images properly sized and compressed
+
+### Bundle Size
+- JavaScript bundle should be minimized
+- Critical CSS inlined where appropriate
+- Lazy loading for non-critical resources
+
+## Error Handling
+
+### Fallback Behavior
+- If module data fails to load, show placeholder cards
+- If navigation fails, provide alternative pathways
+- Graceful degradation for older browsers
+
+## Testing Contract
+
+### Required Tests
+- Unit tests for all new React components
+- Integration tests for navigation functionality
+- Responsive design validation across screen sizes
+- Accessibility tests using automated tools
+- Cross-browser compatibility verification

@@ -1,83 +1,92 @@
 ---
-title: "Module 2, Week 6: Degrees of Freedom and Stability Analysis"
-sidebar_label: "Week 6"
-slug: "/module-2/week-6"
-description: "Degrees of freedom and stability analysis in robotic systems"
-tags: ["week", "degrees-of-freedom", "stability", "robotics"]
+title: "Module 2, Week 3: Physics and Sensor Simulation"
+sidebar_label: "Week 3"
+slug: "/module-2/week-3"
+description: "Understanding physics engines and sensor models in Gazebo simulation environment"
+tags: ["physics", "sensors", "simulation", "gazebo", "robotics", "engines"]
 ---
 
-# Module 2, Week 6: Degrees of Freedom and Stability Analysis
+# Module 2, Week 3: Physics and Sensor Simulation
 
 ## Learning Objectives
 
 By the end of this week, students will be able to:
-- Analyze joint space vs. Cartesian space relationships
-- Evaluate workspace of robotic systems
-- Assess static stability in robotic configurations
-- Evaluate dynamic stability in motion
-- Understand control implications of stability analysis
+- Configure physics engine properties in Gazebo
+- Set up realistic sensor models (cameras, lidars, IMUs, etc.)
+- Tune physics parameters for realistic simulation behavior
+- Validate sensor data in simulation environment
+- Understand the relationship between physics parameters and robot behavior
 
 ## Topics Covered
 
-### Day 1: Joint Space vs. Cartesian Space
-- Configuration space concepts
-- Mapping between spaces
-- Jacobian matrix applications
-- Velocity and force relationships
+### Day 1: Physics Engines in Gazebo
+- Overview of physics engines (ODE, Bullet, Simbody)
+- Selecting appropriate physics engine for applications
+- Physics engine configuration parameters
+- Performance considerations and trade-offs
 
-### Day 2: Workspace Analysis
-- Reachable workspace boundaries
-- Dexterous workspace
-- Orientation workspace
-- Workspace visualization techniques
+### Day 2: Collision and Visual Properties
+- Setting up collision meshes
+- Visual properties and rendering
+- Contact parameters and friction
+- Material properties and surface interactions
 
-### Day 3: Static Stability Considerations
-- Center of mass analysis
-- Support polygon concept
-- Static equilibrium conditions
-- Stability margins
+### Day 3: Sensor Models in Simulation
+- Camera sensors in Gazebo
+- LiDAR and range sensors
+- IMU and accelerometer simulation
+- Force/torque sensors
+- Sensor noise models and parameters
 
-### Day 4: Dynamic Stability Evaluation
-- Dynamic balance equations
-- Zero moment point (ZMP) concept
-- Capture point analysis
-- Stability during motion
+### Day 4: Tuning Physics for Realism
+- Mass and inertial property adjustments
+- Friction and damping coefficients
+- Collision detection parameters
+- Performance optimization strategies
 
-### Day 5: Control Implications
-- Feedback control for stability
-- Stabilization algorithms
-- Trade-offs between mobility and stability
-- Practical implementation considerations
+### Day 5: Physics and Sensor Validation
+- Comparing simulation to real-world behavior
+- Sensor data validation and calibration
+- Physics parameter fine-tuning
+- Week project: Complete physics and sensor setup
 
 ## Resources
 
-- **Readings**: [TBD - Weekly reading list]
-- **Videos**: [TBD - Lecture videos]
-- **Software**: [TBD - Stability analysis tools]
-- **Assignments**: [TBD - Weekly assignments]
-- **Discussion Forum**: [TBD - Week 6 discussion topics]
+- **Readings**:
+  - [Physics and Sensor Simulation Guide](./physics-sensor-simulation.md)
+- **Videos**: [TBD - Week 3 lecture videos]
+- **Assignments**:
+  - [Week 3 Exercises](./exercises.md)
+- **Discussion Forum**: [TBD - Week 3 discussion topics]
 
 ## Activities
 
-- **Lecture**: Stability analysis principles
-- **Lab**: Workspace calculation exercise
-- **Simulation**: Stability analysis implementation
-- **Project**: Stability control design
+- **Lecture**: Physics engines and sensor models in Gazebo
+- **Lab**: Configuring physics properties and sensor models
+- **Exercise**: Tuning physics parameters for realism
+- **Discussion**: Physics simulation challenges and solutions
 
 ## Assessment
 
-- **Module 2 Project**: 15% of final grade
-- **Programming Exercise**: Stability analysis implementation
-- **Quiz**: Week 6 concepts
+- **Quiz**: Week 3 quiz (formative assessment)
+- **Practical Exercise**: Physics and sensor configuration validation
+- **Participation**: Discussion forum engagement
 
 ## Prerequisites
 
 Students should have completed:
-- [Week 5: Robot Dynamics and Motion Planning](/module-2/week-2/)
+- [Week 1: Gazebo Simulation Fundamentals](/docs/module-2/week-1/)
+- [Week 2: Robot Model Integration](/docs/module-2/week-2/)
 
-## Next Module
+## Next Week
 
-Proceed to [Module 3: Control Systems and Locomotion](/module-3/)
+Continue to [Week 4: ROS2 Integration](/docs/module-2/week-4/)
+
+---
+
+## Navigation
+
+[← Week 2](/docs/module-2/week-2/) | [Week 4: ROS2 Integration →](/docs/module-2/week-4/)
 
 ---
 
@@ -86,8 +95,6 @@ Proceed to [Module 3: Control Systems and Locomotion](/module-3/)
 - Detailed daily schedule
 - Specific reading assignments
 - Video lecture links
-- Software installation guides
 - Assignment specifications
 - Assessment rubrics
-- Mathematical derivations
 - Supplementary resources

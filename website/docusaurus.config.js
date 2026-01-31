@@ -49,6 +49,20 @@ export default {
     ],
   ],
 
+  plugins: [
+    async function myPlugin(context, options) {
+      return {
+        name: 'postcss-plugin',
+        configurePostCss(postcssOptions) {
+          // Appends TailwindCSS and AutoPrefixer.
+          postcssOptions.plugins.push(require('@tailwindcss/postcss'));
+          postcssOptions.plugins.push(require('autoprefixer'));
+          return postcssOptions;
+        },
+      };
+    },
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

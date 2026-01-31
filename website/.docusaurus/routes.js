@@ -3,47 +3,12 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/physical-ai-robotics-textbook/__docusaurus/debug',
-    component: ComponentCreator('/physical-ai-robotics-textbook/__docusaurus/debug', '23a'),
-    exact: true
-  },
-  {
-    path: '/physical-ai-robotics-textbook/__docusaurus/debug/config',
-    component: ComponentCreator('/physical-ai-robotics-textbook/__docusaurus/debug/config', '16b'),
-    exact: true
-  },
-  {
-    path: '/physical-ai-robotics-textbook/__docusaurus/debug/content',
-    component: ComponentCreator('/physical-ai-robotics-textbook/__docusaurus/debug/content', '1fe'),
-    exact: true
-  },
-  {
-    path: '/physical-ai-robotics-textbook/__docusaurus/debug/globalData',
-    component: ComponentCreator('/physical-ai-robotics-textbook/__docusaurus/debug/globalData', '14d'),
-    exact: true
-  },
-  {
-    path: '/physical-ai-robotics-textbook/__docusaurus/debug/metadata',
-    component: ComponentCreator('/physical-ai-robotics-textbook/__docusaurus/debug/metadata', '685'),
-    exact: true
-  },
-  {
-    path: '/physical-ai-robotics-textbook/__docusaurus/debug/registry',
-    component: ComponentCreator('/physical-ai-robotics-textbook/__docusaurus/debug/registry', 'a67'),
-    exact: true
-  },
-  {
-    path: '/physical-ai-robotics-textbook/__docusaurus/debug/routes',
-    component: ComponentCreator('/physical-ai-robotics-textbook/__docusaurus/debug/routes', '1e4'),
-    exact: true
-  },
-  {
     path: '/physical-ai-robotics-textbook/docs',
-    component: ComponentCreator('/physical-ai-robotics-textbook/docs', 'd26'),
+    component: ComponentCreator('/physical-ai-robotics-textbook/docs', '5d0'),
     routes: [
       {
         path: '/physical-ai-robotics-textbook/docs',
-        component: ComponentCreator('/physical-ai-robotics-textbook/docs', '962'),
+        component: ComponentCreator('/physical-ai-robotics-textbook/docs', 'cd8'),
         routes: [
           {
             path: '/physical-ai-robotics-textbook/docs/tags',
@@ -76,8 +41,23 @@ export default [
             exact: true
           },
           {
+            path: '/physical-ai-robotics-textbook/docs/tags/capstone',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/capstone', '5cb'),
+            exact: true
+          },
+          {
+            path: '/physical-ai-robotics-textbook/docs/tags/cognition',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/cognition', '871'),
+            exact: true
+          },
+          {
             path: '/physical-ai-robotics-textbook/docs/tags/conclusion',
             component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/conclusion', '27a'),
+            exact: true
+          },
+          {
+            path: '/physical-ai-robotics-textbook/docs/tags/control',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/control', '851'),
             exact: true
           },
           {
@@ -86,18 +66,13 @@ export default [
             exact: true
           },
           {
+            path: '/physical-ai-robotics-textbook/docs/tags/core-concepts',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/core-concepts', 'dfd'),
+            exact: true
+          },
+          {
             path: '/physical-ai-robotics-textbook/docs/tags/course',
             component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/course', '9fb'),
-            exact: true
-          },
-          {
-            path: '/physical-ai-robotics-textbook/docs/tags/degrees-of-freedom',
-            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/degrees-of-freedom', '619'),
-            exact: true
-          },
-          {
-            path: '/physical-ai-robotics-textbook/docs/tags/dynamics',
-            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/dynamics', '04c'),
             exact: true
           },
           {
@@ -116,6 +91,16 @@ export default [
             exact: true
           },
           {
+            path: '/physical-ai-robotics-textbook/docs/tags/engines',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/engines', '867'),
+            exact: true
+          },
+          {
+            path: '/physical-ai-robotics-textbook/docs/tags/environment',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/environment', '57d'),
+            exact: true
+          },
+          {
             path: '/physical-ai-robotics-textbook/docs/tags/environmental-interaction',
             component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/environmental-interaction', 'b54'),
             exact: true
@@ -126,13 +111,13 @@ export default [
             exact: true
           },
           {
-            path: '/physical-ai-robotics-textbook/docs/tags/feedback',
-            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/feedback', '859'),
+            path: '/physical-ai-robotics-textbook/docs/tags/exercises',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/exercises', 'bf0'),
             exact: true
           },
           {
-            path: '/physical-ai-robotics-textbook/docs/tags/forward-kinematics',
-            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/forward-kinematics', 'cdd'),
+            path: '/physical-ai-robotics-textbook/docs/tags/feedback',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/feedback', '859'),
             exact: true
           },
           {
@@ -141,8 +126,18 @@ export default [
             exact: true
           },
           {
+            path: '/physical-ai-robotics-textbook/docs/tags/fundamentals',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/fundamentals', 'a49'),
+            exact: true
+          },
+          {
             path: '/physical-ai-robotics-textbook/docs/tags/gait-generation',
             component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/gait-generation', '9c5'),
+            exact: true
+          },
+          {
+            path: '/physical-ai-robotics-textbook/docs/tags/gazebo',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/gazebo', '10a'),
             exact: true
           },
           {
@@ -166,18 +161,28 @@ export default [
             exact: true
           },
           {
+            path: '/physical-ai-robotics-textbook/docs/tags/implementation',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/implementation', '308'),
+            exact: true
+          },
+          {
+            path: '/physical-ai-robotics-textbook/docs/tags/integration',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/integration', 'd77'),
+            exact: true
+          },
+          {
+            path: '/physical-ai-robotics-textbook/docs/tags/intelligence',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/intelligence', '3b5'),
+            exact: true
+          },
+          {
+            path: '/physical-ai-robotics-textbook/docs/tags/interaction',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/interaction', '9da'),
+            exact: true
+          },
+          {
             path: '/physical-ai-robotics-textbook/docs/tags/introduction',
             component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/introduction', '0c2'),
-            exact: true
-          },
-          {
-            path: '/physical-ai-robotics-textbook/docs/tags/inverse-kinematics',
-            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/inverse-kinematics', '56a'),
-            exact: true
-          },
-          {
-            path: '/physical-ai-robotics-textbook/docs/tags/kinematics',
-            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/kinematics', 'f04'),
             exact: true
           },
           {
@@ -201,18 +206,23 @@ export default [
             exact: true
           },
           {
+            path: '/physical-ai-robotics-textbook/docs/tags/middleware',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/middleware', '6f8'),
+            exact: true
+          },
+          {
             path: '/physical-ai-robotics-textbook/docs/tags/module',
             component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/module', '467'),
             exact: true
           },
           {
-            path: '/physical-ai-robotics-textbook/docs/tags/motion-planning',
-            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/motion-planning', '0dc'),
+            path: '/physical-ai-robotics-textbook/docs/tags/multimodal-integration',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/multimodal-integration', 'd2f'),
             exact: true
           },
           {
-            path: '/physical-ai-robotics-textbook/docs/tags/multimodal-integration',
-            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/multimodal-integration', 'd2f'),
+            path: '/physical-ai-robotics-textbook/docs/tags/nodes',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/nodes', '1d2'),
             exact: true
           },
           {
@@ -236,8 +246,28 @@ export default [
             exact: true
           },
           {
+            path: '/physical-ai-robotics-textbook/docs/tags/physics',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/physics', '188'),
+            exact: true
+          },
+          {
             path: '/physical-ai-robotics-textbook/docs/tags/pid',
             component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/pid', 'ccc'),
+            exact: true
+          },
+          {
+            path: '/physical-ai-robotics-textbook/docs/tags/plugins',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/plugins', '935'),
+            exact: true
+          },
+          {
+            path: '/physical-ai-robotics-textbook/docs/tags/project',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/project', 'e54'),
+            exact: true
+          },
+          {
+            path: '/physical-ai-robotics-textbook/docs/tags/quiz',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/quiz', '81b'),
             exact: true
           },
           {
@@ -261,8 +291,23 @@ export default [
             exact: true
           },
           {
+            path: '/physical-ai-robotics-textbook/docs/tags/robot-model',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/robot-model', 'e7b'),
+            exact: true
+          },
+          {
+            path: '/physical-ai-robotics-textbook/docs/tags/robot-models',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/robot-models', '282'),
+            exact: true
+          },
+          {
             path: '/physical-ai-robotics-textbook/docs/tags/robotics',
             component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/robotics', '9d8'),
+            exact: true
+          },
+          {
+            path: '/physical-ai-robotics-textbook/docs/tags/ros-2',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/ros-2', 'a3d'),
             exact: true
           },
           {
@@ -271,8 +316,23 @@ export default [
             exact: true
           },
           {
+            path: '/physical-ai-robotics-textbook/docs/tags/sdf',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/sdf', '5d2'),
+            exact: true
+          },
+          {
             path: '/physical-ai-robotics-textbook/docs/tags/sensorimotor',
             component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/sensorimotor', '4ee'),
+            exact: true
+          },
+          {
+            path: '/physical-ai-robotics-textbook/docs/tags/sensors',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/sensors', '6f8'),
+            exact: true
+          },
+          {
+            path: '/physical-ai-robotics-textbook/docs/tags/services',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/services', '32e'),
             exact: true
           },
           {
@@ -281,8 +341,8 @@ export default [
             exact: true
           },
           {
-            path: '/physical-ai-robotics-textbook/docs/tags/stability',
-            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/stability', 'dce'),
+            path: '/physical-ai-robotics-textbook/docs/tags/simulation',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/simulation', 'a1a'),
             exact: true
           },
           {
@@ -293,6 +353,16 @@ export default [
           {
             path: '/physical-ai-robotics-textbook/docs/tags/syllabus',
             component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/syllabus', 'a82'),
+            exact: true
+          },
+          {
+            path: '/physical-ai-robotics-textbook/docs/tags/topics',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/topics', '377'),
+            exact: true
+          },
+          {
+            path: '/physical-ai-robotics-textbook/docs/tags/urdf',
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs/tags/urdf', '2f7'),
             exact: true
           },
           {
@@ -312,7 +382,7 @@ export default [
           },
           {
             path: '/physical-ai-robotics-textbook/docs',
-            component: ComponentCreator('/physical-ai-robotics-textbook/docs', 'ec2'),
+            component: ComponentCreator('/physical-ai-robotics-textbook/docs', '11f'),
             routes: [
               {
                 path: '/physical-ai-robotics-textbook/docs/assessments',
@@ -362,8 +432,32 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/physical-ai-robotics-textbook/docs/module-1/capstone-project',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-1/capstone-project', 'ebd'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
                 path: '/physical-ai-robotics-textbook/docs/module-1/week-1',
                 component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-1/week-1', 'b7b'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-1/week-1/exercises',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-1/week-1/exercises', '5de'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-1/week-1/foundations',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-1/week-1/foundations', 'cd3'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-1/week-1/quiz',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-1/week-1/quiz', 'e9b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -374,8 +468,56 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/physical-ai-robotics-textbook/docs/module-1/week-2/exercises',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-1/week-2/exercises', 'e68'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-1/week-2/quiz',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-1/week-2/quiz', '4ac'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-1/week-2/ros2-core-concepts',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-1/week-2/ros2-core-concepts', 'fcc'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-1/week-2/ros2-intro',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-1/week-2/ros2-intro', '157'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
                 path: '/physical-ai-robotics-textbook/docs/module-1/week-3',
                 component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-1/week-3', '0f4'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-1/week-3/embodied-cognition',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-1/week-3/embodied-cognition', '208'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-1/week-3/environmental-interaction',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-1/week-3/environmental-interaction', '420'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-1/week-3/exercises',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-1/week-3/exercises', '109'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-1/week-3/quiz',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-1/week-3/quiz', '6a0'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -386,20 +528,86 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/physical-ai-robotics-textbook/docs/module-2/capstone-project',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/capstone-project', '263'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-2/quiz',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/quiz', '66c'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-2/week-1',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/week-1', '51c'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-2/week-1/exercises',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/week-1/exercises', '98c'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-2/week-1/gazebo-fundamentals',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/week-1/gazebo-fundamentals', '66f'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-2/week-2',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/week-2', '105'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-2/week-2/exercises',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/week-2/exercises', '0f4'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-2/week-2/robot-model-integration',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/week-2/robot-model-integration', 'f4e'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-2/week-3',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/week-3', '32e'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-2/week-3/exercises',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/week-3/exercises', '85b'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-ai-robotics-textbook/docs/module-2/week-3/physics-sensor-simulation',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/week-3/physics-sensor-simulation', '456'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
                 path: '/physical-ai-robotics-textbook/docs/module-2/week-4',
-                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/week-4', '623'),
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/week-4', '43d'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/physical-ai-robotics-textbook/docs/module-2/week-5',
-                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/week-5', '68c'),
+                path: '/physical-ai-robotics-textbook/docs/module-2/week-4/exercises',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/week-4/exercises', 'dd2'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/physical-ai-robotics-textbook/docs/module-2/week-6',
-                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/week-6', '984'),
+                path: '/physical-ai-robotics-textbook/docs/module-2/week-4/gazebo-ros2-integration',
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-2/week-4/gazebo-ros2-integration', 'cff'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -411,24 +619,27 @@ export default [
               },
               {
                 path: '/physical-ai-robotics-textbook/docs/module-3/week-10',
-                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-3/week-10', '157'),
-                exact: true
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-3/week-10', '645'),
+                exact: true,
+                sidebar: "tutorialSidebar"
               },
               {
                 path: '/physical-ai-robotics-textbook/docs/module-3/week-7',
-                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-3/week-7', 'c35'),
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-3/week-7', 'a89'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
                 path: '/physical-ai-robotics-textbook/docs/module-3/week-8',
-                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-3/week-8', '697'),
-                exact: true
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-3/week-8', '105'),
+                exact: true,
+                sidebar: "tutorialSidebar"
               },
               {
                 path: '/physical-ai-robotics-textbook/docs/module-3/week-9',
-                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-3/week-9', '0b1'),
-                exact: true
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-3/week-9', '702'),
+                exact: true,
+                sidebar: "tutorialSidebar"
               },
               {
                 path: '/physical-ai-robotics-textbook/docs/module-4',
@@ -438,18 +649,21 @@ export default [
               },
               {
                 path: '/physical-ai-robotics-textbook/docs/module-4/week-11',
-                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-4/week-11', '668'),
-                exact: true
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-4/week-11', '45f'),
+                exact: true,
+                sidebar: "tutorialSidebar"
               },
               {
                 path: '/physical-ai-robotics-textbook/docs/module-4/week-12',
-                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-4/week-12', '14b'),
-                exact: true
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-4/week-12', '279'),
+                exact: true,
+                sidebar: "tutorialSidebar"
               },
               {
                 path: '/physical-ai-robotics-textbook/docs/module-4/week-13',
-                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-4/week-13', '8b6'),
-                exact: true
+                component: ComponentCreator('/physical-ai-robotics-textbook/docs/module-4/week-13', '557'),
+                exact: true,
+                sidebar: "tutorialSidebar"
               },
               {
                 path: '/physical-ai-robotics-textbook/docs/syllabus',
@@ -465,7 +679,7 @@ export default [
   },
   {
     path: '/physical-ai-robotics-textbook/',
-    component: ComponentCreator('/physical-ai-robotics-textbook/', 'f27'),
+    component: ComponentCreator('/physical-ai-robotics-textbook/', '5ac'),
     exact: true
   },
   {

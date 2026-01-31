@@ -60,10 +60,10 @@ Before starting this module, students should:
 
 ## Resources
 
-- [Week 7: Feedback Control Systems](/module-3/week-1/)
-- [Week 8: Walking Algorithms and Balance Control](/module-3/week-2/)
-- [Week 9: Gait Generation and Adaptation](/module-3/week-3/)
-- [Week 10: Energy Efficiency in Locomotion](/module-3/week-4/)
+- [Week 7: Feedback Control Systems](./module-3/week-7/)
+- [Week 8: Walking Algorithms and Balance Control](./module-3/week-8/)
+- [Week 9: Gait Generation and Adaptation](./module-3/week-9/)
+- [Week 10: Energy Efficiency in Locomotion](./module-3/week-10/)
 
 ## Assessment
 
@@ -72,7 +72,7 @@ Before starting this module, students should:
 
 ## Navigation
 
-[← Module 2](/module-2/) | [Module 4 →](/module-4/)
+[← Module 2](./module-2/) | [Module 4 →](./module-4/)
 
 ---
 

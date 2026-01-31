@@ -1,0 +1,78 @@
+{
+  "id": "module-2/week-4/exercises",
+  "title": "Week 4 Exercises: Gazebo-ROS2 Integration",
+  "description": "Practical exercises to reinforce understanding of Gazebo-ROS2 integration for hardware-in-the-loop testing.",
+  "source": "@site/docs/module-2/week-4/exercises.md",
+  "sourceDirName": "module-2/week-4",
+  "slug": "/module-2/week-4/exercises",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-4/exercises",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-2/week-4/exercises.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "ros2",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/ros-2"
+    },
+    {
+      "inline": true,
+      "label": "integration",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/integration"
+    },
+    {
+      "inline": true,
+      "label": "gazebo",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/gazebo"
+    },
+    {
+      "inline": true,
+      "label": "plugins",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/plugins"
+    },
+    {
+      "inline": true,
+      "label": "simulation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/simulation"
+    },
+    {
+      "inline": true,
+      "label": "exercises",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/exercises"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Week 4 Exercises: Gazebo-ROS2 Integration",
+    "description": "Practical exercises to reinforce understanding of Gazebo-ROS2 integration for hardware-in-the-loop testing.",
+    "tags": [
+      "ros2",
+      "integration",
+      "gazebo",
+      "plugins",
+      "simulation",
+      "exercises",
+      "robotics"
+    ],
+    "learning-objectives": [
+      "Connect ROS2 nodes to Gazebo for hardware-in-the-loop testing",
+      "Configure Gazebo plugins for ROS2 communication",
+      "Implement robot control systems in simulation",
+      "Validate control algorithms in simulation environment"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "1.4 Gazebo-ROS2 Integration",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-4/gazebo-ros2-integration"
+  },
+  "next": {
+    "title": "Module 2 Quiz: Robot Simulation with Gazebo",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/quiz"
+  }
+}

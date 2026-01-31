@@ -46,11 +46,11 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Week 2",
-    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-2"
+    "title": "Week 2 Quiz: ROS2 Introduction and Core Concepts",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-2/quiz"
   },
   "next": {
-    "title": "Module 2",
-    "permalink": "/physical-ai-robotics-textbook/docs/module-2"
+    "title": "1.4 Embodied Cognition in Physical AI",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-3/embodied-cognition"
   }
 }

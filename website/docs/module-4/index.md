@@ -53,9 +53,9 @@ Before starting this module, students should:
 
 ## Resources
 
-- [Week 11: Machine Learning for Humanoid Control](/module-4/week-1/)
-- [Week 12: Perception Systems and Multimodal Integration](/module-4/week-2/)
-- [Week 13: Real-World Applications and Evaluation](/module-4/week-3/)
+- [Week 11: Machine Learning for Humanoid Control](./module-4/week-11/)
+- [Week 12: Perception Systems and Multimodal Integration](./module-4/week-12/)
+- [Week 13: Real-World Applications and Evaluation](./module-4/week-13/)
 
 ## Assessment
 
@@ -66,7 +66,7 @@ Before starting this module, students should:
 
 ## Navigation
 
-[← Module 3](/module-3/) | [Course Conclusion →](/course-conclusion/) *(TBD)*
+[← Module 3](./module-3/) | [Course Conclusion →](./course-conclusion/) *(TBD)*
 
 ---
 

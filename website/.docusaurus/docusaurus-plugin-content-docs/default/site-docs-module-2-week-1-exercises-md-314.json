@@ -1,0 +1,65 @@
+{
+  "id": "module-2/week-1/exercises",
+  "title": "Week 1 Exercises: Gazebo Simulation Fundamentals",
+  "description": "Practical exercises to reinforce understanding of Gazebo simulation fundamentals.",
+  "source": "@site/docs/module-2/week-1/exercises.md",
+  "sourceDirName": "module-2/week-1",
+  "slug": "/module-2/week-1/exercises",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-1/exercises",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-2/week-1/exercises.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "gazebo",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/gazebo"
+    },
+    {
+      "inline": true,
+      "label": "simulation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/simulation"
+    },
+    {
+      "inline": true,
+      "label": "fundamentals",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/fundamentals"
+    },
+    {
+      "inline": true,
+      "label": "exercises",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/exercises"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Week 1 Exercises: Gazebo Simulation Fundamentals",
+    "description": "Practical exercises to reinforce understanding of Gazebo simulation fundamentals.",
+    "tags": [
+      "gazebo",
+      "simulation",
+      "fundamentals",
+      "exercises",
+      "robotics"
+    ],
+    "learning-objectives": [
+      "Apply Gazebo simulation concepts to practical scenarios",
+      "Distinguish between simulation and real-world robotics",
+      "Analyze the implications of simulation for robotics development"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "1.1 Gazebo Simulation Fundamentals",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-1/gazebo-fundamentals"
+  },
+  "next": {
+    "title": "Week 2",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-2"
+  }
+}
