@@ -49,9 +49,21 @@ Before starting this module, students should:
 
 ## Resources
 
-- [Week 1: Introduction to Physical AI](/module-1/week-1/)
-- [Week 2: Sensorimotor Learning and Perception](/module-1/week-2/)
-- [Week 3: Embodied Cognition and Environmental Interaction](/module-1/week-3/)
+- [Week 1: Introduction to Physical AI](/docs/module-1/week-1/)
+  - [1.1 Foundations of Physical AI](/docs/module-1/week-1/foundations)
+  - [Week 1 Exercises](/docs/module-1/week-1/exercises)
+  - [Week 1 Quiz](/docs/module-1/week-1/quiz)
+- [Week 2: ROS2 Introduction and Core Concepts](/docs/module-1/week-2/)
+  - [1.2 Introduction to ROS2](/docs/module-1/week-2/ros2-intro)
+  - [1.3 ROS2 Core Concepts and Implementation](/docs/module-1/week-2/ros2-core-concepts)
+  - [Week 2 Exercises](/docs/module-1/week-2/exercises)
+  - [Week 2 Quiz](/docs/module-1/week-2/quiz)
+- [Week 3: Embodied Cognition and Environmental Interaction](/docs/module-1/week-3/)
+  - [1.4 Embodied Cognition in Physical AI](/docs/module-1/week-3/embodied-cognition)
+  - [1.5 Environmental Interaction in Physical AI](/docs/module-1/week-3/environmental-interaction)
+  - [Week 3 Exercises](/docs/module-1/week-3/exercises)
+  - [Week 3 Quiz](/docs/module-1/week-3/quiz)
+- [Module 1 Capstone Project](/docs/module-1/capstone-project)
 
 ## Assessment
 
@@ -61,7 +73,7 @@ Before starting this module, students should:
 
 ## Navigation
 
-[← Course Overview](/course-overview/) | [Module 2 →](/module-2/)
+[← Course Overview](./course-overview/) | [Module 2 →](./module-2/)
 
 ---
 

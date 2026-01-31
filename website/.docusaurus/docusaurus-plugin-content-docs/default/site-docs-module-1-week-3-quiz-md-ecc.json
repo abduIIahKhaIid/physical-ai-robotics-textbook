@@ -1,0 +1,66 @@
+{
+  "id": "module-1/week-3/quiz",
+  "title": "Week 3 Quiz: Embodied Cognition and Environmental Interaction",
+  "description": "Test your understanding of embodied cognition and environmental interaction in Physical AI systems.",
+  "source": "@site/docs/module-1/week-3/quiz.md",
+  "sourceDirName": "module-1/week-3",
+  "slug": "/module-1/week-3/quiz",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-3/quiz",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-1/week-3/quiz.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "embodied-cognition",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/embodied-cognition"
+    },
+    {
+      "inline": true,
+      "label": "environmental-interaction",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/environmental-interaction"
+    },
+    {
+      "inline": true,
+      "label": "quiz",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/quiz"
+    },
+    {
+      "inline": true,
+      "label": "physical-ai",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/physical-ai"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Week 3 Quiz: Embodied Cognition and Environmental Interaction",
+    "description": "Test your understanding of embodied cognition and environmental interaction in Physical AI systems.",
+    "tags": [
+      "embodied-cognition",
+      "environmental-interaction",
+      "quiz",
+      "physical-ai",
+      "robotics"
+    ],
+    "learning-objectives": [
+      "Demonstrate understanding of embodied cognition principles",
+      "Apply environmental interaction concepts appropriately",
+      "Analyze the role of embodiment in intelligent behavior",
+      "Evaluate adaptive behaviors for dynamic environments"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 3 Exercises: Embodied Cognition and Environmental Interaction",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-3/exercises"
+  },
+  "next": {
+    "title": "Module 1 Capstone Project: Physical AI System Integration",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/capstone-project"
+  }
+}

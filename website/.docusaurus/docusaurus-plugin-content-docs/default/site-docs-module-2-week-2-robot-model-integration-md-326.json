@@ -1,0 +1,79 @@
+{
+  "id": "module-2/week-2/robot-model-integration",
+  "title": "1.2 Robot Model Integration in Gazebo",
+  "description": "Import and configure robot models in Gazebo using URDF and SDF formats.",
+  "source": "@site/docs/module-2/week-2/robot-model-integration.md",
+  "sourceDirName": "module-2/week-2",
+  "slug": "/module-2/week-2/robot-model-integration",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-2/robot-model-integration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-2/week-2/robot-model-integration.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "robot-model",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robot-model"
+    },
+    {
+      "inline": true,
+      "label": "integration",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/integration"
+    },
+    {
+      "inline": true,
+      "label": "urdf",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/urdf"
+    },
+    {
+      "inline": true,
+      "label": "sdf",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/sdf"
+    },
+    {
+      "inline": true,
+      "label": "gazebo",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/gazebo"
+    },
+    {
+      "inline": true,
+      "label": "simulation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/simulation"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "1.2 Robot Model Integration in Gazebo",
+    "description": "Import and configure robot models in Gazebo using URDF and SDF formats.",
+    "tags": [
+      "robot-model",
+      "integration",
+      "urdf",
+      "sdf",
+      "gazebo",
+      "simulation",
+      "robotics"
+    ],
+    "learning-objectives": [
+      "Import URDF and SDF robot models into Gazebo",
+      "Configure joint properties and transmissions for simulation",
+      "Set up robot state publishers for proper TF transforms",
+      "Spawn custom robots in simulation environment",
+      "Validate robot model behavior in simulation"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 2",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-2"
+  },
+  "next": {
+    "title": "Week 2 Exercises: Robot Model Integration",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-2/exercises"
+  }
+}

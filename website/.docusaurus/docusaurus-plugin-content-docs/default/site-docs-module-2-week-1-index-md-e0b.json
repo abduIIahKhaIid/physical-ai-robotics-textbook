@@ -1,53 +1,53 @@
 {
   "id": "module-2/week-1/index",
-  "title": "Module 2, Week 4: Forward and Inverse Kinematics",
-  "description": "Forward and inverse kinematics for robot manipulation",
+  "title": "Module 2, Week 1: Gazebo Simulation Fundamentals",
+  "description": "Introduction to Gazebo simulation environment and basic concepts",
   "source": "@site/docs/module-2/week-1/index.md",
   "sourceDirName": "module-2/week-1",
-  "slug": "/module-2/week-4",
-  "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-4",
+  "slug": "/module-2/week-1",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-1",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-2/week-1/index.md",
   "tags": [
     {
       "inline": true,
-      "label": "week",
-      "permalink": "/physical-ai-robotics-textbook/docs/tags/week"
+      "label": "gazebo",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/gazebo"
     },
     {
       "inline": true,
-      "label": "kinematics",
-      "permalink": "/physical-ai-robotics-textbook/docs/tags/kinematics"
+      "label": "simulation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/simulation"
     },
     {
       "inline": true,
-      "label": "forward-kinematics",
-      "permalink": "/physical-ai-robotics-textbook/docs/tags/forward-kinematics"
-    },
-    {
-      "inline": true,
-      "label": "inverse-kinematics",
-      "permalink": "/physical-ai-robotics-textbook/docs/tags/inverse-kinematics"
+      "label": "fundamentals",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/fundamentals"
     },
     {
       "inline": true,
       "label": "robotics",
       "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    },
+    {
+      "inline": true,
+      "label": "environment",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/environment"
     }
   ],
   "version": "current",
   "frontMatter": {
-    "title": "Module 2, Week 4: Forward and Inverse Kinematics",
-    "sidebar_label": "Week 4",
-    "slug": "/module-2/week-4",
-    "description": "Forward and inverse kinematics for robot manipulation",
+    "title": "Module 2, Week 1: Gazebo Simulation Fundamentals",
+    "sidebar_label": "Week 1",
+    "slug": "/module-2/week-1",
+    "description": "Introduction to Gazebo simulation environment and basic concepts",
     "tags": [
-      "week",
-      "kinematics",
-      "forward-kinematics",
-      "inverse-kinematics",
-      "robotics"
+      "gazebo",
+      "simulation",
+      "fundamentals",
+      "robotics",
+      "environment"
     ]
   },
   "sidebar": "tutorialSidebar",
@@ -56,7 +56,7 @@
     "permalink": "/physical-ai-robotics-textbook/docs/module-2"
   },
   "next": {
-    "title": "Week 5",
-    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-5"
+    "title": "1.1 Gazebo Simulation Fundamentals",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-1/gazebo-fundamentals"
   }
 }

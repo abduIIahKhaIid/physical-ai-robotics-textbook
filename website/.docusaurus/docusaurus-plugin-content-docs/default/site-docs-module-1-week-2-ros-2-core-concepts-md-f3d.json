@@ -1,0 +1,66 @@
+{
+  "id": "module-1/week-2/ros2-core-concepts",
+  "title": "1.3 ROS2 Core Concepts and Implementation",
+  "description": "Deep dive into ROS2 core concepts with practical implementation details for Physical AI systems.",
+  "source": "@site/docs/module-1/week-2/ros2-core-concepts.md",
+  "sourceDirName": "module-1/week-2",
+  "slug": "/module-1/week-2/ros2-core-concepts",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-2/ros2-core-concepts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-1/week-2/ros2-core-concepts.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "ros2",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/ros-2"
+    },
+    {
+      "inline": true,
+      "label": "core-concepts",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/core-concepts"
+    },
+    {
+      "inline": true,
+      "label": "implementation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/implementation"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    },
+    {
+      "inline": true,
+      "label": "physical-ai",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/physical-ai"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "1.3 ROS2 Core Concepts and Implementation",
+    "description": "Deep dive into ROS2 core concepts with practical implementation details for Physical AI systems.",
+    "tags": [
+      "ros2",
+      "core-concepts",
+      "implementation",
+      "robotics",
+      "physical-ai"
+    ],
+    "learning-objectives": [
+      "Implement ROS2 nodes in both C++ and Python",
+      "Create and use custom message types",
+      "Design effective topic and service architectures",
+      "Apply Quality of Service settings appropriately"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "1.2 Introduction to ROS2",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-2/ros2-intro"
+  },
+  "next": {
+    "title": "Week 2 Exercises: ROS2 Introduction and Core Concepts",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-2/exercises"
+  }
+}

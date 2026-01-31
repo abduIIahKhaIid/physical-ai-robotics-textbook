@@ -52,11 +52,11 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Week 1",
-    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-1"
+    "title": "Week 1 Quiz: Foundations of Physical AI",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-1/quiz"
   },
   "next": {
-    "title": "Week 3",
-    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-3"
+    "title": "1.2 Introduction to ROS2",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-2/ros2-intro"
   }
 }

@@ -1,0 +1,68 @@
+{
+  "id": "module-2/week-6/index",
+  "title": "Module 2, Week 6: Simulation Validation and Real-World Transfer",
+  "description": "Validating simulation results and transferring simulation learning to real-world robotics applications",
+  "source": "@site/docs/module-2/week-6/index.md",
+  "sourceDirName": "module-2/week-6",
+  "slug": "/module-2/week-6",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-6",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-2/week-6/index.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "validation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/validation"
+    },
+    {
+      "inline": true,
+      "label": "simulation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/simulation"
+    },
+    {
+      "inline": true,
+      "label": "real-world",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/real-world"
+    },
+    {
+      "inline": true,
+      "label": "transfer",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/transfer"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    },
+    {
+      "inline": true,
+      "label": "gazebo",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/gazebo"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 2, Week 6: Simulation Validation and Real-World Transfer",
+    "sidebar_label": "Week 6",
+    "slug": "/module-2/week-6",
+    "description": "Validating simulation results and transferring simulation learning to real-world robotics applications",
+    "tags": [
+      "validation",
+      "simulation",
+      "real-world",
+      "transfer",
+      "robotics",
+      "gazebo"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 5",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-5"
+  },
+  "next": {
+    "title": "Module 3",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-3"
+  }
+}

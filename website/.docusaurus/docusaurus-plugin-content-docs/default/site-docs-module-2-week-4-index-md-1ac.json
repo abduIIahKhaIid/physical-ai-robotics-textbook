@@ -1,0 +1,68 @@
+{
+  "id": "module-2/week-4/index",
+  "title": "Module 2, Week 4: ROS2 Integration",
+  "description": "Connecting ROS2 nodes to Gazebo simulation environment for hardware-in-the-loop testing",
+  "source": "@site/docs/module-2/week-4/index.md",
+  "sourceDirName": "module-2/week-4",
+  "slug": "/module-2/week-4",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-4",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-2/week-4/index.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "ros2",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/ros-2"
+    },
+    {
+      "inline": true,
+      "label": "integration",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/integration"
+    },
+    {
+      "inline": true,
+      "label": "gazebo",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/gazebo"
+    },
+    {
+      "inline": true,
+      "label": "plugins",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/plugins"
+    },
+    {
+      "inline": true,
+      "label": "simulation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/simulation"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 2, Week 4: ROS2 Integration",
+    "sidebar_label": "Week 4",
+    "slug": "/module-2/week-4",
+    "description": "Connecting ROS2 nodes to Gazebo simulation environment for hardware-in-the-loop testing",
+    "tags": [
+      "ros2",
+      "integration",
+      "gazebo",
+      "plugins",
+      "simulation",
+      "robotics"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 3 Exercises: Physics and Sensor Simulation",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-3/exercises"
+  },
+  "next": {
+    "title": "1.4 Gazebo-ROS2 Integration",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-4/gazebo-ros2-integration"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "module-2/quiz",
+  "title": "Module 2 Quiz: Robot Simulation with Gazebo",
+  "description": "Test your understanding of Gazebo simulation fundamentals, robot integration, physics, and ROS2 integration.",
+  "source": "@site/docs/module-2/quiz.md",
+  "sourceDirName": "module-2",
+  "slug": "/module-2/quiz",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-2/quiz",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-2/quiz.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "gazebo",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/gazebo"
+    },
+    {
+      "inline": true,
+      "label": "simulation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/simulation"
+    },
+    {
+      "inline": true,
+      "label": "quiz",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/quiz"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    },
+    {
+      "inline": true,
+      "label": "ros2",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/ros-2"
+    },
+    {
+      "inline": true,
+      "label": "physics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/physics"
+    },
+    {
+      "inline": true,
+      "label": "sensors",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/sensors"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 2 Quiz: Robot Simulation with Gazebo",
+    "description": "Test your understanding of Gazebo simulation fundamentals, robot integration, physics, and ROS2 integration.",
+    "tags": [
+      "gazebo",
+      "simulation",
+      "quiz",
+      "robotics",
+      "ros2",
+      "physics",
+      "sensors"
+    ],
+    "learning-objectives": [
+      "Demonstrate understanding of Gazebo simulation concepts",
+      "Apply robot model integration principles",
+      "Configure physics and sensor simulation appropriately",
+      "Implement ROS2 integration for simulation"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 4 Exercises: Gazebo-ROS2 Integration",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-4/exercises"
+  },
+  "next": {
+    "title": "Module 2 Capstone Project: Complete Simulation Environment",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/capstone-project"
+  }
+}

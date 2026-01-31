@@ -1,56 +1,68 @@
 {
   "id": "module-2/week-2/index",
-  "title": "Module 2, Week 5: Robot Dynamics and Motion Planning",
-  "description": "Robot dynamics and motion planning fundamentals",
+  "title": "Module 2, Week 2: Robot Model Integration",
+  "description": "Learn how to import and configure robot models in Gazebo simulation environment",
   "source": "@site/docs/module-2/week-2/index.md",
   "sourceDirName": "module-2/week-2",
-  "slug": "/module-2/week-5",
-  "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-5",
+  "slug": "/module-2/week-2",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-2",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-2/week-2/index.md",
   "tags": [
     {
       "inline": true,
-      "label": "week",
-      "permalink": "/physical-ai-robotics-textbook/docs/tags/week"
+      "label": "robot-model",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robot-model"
     },
     {
       "inline": true,
-      "label": "dynamics",
-      "permalink": "/physical-ai-robotics-textbook/docs/tags/dynamics"
+      "label": "integration",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/integration"
     },
     {
       "inline": true,
-      "label": "motion-planning",
-      "permalink": "/physical-ai-robotics-textbook/docs/tags/motion-planning"
+      "label": "urdf",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/urdf"
     },
     {
       "inline": true,
-      "label": "robotics",
-      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+      "label": "sdf",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/sdf"
+    },
+    {
+      "inline": true,
+      "label": "gazebo",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/gazebo"
+    },
+    {
+      "inline": true,
+      "label": "simulation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/simulation"
     }
   ],
   "version": "current",
   "frontMatter": {
-    "title": "Module 2, Week 5: Robot Dynamics and Motion Planning",
-    "sidebar_label": "Week 5",
-    "slug": "/module-2/week-5",
-    "description": "Robot dynamics and motion planning fundamentals",
+    "title": "Module 2, Week 2: Robot Model Integration",
+    "sidebar_label": "Week 2",
+    "slug": "/module-2/week-2",
+    "description": "Learn how to import and configure robot models in Gazebo simulation environment",
     "tags": [
-      "week",
-      "dynamics",
-      "motion-planning",
-      "robotics"
+      "robot-model",
+      "integration",
+      "urdf",
+      "sdf",
+      "gazebo",
+      "simulation"
     ]
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Week 4",
-    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-4"
+    "title": "Week 1 Exercises: Gazebo Simulation Fundamentals",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-1/exercises"
   },
   "next": {
-    "title": "Week 6",
-    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-6"
+    "title": "1.2 Robot Model Integration in Gazebo",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-2/robot-model-integration"
   }
 }

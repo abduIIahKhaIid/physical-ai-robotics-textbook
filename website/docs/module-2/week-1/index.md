@@ -1,83 +1,91 @@
 ---
-title: "Module 2, Week 4: Forward and Inverse Kinematics"
-sidebar_label: "Week 4"
-slug: "/module-2/week-4"
-description: "Forward and inverse kinematics for robot manipulation"
-tags: ["week", "kinematics", "forward-kinematics", "inverse-kinematics", "robotics"]
+title: "Module 2, Week 1: Gazebo Simulation Fundamentals"
+sidebar_label: "Week 1"
+slug: "/module-2/week-1"
+description: "Introduction to Gazebo simulation environment and basic concepts"
+tags: ["gazebo", "simulation", "fundamentals", "robotics", "environment"]
 ---
 
-# Module 2, Week 4: Forward and Inverse Kinematics
+# Module 2, Week 1: Gazebo Simulation Fundamentals
 
 ## Learning Objectives
 
 By the end of this week, students will be able to:
-- Define coordinate systems and transformations
-- Apply Denavit-Hartenberg parameters
-- Calculate forward kinematics for robotic systems
-- Solve inverse kinematics problems
-- Analyze singularity conditions
+- Understand the core concepts of Gazebo simulation environment
+- Set up and configure a basic Gazebo simulation environment
+- Create and modify simple world files
+- Spawn basic objects and robots in simulation
+- Navigate the Gazebo interface and controls
 
 ## Topics Covered
 
-### Day 1: Coordinate Systems and Transformations
-- Reference frames and coordinate systems
-- Rotation matrices and transformation matrices
-- Homogeneous coordinates
-- Transformation composition
+### Day 1: Introduction to Gazebo
+- What is Gazebo and why use it?
+- Overview of Gazebo architecture
+- Physics engines and simulation principles
+- Installing and setting up Gazebo
 
-### Day 2: Denavit-Hartenberg Parameters
-- DH parameter convention
-- Link and joint definitions
-- Parameter identification process
-- Systematic approach to DH analysis
+### Day 2: Gazebo Interface and Controls
+- Understanding the Gazebo GUI
+- Camera controls and navigation
+- Object manipulation tools
+- Simulation controls and parameters
 
-### Day 3: Forward Kinematics Calculations
-- Chain multiplication of transforms
-- End-effector position and orientation
-- Verification and validation methods
-- Computational efficiency considerations
+### Day 3: Basic World Creation
+- World file structure and format
+- Creating simple environments
+- Adding static objects and obstacles
+- Lighting and environmental settings
 
-### Day 4: Inverse Kinematics Solutions
-- Analytical approaches
-- Geometric solutions
-- Numerical methods
-- Multiple solution analysis
+### Day 4: Spawning Objects and Robots
+- Using spawn_entity script
+- Basic robot models in Gazebo
+- Initial pose and configuration
+- Model database and custom models
 
-### Day 5: Singularity Analysis
-- Identifying singular configurations
-- Jacobian matrix and its properties
-- Handling singularities
-- Workspace limitations
+### Day 5: Simulation Testing and Validation
+- Running and controlling simulations
+- Basic physics validation
+- Troubleshooting common issues
+- Week project: Simple simulation exercise
 
 ## Resources
 
-- **Readings**: [TBD - Weekly reading list]
-- **Videos**: [TBD - Lecture videos]
-- **Software**: [TBD - Kinematics software tools]
-- **Assignments**: [TBD - Weekly assignments]
-- **Discussion Forum**: [TBD - Week 4 discussion topics]
+- **Readings**:
+  - [Gazebo Simulation Fundamentals](./gazebo-fundamentals.md)
+- **Videos**: [TBD - Week 1 lecture videos]
+- **Assignments**:
+  - [Week 1 Exercises](./exercises.md)
+- **Discussion Forum**: [TBD - Week 1 discussion topics]
 
 ## Activities
 
-- **Lecture**: Kinematics fundamentals
-- **Lab**: DH parameter calculation exercise
-- **Simulation**: Forward kinematics implementation
-- **Problem Solving**: Inverse kinematics examples
+- **Lecture**: Introduction to Gazebo concepts and architecture
+- **Lab**: Setting up Gazebo environment and running first simulation
+- **Exercise**: Basic world creation and object spawning
+- **Discussion**: Simulation vs. real-world robotics
 
 ## Assessment
 
-- **Practice Problems**: Kinematics calculations
-- **Programming Exercise**: Forward kinematics implementation
-- **Quiz**: Week 4 concepts
+- **Quiz**: Week 1 quiz (formative assessment)
+- **Practical Exercise**: Basic simulation setup and validation
+- **Participation**: Discussion forum engagement
 
 ## Prerequisites
 
 Students should have completed:
-- [Module 1](/module-1/)
+- [Module 1: Foundations of Physical AI](../module-1/)
+- Basic understanding of ROS2 concepts
 
 ## Next Week
 
-Continue to [Week 5: Robot Dynamics and Motion Planning](/module-2/week-2/)
+Continue to [Week 2: Robot Model Integration](/docs/module-2/week-2/)
+
+---
+
+## Navigation
+
+[← Module 2 Index](/docs/module-2/) | [Week 2: Robot Model Integration →](/docs/module-2/week-2/)
 
 ---
 
@@ -86,8 +94,6 @@ Continue to [Week 5: Robot Dynamics and Motion Planning](/module-2/week-2/)
 - Detailed daily schedule
 - Specific reading assignments
 - Video lecture links
-- Software installation guides
 - Assignment specifications
 - Assessment rubrics
-- Mathematical derivations
 - Supplementary resources

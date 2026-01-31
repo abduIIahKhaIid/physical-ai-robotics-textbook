@@ -45,8 +45,23 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "module-1/capstone-project",
+              "path": "/physical-ai-robotics-textbook/docs/module-1/capstone-project",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "module-1/index",
               "path": "/physical-ai-robotics-textbook/docs/module-1",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/week-1/exercises",
+              "path": "/physical-ai-robotics-textbook/docs/module-1/week-1/exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/week-1/foundations",
+              "path": "/physical-ai-robotics-textbook/docs/module-1/week-1/foundations",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -55,8 +70,48 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "module-1/week-1/quiz",
+              "path": "/physical-ai-robotics-textbook/docs/module-1/week-1/quiz",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/week-2/exercises",
+              "path": "/physical-ai-robotics-textbook/docs/module-1/week-2/exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "module-1/week-2/index",
               "path": "/physical-ai-robotics-textbook/docs/module-1/week-2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/week-2/quiz",
+              "path": "/physical-ai-robotics-textbook/docs/module-1/week-2/quiz",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/week-2/ros2-core-concepts",
+              "path": "/physical-ai-robotics-textbook/docs/module-1/week-2/ros2-core-concepts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/week-2/ros2-intro",
+              "path": "/physical-ai-robotics-textbook/docs/module-1/week-2/ros2-intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/week-3/embodied-cognition",
+              "path": "/physical-ai-robotics-textbook/docs/module-1/week-3/embodied-cognition",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/week-3/environmental-interaction",
+              "path": "/physical-ai-robotics-textbook/docs/module-1/week-3/environmental-interaction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1/week-3/exercises",
+              "path": "/physical-ai-robotics-textbook/docs/module-1/week-3/exercises",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -65,23 +120,83 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "module-1/week-3/quiz",
+              "path": "/physical-ai-robotics-textbook/docs/module-1/week-3/quiz",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/capstone-project",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/capstone-project",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "module-2/index",
               "path": "/physical-ai-robotics-textbook/docs/module-2",
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "module-2/quiz",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/quiz",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/week-1/exercises",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/week-1/exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/week-1/gazebo-fundamentals",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/week-1/gazebo-fundamentals",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "module-2/week-1/index",
-              "path": "/physical-ai-robotics-textbook/docs/module-2/week-4",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/week-1",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/week-2/exercises",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/week-2/exercises",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module-2/week-2/index",
-              "path": "/physical-ai-robotics-textbook/docs/module-2/week-5",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/week-2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/week-2/robot-model-integration",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/week-2/robot-model-integration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/week-3/exercises",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/week-3/exercises",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "module-2/week-3/index",
-              "path": "/physical-ai-robotics-textbook/docs/module-2/week-6",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/week-3",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/week-3/physics-sensor-simulation",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/week-3/physics-sensor-simulation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/week-4/exercises",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/week-4/exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/week-4/gazebo-ros2-integration",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/week-4/gazebo-ros2-integration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2/week-4/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-2/week-4",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -90,21 +205,24 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "module-3/week-1/index",
+              "id": "module-3/week-10/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-10",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3/week-7/index",
               "path": "/physical-ai-robotics-textbook/docs/module-3/week-7",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "module-3/week-2/index",
-              "path": "/physical-ai-robotics-textbook/docs/module-3/week-8"
+              "id": "module-3/week-8/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-8",
+              "sidebar": "tutorialSidebar"
             },
             {
-              "id": "module-3/week-3/index",
-              "path": "/physical-ai-robotics-textbook/docs/module-3/week-9"
-            },
-            {
-              "id": "module-3/week-4/index",
-              "path": "/physical-ai-robotics-textbook/docs/module-3/week-10"
+              "id": "module-3/week-9/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-9",
+              "sidebar": "tutorialSidebar"
             },
             {
               "id": "module-4/index",
@@ -112,16 +230,19 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "module-4/week-1/index",
-              "path": "/physical-ai-robotics-textbook/docs/module-4/week-11"
+              "id": "module-4/week-11/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-4/week-11",
+              "sidebar": "tutorialSidebar"
             },
             {
-              "id": "module-4/week-2/index",
-              "path": "/physical-ai-robotics-textbook/docs/module-4/week-12"
+              "id": "module-4/week-12/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-4/week-12",
+              "sidebar": "tutorialSidebar"
             },
             {
-              "id": "module-4/week-3/index",
-              "path": "/physical-ai-robotics-textbook/docs/module-4/week-13"
+              "id": "module-4/week-13/index",
+              "path": "/physical-ai-robotics-textbook/docs/module-4/week-13",
+              "sidebar": "tutorialSidebar"
             },
             {
               "id": "syllabus",

@@ -1,0 +1,66 @@
+{
+  "id": "module-1/week-2/quiz",
+  "title": "Week 2 Quiz: ROS2 Introduction and Core Concepts",
+  "description": "Test your understanding of ROS2 concepts and implementation for Physical AI systems.",
+  "source": "@site/docs/module-1/week-2/quiz.md",
+  "sourceDirName": "module-1/week-2",
+  "slug": "/module-1/week-2/quiz",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-2/quiz",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-1/week-2/quiz.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "ros2",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/ros-2"
+    },
+    {
+      "inline": true,
+      "label": "quiz",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/quiz"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    },
+    {
+      "inline": true,
+      "label": "implementation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/implementation"
+    },
+    {
+      "inline": true,
+      "label": "physical-ai",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/physical-ai"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Week 2 Quiz: ROS2 Introduction and Core Concepts",
+    "description": "Test your understanding of ROS2 concepts and implementation for Physical AI systems.",
+    "tags": [
+      "ros2",
+      "quiz",
+      "robotics",
+      "implementation",
+      "physical-ai"
+    ],
+    "learning-objectives": [
+      "Demonstrate understanding of ROS2 architecture and components",
+      "Apply ROS2 communication patterns appropriately",
+      "Configure Quality of Service settings for different scenarios",
+      "Implement ROS2 systems effectively"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 2 Exercises: ROS2 Introduction and Core Concepts",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-2/exercises"
+  },
+  "next": {
+    "title": "Week 3",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-3"
+  }
+}

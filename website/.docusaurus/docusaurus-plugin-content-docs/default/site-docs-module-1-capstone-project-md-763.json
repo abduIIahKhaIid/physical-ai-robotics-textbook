@@ -1,0 +1,66 @@
+{
+  "id": "module-1/capstone-project",
+  "title": "Module 1 Capstone Project: Physical AI System Integration",
+  "description": "Integrate all Module 1 concepts into a comprehensive Physical AI system demonstrating embodied cognition and environmental interaction.",
+  "source": "@site/docs/module-1/capstone-project.md",
+  "sourceDirName": "module-1",
+  "slug": "/module-1/capstone-project",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-1/capstone-project",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-1/capstone-project.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "capstone",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/capstone"
+    },
+    {
+      "inline": true,
+      "label": "physical-ai",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/physical-ai"
+    },
+    {
+      "inline": true,
+      "label": "integration",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/integration"
+    },
+    {
+      "inline": true,
+      "label": "embodied-cognition",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/embodied-cognition"
+    },
+    {
+      "inline": true,
+      "label": "environmental-interaction",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/environmental-interaction"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 1 Capstone Project: Physical AI System Integration",
+    "description": "Integrate all Module 1 concepts into a comprehensive Physical AI system demonstrating embodied cognition and environmental interaction.",
+    "tags": [
+      "capstone",
+      "physical-ai",
+      "integration",
+      "embodied-cognition",
+      "environmental-interaction"
+    ],
+    "learning-objectives": [
+      "Synthesize all Module 1 concepts into a cohesive system",
+      "Implement embodied cognition principles in a practical application",
+      "Demonstrate environmental interaction capabilities",
+      "Apply ROS2 concepts for system integration"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 3 Quiz: Embodied Cognition and Environmental Interaction",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-3/quiz"
+  },
+  "next": {
+    "title": "Module 2",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2"
+  }
+}

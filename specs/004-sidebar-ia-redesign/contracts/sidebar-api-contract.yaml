@@ -1,0 +1,103 @@
+# Sidebar API Contract
+
+## Overview
+This document defines the contract for the sidebar information architecture of the Physical AI & Humanoid Robotics textbook.
+
+## Format Specification
+The sidebar configuration follows the Docusaurus plugin-content-docs format as defined by the `@docusaurus/plugin-content-docs` package.
+
+### Type Definitions
+```typescript
+type SidebarItem =
+  | SidebarItemLink
+  | SidebarItemDoc
+  | SidebarItemCategory
+  | SidebarItemHtml
+  | string;
+
+interface SidebarItemLink {
+  type: 'link';
+  href: string;
+  label: string;
+  className?: string;
+  target?: '_blank' | '_self' | string;
+  rel?: string;
+}
+
+interface SidebarItemDoc {
+  type: 'doc';
+  id: string;  // Doc ID that refers to the document ID (e.g., 'getting-started')
+}
+
+interface SidebarItemCategory {
+  type: 'category';
+  label: string;  // The label to display
+  items: SidebarItem[];  // Array of sub-items
+  collapsible?: boolean;  // Whether the category is collapsible (defaults to true)
+  collapsed?: boolean;  // Whether the category is initially collapsed (defaults to true)
+  className?: string;
+  link?: {
+    type: 'doc' | 'generated-index';
+    id: string;
+  };
+}
+
+interface SidebarItemHtml {
+  type: 'html';
+  value: string;
+  defaultStyle?: boolean;
+  className?: string;
+}
+```
+
+## Sidebar Configuration Structure
+```typescript
+interface SidebarsConfig {
+  [sidebarId: string]: SidebarItem[];
+}
+
+// For this project, we use:
+tutorialSidebar: SidebarItem[];
+```
+
+## Required Sidebar Structure
+The sidebar must include:
+
+### 1. Course Overview Category
+- **Label**: "Course Overview"
+- **Items**: Contains doc references for:
+  - 'course-overview'
+  - 'learning-objectives'
+  - 'syllabus'
+  - 'assessments'
+  - 'hardware-requirements'
+
+### 2. Module Categories (1-4)
+Each module must follow this pattern:
+- **Label**: "Module X: [Module Title]" (e.g., "Module 1: Foundations of Physical AI")
+- **Collapsible**: true
+- **Collapsed**: false (to be expanded by default)
+- **Items**: Contains:
+  - Module index doc ('module-X/index')
+  - Week subcategories
+
+### 3. Week Subcategories
+Each week must follow this pattern:
+- **Label**: "Week Y: [Week Title]" (e.g., "Week 1: Introduction to Physical AI")
+- **Items**: Contains week-specific doc reference ('module-X/week-Y/index')
+
+## Naming Conventions
+- Module labels: "Module X: [Title]" where X is 1-4
+- Week labels: "Week Y: [Title]" where Y follows chronological order
+- Doc IDs: Lowercase with hyphens (e.g., 'module-1/week-1/index')
+
+## Validation Requirements
+- All doc IDs must correspond to existing files in the docs directory
+- No circular references allowed
+- Maximum nesting depth of 3 levels
+- All links must resolve without 404 errors
+
+## Error Handling
+- Invalid doc IDs will result in 404 errors
+- Malformed configuration will cause build failures
+- Missing required categories will result in incomplete navigation

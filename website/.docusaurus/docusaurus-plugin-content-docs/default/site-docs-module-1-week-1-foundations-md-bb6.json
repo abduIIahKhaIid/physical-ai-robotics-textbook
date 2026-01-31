@@ -1,0 +1,59 @@
+{
+  "id": "module-1/week-1/foundations",
+  "title": "1.1 Foundations of Physical AI",
+  "description": "Deep dive into the core principles of Physical AI and how intelligence differs when operating in physical systems.",
+  "source": "@site/docs/module-1/week-1/foundations.md",
+  "sourceDirName": "module-1/week-1",
+  "slug": "/module-1/week-1/foundations",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-1/foundations",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-1/week-1/foundations.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "physical-ai",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/physical-ai"
+    },
+    {
+      "inline": true,
+      "label": "foundations",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/foundations"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    },
+    {
+      "inline": true,
+      "label": "ai",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/ai"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "1.1 Foundations of Physical AI",
+    "description": "Deep dive into the core principles of Physical AI and how intelligence differs when operating in physical systems.",
+    "tags": [
+      "physical-ai",
+      "foundations",
+      "robotics",
+      "ai"
+    ],
+    "learning-objectives": [
+      "Explain the core principles of Physical AI",
+      "Distinguish Physical AI from traditional digital AI approaches",
+      "Understand the concept of embodied intelligence"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 1",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-1"
+  },
+  "next": {
+    "title": "Week 1 Exercises: Foundations of Physical AI",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-1/exercises"
+  }
+}

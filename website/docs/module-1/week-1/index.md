@@ -67,12 +67,12 @@ By the end of this week, students will be able to:
 ## Prerequisites
 
 Students should have completed:
-- [Course Overview](../../course-overview)
-- [Learning Objectives](../../learning-objectives)
+- [Course Overview](../course-overview)
+- [Learning Objectives](../learning-objectives)
 
 ## Next Week
 
-Continue to [Week 2: Sensorimotor Learning and Perception](/module-1/week-2/)
+Continue to [Week 2: Sensorimotor Learning and Perception](../module-1/week-2/)
 
 ---
 

@@ -1,0 +1,65 @@
+{
+  "id": "module-1/week-1/quiz",
+  "title": "Week 1 Quiz: Foundations of Physical AI",
+  "description": "Test your understanding of Physical AI concepts and principles.",
+  "source": "@site/docs/module-1/week-1/quiz.md",
+  "sourceDirName": "module-1/week-1",
+  "slug": "/module-1/week-1/quiz",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-1/quiz",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-1/week-1/quiz.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "physical-ai",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/physical-ai"
+    },
+    {
+      "inline": true,
+      "label": "quiz",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/quiz"
+    },
+    {
+      "inline": true,
+      "label": "foundations",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/foundations"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    },
+    {
+      "inline": true,
+      "label": "ai",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/ai"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Week 1 Quiz: Foundations of Physical AI",
+    "description": "Test your understanding of Physical AI concepts and principles.",
+    "tags": [
+      "physical-ai",
+      "quiz",
+      "foundations",
+      "robotics",
+      "ai"
+    ],
+    "learning-objectives": [
+      "Demonstrate understanding of Physical AI concepts",
+      "Distinguish between digital and physical AI systems",
+      "Apply embodied intelligence principles"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 1 Exercises: Foundations of Physical AI",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-1/exercises"
+  },
+  "next": {
+    "title": "Week 2",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-1/week-2"
+  }
+}

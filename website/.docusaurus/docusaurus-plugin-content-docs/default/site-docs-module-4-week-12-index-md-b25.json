@@ -1,0 +1,56 @@
+{
+  "id": "module-4/week-12/index",
+  "title": "Module 4, Week 12: Perception Systems and Multimodal Integration",
+  "description": "Perception systems and multimodal integration for humanoid robots",
+  "source": "@site/docs/module-4/week-12/index.md",
+  "sourceDirName": "module-4/week-12",
+  "slug": "/module-4/week-12",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-4/week-12",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-4/week-12/index.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "week",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/week"
+    },
+    {
+      "inline": true,
+      "label": "perception",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/perception"
+    },
+    {
+      "inline": true,
+      "label": "multimodal-integration",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/multimodal-integration"
+    },
+    {
+      "inline": true,
+      "label": "humanoid-robots",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/humanoid-robots"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Module 4, Week 12: Perception Systems and Multimodal Integration",
+    "sidebar_label": "Week 12",
+    "slug": "/module-4/week-12",
+    "description": "Perception systems and multimodal integration for humanoid robots",
+    "tags": [
+      "week",
+      "perception",
+      "multimodal-integration",
+      "humanoid-robots"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 11",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-4/week-11"
+  },
+  "next": {
+    "title": "Week 13",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-4/week-13"
+  }
+}

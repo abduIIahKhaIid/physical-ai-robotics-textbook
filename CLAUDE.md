@@ -215,6 +215,10 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 ## Active Technologies
 - JavaScript/Node.js v18 + Docusaurus v3.x, @docusaurus/preset-classic (001-docusaurus-book-site)
 - Static files (documentation content) (001-docusaurus-book-site)
+- JavaScript/TypeScript with Node.js v18+ (based on Docusaurus v3.x requirements) + Docusaurus v3.x, React 18+, @docusaurus/core, @docusaurus/preset-classic (001-homepage-redesign)
+- Static files for content, no dynamic storage needed for homepage (001-homepage-redesign)
+- JavaScript/TypeScript with Node.js v18+ (based on Docusaurus v3.x requirements) + Docusaurus v3.x, @docusaurus/plugin-content-docs, React 18+ (001-sidebar-ia-redesign)
+- Static files for content, no dynamic storage needed for sidebar configuration (001-sidebar-ia-redesign)
 
 ## Recent Changes
 - 001-docusaurus-book-site: Added JavaScript/Node.js v18 + Docusaurus v3.x, @docusaurus/preset-classic

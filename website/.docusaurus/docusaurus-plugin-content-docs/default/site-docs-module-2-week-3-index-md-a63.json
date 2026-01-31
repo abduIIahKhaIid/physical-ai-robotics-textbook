@@ -1,56 +1,68 @@
 {
   "id": "module-2/week-3/index",
-  "title": "Module 2, Week 6: Degrees of Freedom and Stability Analysis",
-  "description": "Degrees of freedom and stability analysis in robotic systems",
+  "title": "Module 2, Week 3: Physics and Sensor Simulation",
+  "description": "Understanding physics engines and sensor models in Gazebo simulation environment",
   "source": "@site/docs/module-2/week-3/index.md",
   "sourceDirName": "module-2/week-3",
-  "slug": "/module-2/week-6",
-  "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-6",
+  "slug": "/module-2/week-3",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-3",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-2/week-3/index.md",
   "tags": [
     {
       "inline": true,
-      "label": "week",
-      "permalink": "/physical-ai-robotics-textbook/docs/tags/week"
+      "label": "physics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/physics"
     },
     {
       "inline": true,
-      "label": "degrees-of-freedom",
-      "permalink": "/physical-ai-robotics-textbook/docs/tags/degrees-of-freedom"
+      "label": "sensors",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/sensors"
     },
     {
       "inline": true,
-      "label": "stability",
-      "permalink": "/physical-ai-robotics-textbook/docs/tags/stability"
+      "label": "simulation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/simulation"
+    },
+    {
+      "inline": true,
+      "label": "gazebo",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/gazebo"
     },
     {
       "inline": true,
       "label": "robotics",
       "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    },
+    {
+      "inline": true,
+      "label": "engines",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/engines"
     }
   ],
   "version": "current",
   "frontMatter": {
-    "title": "Module 2, Week 6: Degrees of Freedom and Stability Analysis",
-    "sidebar_label": "Week 6",
-    "slug": "/module-2/week-6",
-    "description": "Degrees of freedom and stability analysis in robotic systems",
+    "title": "Module 2, Week 3: Physics and Sensor Simulation",
+    "sidebar_label": "Week 3",
+    "slug": "/module-2/week-3",
+    "description": "Understanding physics engines and sensor models in Gazebo simulation environment",
     "tags": [
-      "week",
-      "degrees-of-freedom",
-      "stability",
-      "robotics"
+      "physics",
+      "sensors",
+      "simulation",
+      "gazebo",
+      "robotics",
+      "engines"
     ]
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Week 5",
-    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-5"
+    "title": "Week 2 Exercises: Robot Model Integration",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-2/exercises"
   },
   "next": {
-    "title": "Module 3",
-    "permalink": "/physical-ai-robotics-textbook/docs/module-3"
+    "title": "1.3 Physics and Sensor Simulation in Gazebo",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-3/physics-sensor-simulation"
   }
 }

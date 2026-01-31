@@ -1,0 +1,79 @@
+{
+  "id": "module-2/week-3/physics-sensor-simulation",
+  "title": "1.3 Physics and Sensor Simulation in Gazebo",
+  "description": "Configure physics properties and sensor models for realistic simulation in Gazebo.",
+  "source": "@site/docs/module-2/week-3/physics-sensor-simulation.md",
+  "sourceDirName": "module-2/week-3",
+  "slug": "/module-2/week-3/physics-sensor-simulation",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-3/physics-sensor-simulation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-2/week-3/physics-sensor-simulation.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "physics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/physics"
+    },
+    {
+      "inline": true,
+      "label": "sensors",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/sensors"
+    },
+    {
+      "inline": true,
+      "label": "simulation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/simulation"
+    },
+    {
+      "inline": true,
+      "label": "gazebo",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/gazebo"
+    },
+    {
+      "inline": true,
+      "label": "robot-models",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robot-models"
+    },
+    {
+      "inline": true,
+      "label": "sensors",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/sensors"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "1.3 Physics and Sensor Simulation in Gazebo",
+    "description": "Configure physics properties and sensor models for realistic simulation in Gazebo.",
+    "tags": [
+      "physics",
+      "sensors",
+      "simulation",
+      "gazebo",
+      "robot-models",
+      "sensors",
+      "robotics"
+    ],
+    "learning-objectives": [
+      "Configure physics engine properties in Gazebo",
+      "Set up realistic sensor models (cameras, lidars, IMUs, etc.)",
+      "Tune physics parameters for realistic simulation behavior",
+      "Validate sensor data in simulation environment",
+      "Understand the relationship between physics parameters and robot behavior"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Week 3",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-3"
+  },
+  "next": {
+    "title": "Week 3 Exercises: Physics and Sensor Simulation",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-2/week-3/exercises"
+  }
+}
