@@ -4,8 +4,15 @@ on:
   push:
     branches:
       - main
-    # Review gh actions docs if you want to further define triggers, paths, etc
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+      - 007-author-module-3  # Add the current feature branch for Module 3
+    paths:
+      - 'website/**'
+      - '.github/workflows/deploy.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'website/**'
 
 jobs:
   build:
@@ -15,37 +22,74 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
+          cache-dependency-path: website/package-lock.json
 
       - name: Install dependencies
         run: npm ci
+        working-directory: website
+
       - name: Build website
         run: npm run build
+        working-directory: website
+
+      - name: Run linting checks
+        run: |
+          if [ -f "package.json" ]; then
+            if grep -q "eslint" package.json; then
+              npm run lint || echo "Linting completed with warnings"
+            fi
+          fi
+        working-directory: website
+        continue-on-error: true
+
+      - name: Run link checker
+        run: |
+          if npx -c '[[ $(which markdown-link-check) ]] && echo exists' 2>/dev/null; then
+            echo "Markdown link checker found, skipping installation"
+          else
+            npm install -g markdown-link-check
+          fi
+          find . -name "*.md" -o -name "*.mdx" | head -20 | xargs -I {} markdown-link-check -c 30000 -t 10000 {}
+        working-directory: website
+        continue-on-error: true
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build
+          path: website/build
 
   deploy:
     name: Deploy to GitHub Pages
     needs: build
+    runs-on: ubuntu-latest
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
-      pages: write # to deploy to Pages
-      id-token: write # to verify the deployment originates from an appropriate source
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
 
     # Deploy to the github-pages environment
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
-    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  # Optional: Slack notification job (uncomment if you have Slack integration)
+  # notify:
+  #   name: Send Notification
+  #   needs: [build, deploy]
+  #   runs-on: ubuntu-latest
+  #   if: always()
+  #   steps:
+  #     - name: Notify on failure
+  #       if: ${{ needs.build.result == 'failure' || needs.deploy.result == 'failure' }}
+  #       run: echo "Deployment failed! Check the workflow run for details."

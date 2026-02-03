@@ -1,53 +1,59 @@
 {
   "id": "module-3/index",
-  "title": "Module 3: Control Systems and Locomotion",
-  "description": "Control systems and locomotion for humanoid robots",
+  "title": "Module 3 - NVIDIA Isaac Sim / Isaac ROS Lessons",
+  "description": "Learn NVIDIA Isaac Sim and Isaac ROS for perception and navigation pipelines",
   "source": "@site/docs/module-3/index.md",
   "sourceDirName": "module-3",
-  "slug": "/module-3",
-  "permalink": "/physical-ai-robotics-textbook/docs/module-3",
+  "slug": "/module-3/",
+  "permalink": "/physical-ai-robotics-textbook/docs/module-3/",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/tree/main/docs/module-3/index.md",
   "tags": [
     {
       "inline": true,
-      "label": "module",
-      "permalink": "/physical-ai-robotics-textbook/docs/tags/module"
+      "label": "isaac-sim",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/isaac-sim"
     },
     {
       "inline": true,
-      "label": "control-systems",
-      "permalink": "/physical-ai-robotics-textbook/docs/tags/control-systems"
+      "label": "isaac-ros",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/isaac-ros"
     },
     {
       "inline": true,
-      "label": "locomotion",
-      "permalink": "/physical-ai-robotics-textbook/docs/tags/locomotion"
+      "label": "robotics",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/robotics"
     },
     {
       "inline": true,
-      "label": "balance",
-      "permalink": "/physical-ai-robotics-textbook/docs/tags/balance"
+      "label": "perception",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/perception"
     },
     {
       "inline": true,
-      "label": "humanoid-robots",
-      "permalink": "/physical-ai-robotics-textbook/docs/tags/humanoid-robots"
+      "label": "navigation",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/navigation"
+    },
+    {
+      "inline": true,
+      "label": "sim-to-real",
+      "permalink": "/physical-ai-robotics-textbook/docs/tags/sim-to-real"
     }
   ],
   "version": "current",
+  "sidebarPosition": 3,
   "frontMatter": {
-    "title": "Module 3: Control Systems and Locomotion",
-    "sidebar_label": "Module 3",
-    "slug": "/module-3",
-    "description": "Control systems and locomotion for humanoid robots",
+    "title": "Module 3 - NVIDIA Isaac Sim / Isaac ROS Lessons",
+    "sidebar_position": 3,
+    "description": "Learn NVIDIA Isaac Sim and Isaac ROS for perception and navigation pipelines",
     "tags": [
-      "module",
-      "control-systems",
-      "locomotion",
-      "balance",
-      "humanoid-robots"
+      "isaac-sim",
+      "isaac-ros",
+      "robotics",
+      "perception",
+      "navigation",
+      "sim-to-real"
     ]
   },
   "sidebar": "tutorialSidebar",
@@ -56,7 +62,7 @@
     "permalink": "/physical-ai-robotics-textbook/docs/module-2/capstone-project"
   },
   "next": {
-    "title": "Week 7",
-    "permalink": "/physical-ai-robotics-textbook/docs/module-3/week-7"
+    "title": "Introduction to Isaac Sim Environment",
+    "permalink": "/physical-ai-robotics-textbook/docs/module-3/week-1/introduction-to-isaac-sim"
   }
 }

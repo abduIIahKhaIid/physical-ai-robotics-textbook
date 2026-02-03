@@ -1,11 +1,11 @@
 {
-  "/physical-ai-robotics-textbook/docs-5d0": {
+  "/physical-ai-robotics-textbook/docs-4e7": {
     "__comp": "5e95c892",
     "__context": {
       "plugin": "aba21aa0"
     }
   },
-  "/physical-ai-robotics-textbook/docs-cd8": {
+  "/physical-ai-robotics-textbook/docs-61a": {
     "__comp": "a7bd4aaa",
     "__props": "a4a88951"
   },
@@ -21,17 +21,21 @@
     "__comp": "df203c0f",
     "__props": "676fc519"
   },
+  "/physical-ai-robotics-textbook/docs/tags/assessment-b8b": {
+    "__comp": "df203c0f",
+    "__props": "681bca98"
+  },
   "/physical-ai-robotics-textbook/docs/tags/assessments-a14": {
     "__comp": "df203c0f",
     "__props": "2205cb57"
   },
-  "/physical-ai-robotics-textbook/docs/tags/balance-1b1": {
+  "/physical-ai-robotics-textbook/docs/tags/basics-0f7": {
     "__comp": "df203c0f",
-    "__props": "ad026c26"
+    "__props": "43ddafac"
   },
-  "/physical-ai-robotics-textbook/docs/tags/balance-control-c27": {
+  "/physical-ai-robotics-textbook/docs/tags/camera-67a": {
     "__comp": "df203c0f",
-    "__props": "fec7e8a7"
+    "__props": "d5538c87"
   },
   "/physical-ai-robotics-textbook/docs/tags/capstone-5cb": {
     "__comp": "df203c0f",
@@ -45,13 +49,13 @@
     "__comp": "df203c0f",
     "__props": "2eb63535"
   },
+  "/physical-ai-robotics-textbook/docs/tags/configuration-6ad": {
+    "__comp": "df203c0f",
+    "__props": "4a5d344e"
+  },
   "/physical-ai-robotics-textbook/docs/tags/control-851": {
     "__comp": "df203c0f",
     "__props": "6fd9b517"
-  },
-  "/physical-ai-robotics-textbook/docs/tags/control-systems-261": {
-    "__comp": "df203c0f",
-    "__props": "ca6fb8b7"
   },
   "/physical-ai-robotics-textbook/docs/tags/core-concepts-dfd": {
     "__comp": "df203c0f",
@@ -61,6 +65,18 @@
     "__comp": "df203c0f",
     "__props": "54c44f52"
   },
+  "/physical-ai-robotics-textbook/docs/tags/debugging-25a": {
+    "__comp": "df203c0f",
+    "__props": "7e581d67"
+  },
+  "/physical-ai-robotics-textbook/docs/tags/domain-randomization-f9b": {
+    "__comp": "df203c0f",
+    "__props": "3f6d8347"
+  },
+  "/physical-ai-robotics-textbook/docs/tags/education-5f8": {
+    "__comp": "df203c0f",
+    "__props": "382417b4"
+  },
   "/physical-ai-robotics-textbook/docs/tags/embodied-cognition-330": {
     "__comp": "df203c0f",
     "__props": "e856a2e0"
@@ -68,10 +84,6 @@
   "/physical-ai-robotics-textbook/docs/tags/embodied-intelligence-382": {
     "__comp": "df203c0f",
     "__props": "d9f14b88"
-  },
-  "/physical-ai-robotics-textbook/docs/tags/energy-efficiency-c00": {
-    "__comp": "df203c0f",
-    "__props": "bd627952"
   },
   "/physical-ai-robotics-textbook/docs/tags/engines-867": {
     "__comp": "df203c0f",
@@ -89,13 +101,13 @@
     "__comp": "df203c0f",
     "__props": "7bb1395d"
   },
+  "/physical-ai-robotics-textbook/docs/tags/exercise-523": {
+    "__comp": "df203c0f",
+    "__props": "00e564b3"
+  },
   "/physical-ai-robotics-textbook/docs/tags/exercises-bf0": {
     "__comp": "df203c0f",
     "__props": "d852d10c"
-  },
-  "/physical-ai-robotics-textbook/docs/tags/feedback-859": {
-    "__comp": "df203c0f",
-    "__props": "151db9f3"
   },
   "/physical-ai-robotics-textbook/docs/tags/foundations-f96": {
     "__comp": "df203c0f",
@@ -105,10 +117,6 @@
     "__comp": "df203c0f",
     "__props": "0d3636ca"
   },
-  "/physical-ai-robotics-textbook/docs/tags/gait-generation-9c5": {
-    "__comp": "df203c0f",
-    "__props": "87981eaa"
-  },
   "/physical-ai-robotics-textbook/docs/tags/gazebo-10a": {
     "__comp": "df203c0f",
     "__props": "fdd223cb"
@@ -116,6 +124,10 @@
   "/physical-ai-robotics-textbook/docs/tags/grading-f75": {
     "__comp": "df203c0f",
     "__props": "4355c381"
+  },
+  "/physical-ai-robotics-textbook/docs/tags/hands-on-841": {
+    "__comp": "df203c0f",
+    "__props": "f1345c12"
   },
   "/physical-ai-robotics-textbook/docs/tags/hardware-b7e": {
     "__comp": "df203c0f",
@@ -133,6 +145,10 @@
     "__comp": "df203c0f",
     "__props": "284bcd5b"
   },
+  "/physical-ai-robotics-textbook/docs/tags/installation-5ec": {
+    "__comp": "df203c0f",
+    "__props": "4a800546"
+  },
   "/physical-ai-robotics-textbook/docs/tags/integration-d77": {
     "__comp": "df203c0f",
     "__props": "bd93e0bf"
@@ -149,6 +165,22 @@
     "__comp": "df203c0f",
     "__props": "e39590ff"
   },
+  "/physical-ai-robotics-textbook/docs/tags/isaac-ros-7be": {
+    "__comp": "df203c0f",
+    "__props": "a0fbd6b2"
+  },
+  "/physical-ai-robotics-textbook/docs/tags/isaac-sim-62c": {
+    "__comp": "df203c0f",
+    "__props": "380cc528"
+  },
+  "/physical-ai-robotics-textbook/docs/tags/issues-408": {
+    "__comp": "df203c0f",
+    "__props": "7fe65bfd"
+  },
+  "/physical-ai-robotics-textbook/docs/tags/lab-8ef": {
+    "__comp": "df203c0f",
+    "__props": "65a5d123"
+  },
   "/physical-ai-robotics-textbook/docs/tags/learning-53e": {
     "__comp": "df203c0f",
     "__props": "7b348ad8"
@@ -157,9 +189,13 @@
     "__comp": "df203c0f",
     "__props": "51b4a234"
   },
-  "/physical-ai-robotics-textbook/docs/tags/locomotion-978": {
+  "/physical-ai-robotics-textbook/docs/tags/lesson-fe3": {
     "__comp": "df203c0f",
-    "__props": "6445ef16"
+    "__props": "2c0a5b99"
+  },
+  "/physical-ai-robotics-textbook/docs/tags/lidar-f57": {
+    "__comp": "df203c0f",
+    "__props": "27426da4"
   },
   "/physical-ai-robotics-textbook/docs/tags/machine-learning-751": {
     "__comp": "df203c0f",
@@ -177,6 +213,10 @@
     "__comp": "df203c0f",
     "__props": "0d04b5c6"
   },
+  "/physical-ai-robotics-textbook/docs/tags/navigation-bce": {
+    "__comp": "df203c0f",
+    "__props": "cb366651"
+  },
   "/physical-ai-robotics-textbook/docs/tags/nodes-1d2": {
     "__comp": "df203c0f",
     "__props": "96f7808c"
@@ -185,9 +225,17 @@
     "__comp": "df203c0f",
     "__props": "e67ddf33"
   },
+  "/physical-ai-robotics-textbook/docs/tags/obstacle-avoidance-78a": {
+    "__comp": "df203c0f",
+    "__props": "f70c68d6"
+  },
   "/physical-ai-robotics-textbook/docs/tags/overview-ca2": {
     "__comp": "df203c0f",
     "__props": "12d8586a"
+  },
+  "/physical-ai-robotics-textbook/docs/tags/path-planning-069": {
+    "__comp": "df203c0f",
+    "__props": "e16c78ea"
   },
   "/physical-ai-robotics-textbook/docs/tags/perception-421": {
     "__comp": "df203c0f",
@@ -201,13 +249,21 @@
     "__comp": "df203c0f",
     "__props": "d2731644"
   },
-  "/physical-ai-robotics-textbook/docs/tags/pid-ccc": {
+  "/physical-ai-robotics-textbook/docs/tags/pipeline-02c": {
     "__comp": "df203c0f",
-    "__props": "4ca9479a"
+    "__props": "b427371b"
   },
   "/physical-ai-robotics-textbook/docs/tags/plugins-935": {
     "__comp": "df203c0f",
     "__props": "634a0544"
+  },
+  "/physical-ai-robotics-textbook/docs/tags/practical-cc9": {
+    "__comp": "df203c0f",
+    "__props": "c4cb1417"
+  },
+  "/physical-ai-robotics-textbook/docs/tags/processing-5d1": {
+    "__comp": "df203c0f",
+    "__props": "bbec8199"
   },
   "/physical-ai-robotics-textbook/docs/tags/project-e54": {
     "__comp": "df203c0f",
@@ -273,9 +329,17 @@
     "__comp": "df203c0f",
     "__props": "e918dfc5"
   },
+  "/physical-ai-robotics-textbook/docs/tags/sim-to-real-624": {
+    "__comp": "df203c0f",
+    "__props": "d40891e9"
+  },
   "/physical-ai-robotics-textbook/docs/tags/simulation-a1a": {
     "__comp": "df203c0f",
     "__props": "8503d8db"
+  },
+  "/physical-ai-robotics-textbook/docs/tags/solutions-5b8": {
+    "__comp": "df203c0f",
+    "__props": "835d6835"
   },
   "/physical-ai-robotics-textbook/docs/tags/summary-228": {
     "__comp": "df203c0f",
@@ -285,17 +349,41 @@
     "__comp": "df203c0f",
     "__props": "20a7acde"
   },
+  "/physical-ai-robotics-textbook/docs/tags/synthetic-data-120": {
+    "__comp": "df203c0f",
+    "__props": "71967fc9"
+  },
+  "/physical-ai-robotics-textbook/docs/tags/tag-1-b8a": {
+    "__comp": "df203c0f",
+    "__props": "8884324e"
+  },
+  "/physical-ai-robotics-textbook/docs/tags/tag-2-d89": {
+    "__comp": "df203c0f",
+    "__props": "d063319e"
+  },
+  "/physical-ai-robotics-textbook/docs/tags/tag-3-945": {
+    "__comp": "df203c0f",
+    "__props": "c427191c"
+  },
+  "/physical-ai-robotics-textbook/docs/tags/template-f44": {
+    "__comp": "df203c0f",
+    "__props": "2c760719"
+  },
   "/physical-ai-robotics-textbook/docs/tags/topics-377": {
     "__comp": "df203c0f",
     "__props": "24698df5"
   },
+  "/physical-ai-robotics-textbook/docs/tags/transfer-learning-3c7": {
+    "__comp": "df203c0f",
+    "__props": "6d701809"
+  },
+  "/physical-ai-robotics-textbook/docs/tags/troubleshooting-904": {
+    "__comp": "df203c0f",
+    "__props": "b2775689"
+  },
   "/physical-ai-robotics-textbook/docs/tags/urdf-2f7": {
     "__comp": "df203c0f",
     "__props": "c53f29de"
-  },
-  "/physical-ai-robotics-textbook/docs/tags/walking-algorithms-5e3": {
-    "__comp": "df203c0f",
-    "__props": "21576274"
   },
   "/physical-ai-robotics-textbook/docs/tags/week-9d5": {
     "__comp": "df203c0f",
@@ -305,7 +393,7 @@
     "__comp": "df203c0f",
     "__props": "5469e49a"
   },
-  "/physical-ai-robotics-textbook/docs-11f": {
+  "/physical-ai-robotics-textbook/docs-636": {
     "__comp": "a94703ab"
   },
   "/physical-ai-robotics-textbook/docs/assessments-fa4": {
@@ -464,21 +552,77 @@
     "__comp": "17896441",
     "content": "9b44c66f"
   },
-  "/physical-ai-robotics-textbook/docs/module-3/week-10-645": {
+  "/physical-ai-robotics-textbook/docs/module-3/frontmatter-schema-46f": {
     "__comp": "17896441",
-    "content": "73213c2c"
+    "content": "014231ae"
   },
-  "/physical-ai-robotics-textbook/docs/module-3/week-7-a89": {
+  "/physical-ai-robotics-textbook/docs/module-3/lab-template-1a4": {
     "__comp": "17896441",
-    "content": "ea0759d1"
+    "content": "ab24e8e1"
   },
-  "/physical-ai-robotics-textbook/docs/module-3/week-8-105": {
+  "/physical-ai-robotics-textbook/docs/module-3/lesson-template-48e": {
     "__comp": "17896441",
-    "content": "bfd6cedd"
+    "content": "5dbaf982"
   },
-  "/physical-ai-robotics-textbook/docs/module-3/week-9-702": {
+  "/physical-ai-robotics-textbook/docs/module-3/week-1/introduction-to-isaac-sim-e5c": {
     "__comp": "17896441",
-    "content": "ef5c545c"
+    "content": "434828c8"
+  },
+  "/physical-ai-robotics-textbook/docs/module-3/week-1/isaac-sim-setup-cc1": {
+    "__comp": "17896441",
+    "content": "e29524c3"
+  },
+  "/physical-ai-robotics-textbook/docs/module-3/week-1/lab-1-isaac-sim-basics-a38": {
+    "__comp": "17896441",
+    "content": "5b01d8fd"
+  },
+  "/physical-ai-robotics-textbook/docs/module-3/week-2/camera-lidar-processing-aaa": {
+    "__comp": "17896441",
+    "content": "23a31bbb"
+  },
+  "/physical-ai-robotics-textbook/docs/module-3/week-2/lab-2-perception-pipeline-221": {
+    "__comp": "17896441",
+    "content": "b0424d8b"
+  },
+  "/physical-ai-robotics-textbook/docs/module-3/week-2/perception-pipelines-overview-1b1": {
+    "__comp": "17896441",
+    "content": "a2fa6c60"
+  },
+  "/physical-ai-robotics-textbook/docs/module-3/week-3/lab-3-navigation-implementation-4bb": {
+    "__comp": "17896441",
+    "content": "bd7c1872"
+  },
+  "/physical-ai-robotics-textbook/docs/module-3/week-3/navigation-pipeline-basics-499": {
+    "__comp": "17896441",
+    "content": "16d0e03a"
+  },
+  "/physical-ai-robotics-textbook/docs/module-3/week-3/path-planning-obstacle-avoidance-511": {
+    "__comp": "17896441",
+    "content": "8dfcbe62"
+  },
+  "/physical-ai-robotics-textbook/docs/module-3/week-4/domain-randomization-8dc": {
+    "__comp": "17896441",
+    "content": "237c06a1"
+  },
+  "/physical-ai-robotics-textbook/docs/module-3/week-4/lab-4-sim-to-real-transfer-58c": {
+    "__comp": "17896441",
+    "content": "6380692c"
+  },
+  "/physical-ai-robotics-textbook/docs/module-3/week-4/sim-to-real-concepts-beb": {
+    "__comp": "17896441",
+    "content": "85e702fb"
+  },
+  "/physical-ai-robotics-textbook/docs/module-3/week-5/integrated-project-732": {
+    "__comp": "17896441",
+    "content": "b9b7ad51"
+  },
+  "/physical-ai-robotics-textbook/docs/module-3/week-5/module-3-assessment-982": {
+    "__comp": "17896441",
+    "content": "49b56b5c"
+  },
+  "/physical-ai-robotics-textbook/docs/module-3/week-5/troubleshooting-guide-1b6": {
+    "__comp": "17896441",
+    "content": "68a7e7c2"
   },
   "/physical-ai-robotics-textbook/docs/module-4-4d0": {
     "__comp": "17896441",
