@@ -219,6 +219,8 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 - Static files for content, no dynamic storage needed for homepage (001-homepage-redesign)
 - JavaScript/TypeScript with Node.js v18+ (based on Docusaurus v3.x requirements) + Docusaurus v3.x, @docusaurus/plugin-content-docs, React 18+ (001-sidebar-ia-redesign)
 - Static files for content, no dynamic storage needed for sidebar configuration (001-sidebar-ia-redesign)
+- Markdown and MDX for Docusaurus content, Python for Isaac ROS nodes + Docusaurus v3.x, React 18+, Node.js v18+ (007-author-module-3)
+- Static files in documentation repository (007-author-module-3)
 
 ## Recent Changes
 - 001-docusaurus-book-site: Added JavaScript/Node.js v18 + Docusaurus v3.x, @docusaurus/preset-classic

@@ -1,88 +1,70 @@
 ---
-title: "Module 3: Control Systems and Locomotion"
-sidebar_label: "Module 3"
-slug: "/module-3"
-description: "Control systems and locomotion for humanoid robots"
-tags: ["module", "control-systems", "locomotion", "balance", "humanoid-robots"]
+title: Module 3 - NVIDIA Isaac Sim / Isaac ROS Lessons
+sidebar_position: 3
+description: Learn NVIDIA Isaac Sim and Isaac ROS for perception and navigation pipelines
+tags: [isaac-sim, isaac-ros, robotics, perception, navigation, sim-to-real]
 ---
 
-# Module 3: Control Systems and Locomotion
+# Module 3: NVIDIA Isaac Sim / Isaac ROS Lessons
+
+Welcome to Module 3 of the Physical AI and Humanoid Robotics textbook! This module focuses on NVIDIA Isaac Sim and Isaac ROS for developing perception and navigation pipelines, with emphasis on sim-to-real transfer concepts.
 
 ## Overview
 
-This module explores the principles of control systems and locomotion in humanoid robotics. We'll examine feedback control mechanisms, walking algorithms, balance control, and the challenges of creating stable, efficient locomotion in bipedal robots.
+This module covers:
+- Introduction to NVIDIA Isaac Sim environment and setup
+- Perception pipeline implementation using Isaac ROS
+- Navigation pipeline development with path planning and obstacle avoidance
+- Sim-to-real transfer concepts and domain randomization techniques
+- Practical lab exercises integrating all concepts
 
 ## Learning Objectives
 
-By the end of this module, students will be able to:
-- Design feedback control systems for robotic applications
-- Implement walking and balancing algorithms
-- Understand gait generation and adaptation techniques
-- Analyze energy efficiency in robotic locomotion
-- Evaluate stability and control in dynamic systems
+After completing this module, you will be able to:
+- Set up and configure NVIDIA Isaac Sim for robotics simulation
+- Implement perception pipelines using Isaac ROS for camera and LiDAR processing
+- Develop navigation systems with path planning and obstacle avoidance
+- Apply sim-to-real transfer techniques to bridge the reality gap
+- Combine perception and navigation in integrated robotics applications
 
-## Topics Covered
+## Module Structure
 
-### Week 7: Feedback Control Systems
-- PID controllers and tuning
-- State-space representation
-- Stability analysis
-- Robust control techniques
-- Adaptive control systems
+This module is organized into 5 weeks of content:
 
-### Week 8: Walking Algorithms and Balance Control
-- Zero Moment Point (ZMP) theory
-- Center of Mass control
-- Balance recovery strategies
-- Stepping strategies for stability
-- Dynamic walking patterns
+- **Week 1**: [Introduction to Isaac Sim Environment](./week-1/introduction-to-isaac-sim.md)
+  - [Isaac Sim Setup](./week-1/isaac-sim-setup.md)
+  - [Lab 1: Isaac Sim Basics](./week-1/lab-1-isaac-sim-basics.md)
 
-### Week 9: Gait Generation and Adaptation
-- Bipedal gait patterns
-- Terrain adaptation
-- Obstacle negotiation
-- Speed and gait transitions
-- Energy-efficient walking
+- **Week 2**: [Perception Pipelines Overview](./week-2/perception-pipelines-overview.md)
+  - [Camera and LiDAR Processing](./week-2/camera-lidar-processing.md)
+  - [Lab 2: Perception Pipeline Implementation](./week-2/lab-2-perception-pipeline.md)
 
-### Week 10: Energy Efficiency in Locomotion
-- Power consumption analysis
-- Optimal control for efficiency
-- Passive dynamics utilization
-- Spring-loaded inverted pendulum models
-- Comparison of different locomotion strategies
+- **Week 3**: [Navigation Pipeline Basics](./week-3/navigation-pipeline-basics.md)
+  - [Path Planning and Obstacle Avoidance](./week-3/path-planning-obstacle-avoidance.md)
+  - [Lab 3: Navigation Implementation](./week-3/lab-3-navigation-implementation.md)
+
+- **Week 4**: [Sim-to-Real Concepts](./week-4/sim-to-real-concepts.md)
+  - [Domain Randomization Techniques](./week-4/domain-randomization.md)
+  - [Lab 4: Sim-to-Real Transfer](./week-4/lab-4-sim-to-real-transfer.md)
+
+- **Week 5**: [Integrated Project](./week-5/integrated-project.md)
+  - [Module 3 Assessment](./week-5/module-3-assessment.md)
+  - [Troubleshooting Guide](./week-5/troubleshooting-guide.md)
+
+Each week includes theoretical lessons and hands-on lab exercises to reinforce your learning.
 
 ## Prerequisites
 
-Before starting this module, students should:
-- Complete [Module 2](./module-2/)
-- Understand basic control theory concepts
-- Be comfortable with differential equations and linear algebra
+Before starting this module, you should have:
+- Basic understanding of robotics concepts (covered in Module 1)
+- Familiarity with simulation environments (covered in Module 2)
+- Basic knowledge of ROS/ROS2 concepts
+- Access to compatible hardware for Isaac Sim (see [Hardware Requirements](../hardware-requirements.md))
 
-## Resources
+## Getting Started
 
-- [Week 7: Feedback Control Systems](./module-3/week-7/)
-- [Week 8: Walking Algorithms and Balance Control](./module-3/week-8/)
-- [Week 9: Gait Generation and Adaptation](./module-3/week-9/)
-- [Week 10: Energy Efficiency in Locomotion](./module-3/week-10/)
+Begin with the [Introduction to Isaac Sim Environment](./week-1/introduction-to-isaac-sim.md) lesson to familiarize yourself with the simulation platform before diving into perception and navigation pipelines.
 
-## Assessment
-
-- **Control System Design Project**: 20% of final grade
-- **Due Date**: End of Week 10
-
-## Navigation
-
-[← Module 2](./module-2/) | [Module 4 →](./module-4/)
-
----
-
-## TBD Sections
-
-- Detailed weekly schedules
-- Assignment specifications
-- Reading lists and references
-- Video lecture links
-- Lab exercise descriptions
-- Assessment rubrics
-- Mathematical formulations of control algorithms
-- Simulation environments for control system testing
+:::info
+Make sure to complete the lab exercises each week to solidify your understanding of the concepts!
+:::

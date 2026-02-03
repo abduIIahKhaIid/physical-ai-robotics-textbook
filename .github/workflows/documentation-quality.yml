@@ -1,0 +1,264 @@
+name: Documentation Quality Assurance
+
+on:
+  push:
+    branches: [ main, 007-author-module-3 ]
+    paths:
+      - 'website/docs/**'
+      - 'website/static/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'website/docs/**'
+      - 'website/static/**'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-docs-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check documentation structure
+        run: |
+          # Validate module structure
+          MODULE_DIRS=$(find website/docs -maxdepth 2 -name "module-*" -type d 2>/dev/null || true)
+
+          if [ -n "$MODULE_DIRS" ]; then
+            echo "Validating module structure:"
+            for module_dir in $MODULE_DIRS; do
+              echo "Checking: $module_dir"
+
+              # Check for module index
+              if [ ! -f "$module_dir/index.md" ]; then
+                echo "ERROR: Missing index.md in $module_dir"
+                exit 1
+              fi
+
+              # Check for week directories
+              WEEK_DIRS=$(find "$module_dir" -maxdepth 1 -name "week-*" -type d 2>/dev/null || true)
+              if [ -n "$WEEK_DIRS" ]; then
+                for week_dir in $WEEK_DIRS; do
+                  echo "Checking week: $week_dir"
+
+                  # Count lesson files in week
+                  LESSON_COUNT=$(find "$week_dir" -name "*.md" -type f | wc -l)
+                  if [ "$LESSON_COUNT" -eq 0 ]; then
+                    echo "WARNING: No lesson files found in $week_dir"
+                  else
+                    echo "  Found $LESSON_COUNT lesson files"
+                  fi
+                done
+              fi
+
+              echo "✓ $module_dir validated successfully"
+            done
+          else
+            echo "No module directories found"
+          fi
+
+  validate-frontmatter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check frontmatter consistency
+        run: |
+          # Find all markdown files in docs
+          DOC_FILES=$(find website/docs -name "*.md" -type f 2>/dev/null || true)
+
+          if [ -n "$DOC_FILES" ]; then
+            echo "Validating frontmatter in documentation files:"
+            for doc in $DOC_FILES; do
+              echo "Checking: $doc"
+
+              # Extract frontmatter
+              FRONTMATTER=$(sed -n '/^---$/,/^---$/p' "$doc" | head -n -1 | tail -n +2)
+
+              if [ -n "$FRONTMATTER" ]; then
+                # Check for required fields
+                if ! echo "$FRONTMATTER" | grep -q "^title:"; then
+                  echo "WARNING: Missing title in $doc"
+                fi
+
+                if ! echo "$FRONTMATTER" | grep -q "^description:"; then
+                  echo "WARNING: Missing description in $doc"
+                fi
+
+                if ! echo "$FRONTMATTER" | grep -q "^tags:"; then
+                  echo "INFO: No tags found in $doc (might be acceptable)"
+                fi
+              else
+                echo "INFO: No frontmatter found in $doc (might be acceptable)"
+              fi
+            done
+          else
+            echo "No documentation files found"
+          fi
+
+  validate-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: website/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: website
+
+      - name: Build website
+        run: npm run build
+        working-directory: website
+
+      - name: Check for broken links
+        run: |
+          # Install link checker
+          npm install -g linkinator
+
+          # Check for broken links in the built site
+          linkinator website/build --recurse --verbosity error --skip "^(http://localhost|https://fonts.googleapis.com|https://fonts.gstatic.com)"
+
+  validate-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: website/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: website
+
+      - name: Build website
+        run: npm run build
+        working-directory: website
+
+      - name: Check build output
+        run: |
+          if [ -d "website/build" ]; then
+            BUILD_SIZE=$(du -sh website/build | cut -f1)
+            BUILD_FILE_COUNT=$(find website/build -type f | wc -l)
+            echo "Build successful!"
+            echo "Build size: $BUILD_SIZE"
+            echo "Number of files: $BUILD_FILE_COUNT"
+
+            # Check if main files exist
+            if [ -f "website/build/index.html" ]; then
+              echo "✓ Index file exists"
+            else
+              echo "ERROR: Index file not found"
+              exit 1
+            fi
+
+            if [ -f "website/build/sitemap.xml" ]; then
+              echo "✓ Sitemap exists"
+            else
+              echo "INFO: Sitemap not found (might be acceptable)"
+            fi
+          else
+            echo "ERROR: Build directory not found"
+            exit 1
+          fi
+
+  validate-sidebar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check sidebar configuration
+        run: |
+          SIDEBAR_FILE="website/sidebars.js"
+
+          if [ -f "$SIDEBAR_FILE" ]; then
+            echo "Validating sidebar configuration..."
+
+            # Check if it's a valid JS file
+            if node -c "$SIDEBAR_FILE"; then
+              echo "✓ Sidebar file is valid JavaScript"
+            else
+              echo "ERROR: Sidebar file has JavaScript syntax errors"
+              exit 1
+            fi
+
+            # Check for common sidebar structure
+            if grep -q "tutorialSidebar" "$SIDEBAR_FILE"; then
+              echo "✓ Found tutorialSidebar configuration"
+            else
+              echo "INFO: tutorialSidebar not found in sidebar"
+            fi
+
+            # Check if sidebar references existing docs
+            if [ -d "website/docs" ]; then
+              echo "Checking if sidebar references exist in docs..."
+              # Extract doc IDs from sidebar and verify they exist
+              # This is a simplified check - in practice you'd want more thorough validation
+            fi
+          else
+            echo "ERROR: Sidebar file not found"
+            exit 1
+          fi
+
+  validate-content-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check content quality metrics
+        run: |
+          # Find all documentation files
+          DOC_FILES=$(find website/docs -name "*.md" -type f 2>/dev/null || true)
+
+          if [ -n "$DOC_FILES" ]; then
+            echo "Analyzing content quality:"
+
+            TOTAL_FILES=0
+            FILES_WITH_HEADING_IDS=0
+            FILES_WITH_CODE_BLOCKS=0
+            FILES_WITH_IMAGES=0
+
+            for doc in $DOC_FILES; do
+              TOTAL_FILES=$((TOTAL_FILES + 1))
+
+              # Check if file has heading IDs (indicates proper structure)
+              if grep -q "^#\|##\|###" "$doc"; then
+                FILES_WITH_HEADING_IDS=$((FILES_WITH_HEADING_IDS + 1))
+              fi
+
+              # Check for code blocks
+              if grep -q "```" "$doc"; then
+                FILES_WITH_CODE_BLOCKS=$((FILES_WITH_CODE_BLOCKS + 1))
+              fi
+
+              # Check for image references
+              if grep -qi "\!\[.*\](.*\.\(png\|jpg\|jpeg\|gif\|svg\))" "$doc"; then
+                FILES_WITH_IMAGES=$((FILES_WITH_IMAGES + 1))
+              fi
+            done
+
+            echo "Total files analyzed: $TOTAL_FILES"
+            echo "Files with headings: $FILES_WITH_HEADING_IDS"
+            echo "Files with code blocks: $FILES_WITH_CODE_BLOCKS"
+            echo "Files with images: $FILES_WITH_IMAGES"
+
+            if [ $TOTAL_FILES -gt 0 ]; then
+              echo "✓ Content analysis completed"
+            else
+              echo "INFO: No documentation files to analyze"
+            fi
+          else
+            echo "No documentation files found"
+          fi

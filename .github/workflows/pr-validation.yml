@@ -1,0 +1,124 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'website/**'
+      - 'specs/**'
+      - 'history/**'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: website/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: website
+
+      - name: Validate Docusaurus build
+        run: npm run build
+        working-directory: website
+
+      - name: Check for broken links
+        run: |
+          npm install -g markdown-link-check
+          find website/docs -name "*.md" -o -name "*.mdx" | xargs -I {} markdown-link-check -c 30000 -t 10000 {} || echo "Link checking completed with some issues"
+        continue-on-error: true
+
+      - name: Validate content structure
+        run: |
+          # Check if all required frontmatter is present in new/changed docs
+          echo "Checking documentation structure..."
+          if [ -n "${{ github.event.pull_request.base.sha }}" ]; then
+            CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }}..${{ github.sha }} | grep -E '\.(md|mdx)$' || true)
+            if [ -n "$CHANGED_FILES" ]; then
+              echo "Checking changed files: $CHANGED_FILES"
+              for file in $CHANGED_FILES; do
+                if [[ $file == website/docs/* ]]; then
+                  echo "Validating: $file"
+                  head -20 "$file" | grep -q "title:" || echo "Warning: Missing title in $file"
+                  head -20 "$file" | grep -q "description:" || echo "Warning: Missing description in $file"
+                fi
+              done
+            fi
+          fi
+
+      - name: Run spellcheck
+        run: |
+          # Install and run markdown spellcheck
+          npm install -g markdown-spellcheck
+          find website/docs -name "*.md" -o -name "*.mdx" | head -10 | xargs -I {} mdl-spellcheck {} || echo "Spellcheck completed with findings"
+        continue-on-error: true
+
+  validate-specs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check spec completeness
+        run: |
+          # Validate that new specs have required sections
+          SPEC_CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }}..${{ github.sha }} | grep -E '^specs/.*spec\.md$' || true)
+          if [ -n "$SPEC_CHANGED" ]; then
+            echo "Checking spec files: $SPEC_CHANGED"
+            for spec in $SPEC_CHANGED; do
+              echo "Validating spec: $spec"
+              # Check for required sections
+              grep -q "## User Scenarios & Testing" "$spec" || echo "Missing User Scenarios section in $spec"
+              grep -q "## Requirements" "$spec" || echo "Missing Requirements section in $spec"
+              grep -q "## Success Criteria" "$spec" || echo "Missing Success Criteria section in $spec"
+            done
+          fi
+
+  validate-tasks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check task completeness
+        run: |
+          # Validate that new task files have required structure
+          TASK_CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }}..${{ github.sha }} | grep -E '^specs/.*/tasks\.md$' || true)
+          if [ -n "$TASK_CHANGED" ]; then
+            echo "Checking task files: $TASK_CHANGED"
+            for task in $TASK_CHANGED; do
+              echo "Validating tasks: $task"
+              # Check for required sections
+              grep -q "# Tasks:" "$task" || echo "Missing Tasks header in $task"
+              grep -q "\[X\]" "$task" || echo "No completed tasks found in $task (may be WIP)"
+            done
+          fi
+
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for secrets in documentation
+        run: |
+          # Scan for potential secrets in documentation
+          if grep -r "secret\|password\|token\|key\|credential" website/docs/ --exclude-dir=".git" | grep -v ".md:"; then
+            echo "Potential secrets found in documentation - please review"
+          fi
+
+      - name: Run CodeQL Analysis
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3

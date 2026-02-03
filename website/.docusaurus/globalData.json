@@ -200,28 +200,95 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "module-3/frontmatter-schema",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/frontmatter-schema"
+            },
+            {
               "id": "module-3/index",
-              "path": "/physical-ai-robotics-textbook/docs/module-3",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "module-3/week-10/index",
-              "path": "/physical-ai-robotics-textbook/docs/module-3/week-10",
+              "id": "module-3/lab-template",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/lab-template"
+            },
+            {
+              "id": "module-3/lesson-template",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/lesson-template"
+            },
+            {
+              "id": "module-3/week-1/introduction-to-isaac-sim",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-1/introduction-to-isaac-sim",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "module-3/week-7/index",
-              "path": "/physical-ai-robotics-textbook/docs/module-3/week-7",
+              "id": "module-3/week-1/isaac-sim-setup",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-1/isaac-sim-setup",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "module-3/week-8/index",
-              "path": "/physical-ai-robotics-textbook/docs/module-3/week-8",
+              "id": "module-3/week-1/lab-1-isaac-sim-basics",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-1/lab-1-isaac-sim-basics",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "module-3/week-9/index",
-              "path": "/physical-ai-robotics-textbook/docs/module-3/week-9",
+              "id": "module-3/week-2/camera-lidar-processing",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-2/camera-lidar-processing",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3/week-2/lab-2-perception-pipeline",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-2/lab-2-perception-pipeline",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3/week-2/perception-pipelines-overview",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-2/perception-pipelines-overview",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3/week-3/lab-3-navigation-implementation",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-3/lab-3-navigation-implementation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3/week-3/navigation-pipeline-basics",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-3/navigation-pipeline-basics",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3/week-3/path-planning-obstacle-avoidance",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-3/path-planning-obstacle-avoidance",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3/week-4/domain-randomization",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-4/domain-randomization",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3/week-4/lab-4-sim-to-real-transfer",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-4/lab-4-sim-to-real-transfer",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3/week-4/sim-to-real-concepts",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-4/sim-to-real-concepts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3/week-5/integrated-project",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-5/integrated-project",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3/week-5/module-3-assessment",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-5/module-3-assessment",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3/week-5/troubleshooting-guide",
+              "path": "/physical-ai-robotics-textbook/docs/module-3/week-5/troubleshooting-guide",
               "sidebar": "tutorialSidebar"
             },
             {

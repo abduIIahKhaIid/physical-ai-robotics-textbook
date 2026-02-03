@@ -36,18 +36,17 @@ Given that feature description, do this:
      - "Create a dashboard for analytics" → "analytics-dashboard"
      - "Fix payment processing timeout bug" → "fix-payment-timeout"
 
-2. **Check for existing branches before creating new one**:
+2. **Automatically create a branch based on the next available spec number**:
 
-   a. First, fetch all remote branches to ensure we have the latest information:
+   The system will automatically determine the next available number by checking:
+   - Existing spec directories in `specs/` (e.g., `specs/001-*`, `specs/002-*`, etc.)
+   - Existing git branches with numeric prefixes (e.g., `001-*`, `002-*`, etc.)
+   - The next available number will be the highest existing number + 1
 
-      ```bash
-      git fetch --all --prune
-      ```
-
-   b. Find the highest feature number across all sources for the short-name:
-      - Remote branches: `git ls-remote --heads origin | grep -E 'refs/heads/[0-9]+-<short-name>$'`
-      - Local branches: `git branch | grep -E '^[* ]*[0-9]+-<short-name>$'`
-      - Specs directories: Check for directories matching `specs/[0-9]+-<short-name>`
+   Then run the script `.specify/scripts/bash/create-new-feature.sh --json "$ARGUMENTS"` with the calculated number and short-name:
+      - The script automatically determines the next number and creates the branch in the format `{NNN}-{short-name}`
+      - Example: If the highest existing spec is `006-module-2-lessons`, the next branch would be `007-{your-short-name}`
+      - Bash example: `.specify/scripts/bash/create-new-feature.sh --json "$ARGUMENTS" "Add user authentication"`
 
    c. Determine the next available number:
       - Extract all numbers from all three sources

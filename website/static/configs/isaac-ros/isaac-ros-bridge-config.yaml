@@ -1,0 +1,71 @@
+# Isaac ROS Bridge Configuration Template
+# This is a template configuration for Isaac ROS bridge
+
+# ROS Bridge Settings
+ros_bridge:
+  # Enable ROS bridge
+  enabled: true
+
+  # ROS namespace
+  namespace: "isaac_ros"
+
+  # Topics configuration
+  topics:
+    # Camera topics
+    camera_rgb:
+      topic_name: "/camera/color/image_raw"
+      queue_size: 10
+      frame_id: "camera_color_frame"
+
+    camera_depth:
+      topic_name: "/camera/depth/image_rect_raw"
+      queue_size: 10
+      frame_id: "camera_depth_frame"
+
+    # LiDAR topics
+    lidar_points:
+      topic_name: "/lidar/points"
+      queue_size: 10
+      frame_id: "lidar_frame"
+
+    # Robot state topics
+    joint_states:
+      topic_name: "/joint_states"
+      queue_size: 10
+
+    # Navigation topics
+    cmd_vel:
+      topic_name: "/cmd_vel"
+      queue_size: 10
+
+    odom:
+      topic_name: "/odom"
+      queue_size: 10
+      frame_id: "odom"
+      child_frame_id: "base_link"
+
+# Sensor settings
+sensors:
+  camera:
+    width: 640
+    height: 480
+    fov: 1.0472  # 60 degrees in radians
+    enable_debug_frustum: false
+
+  lidar:
+    points_topic: "/lidar/points"
+    ticks_per_sec: 20
+    lasers_per_ring: 64
+    rings: 1
+    samples_per_laser: 1000
+    horizontal_fov: 360.0
+    vertical_fov: 30.0
+    min_range: 0.1
+    max_range: 100.0
+
+# TF frames
+tf_frames:
+  world: "world"
+  robot_base: "base_link"
+  camera: "camera_color_frame"
+  lidar: "lidar_frame"

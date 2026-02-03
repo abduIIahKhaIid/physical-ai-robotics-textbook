@@ -104,37 +104,54 @@ export default {
     },
     {
       type: 'category',
-      label: 'Module 3: Control Systems and Locomotion',
+      label: 'Module 3: NVIDIA Isaac Sim / Isaac ROS Lessons',
       collapsible: true,
       collapsed: false,
       items: [
         'module-3/index',
         {
           type: 'category',
-          label: 'Week 7: Feedback Control Systems',
+          label: 'Week 1: Introduction to Isaac Sim Environment',
           items: [
-            'module-3/week-7/index'
+            'module-3/week-1/introduction-to-isaac-sim',
+            'module-3/week-1/isaac-sim-setup',
+            'module-3/week-1/lab-1-isaac-sim-basics'
           ]
         },
         {
           type: 'category',
-          label: 'Week 8: PID Controllers and Balance Control',
+          label: 'Week 2: Perception Pipeline Implementation',
           items: [
-            'module-3/week-8/index'
+            'module-3/week-2/perception-pipelines-overview',
+            'module-3/week-2/camera-lidar-processing',
+            'module-3/week-2/lab-2-perception-pipeline'
           ]
         },
         {
           type: 'category',
-          label: 'Week 9: Walking Algorithms and Gait Generation',
+          label: 'Week 3: Navigation Pipeline Development',
           items: [
-            'module-3/week-9/index'
+            'module-3/week-3/navigation-pipeline-basics',
+            'module-3/week-3/path-planning-obstacle-avoidance',
+            'module-3/week-3/lab-3-navigation-implementation'
           ]
         },
         {
           type: 'category',
-          label: 'Week 10: Locomotion and Motion Planning',
+          label: 'Week 4: Sim-to-Real Transfer Concepts',
           items: [
-            'module-3/week-10/index'
+            'module-3/week-4/sim-to-real-concepts',
+            'module-3/week-4/domain-randomization',
+            'module-3/week-4/lab-4-sim-to-real-transfer'
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Week 5: Integrated Project and Assessment',
+          items: [
+            'module-3/week-5/integrated-project',
+            'module-3/week-5/module-3-assessment',
+            'module-3/week-5/troubleshooting-guide'
           ]
         }
       ],

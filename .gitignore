@@ -5,6 +5,7 @@ node_modules/
 build/
 dist/
 .next/
+.docusaurus/
 
 # Logs
 *.log
