@@ -9,8 +9,8 @@ export default {
   // Set the production url of your site here
   url: 'https://abduIIahKhaIid.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/physical-ai-robotics-textbook/',
+  // For GitHub pages deployment, setting to root '/' for direct domain access
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   organizationName: 'abduIIahKhaIid', // Usually your GitHub org/user name.
