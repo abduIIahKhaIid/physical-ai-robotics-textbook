@@ -1,12 +1,12 @@
 ---
-title: "Module 1: Foundations of Physical AI"
+title: "Module 1: Foundations of Physical AI & Robotics"
 sidebar_label: "Module 1"
 slug: "/module-1"
 description: "Foundations of Physical AI and embodied intelligence"
-tags: ["module", "physical-ai", "foundations", "embodied-intelligence"]
+tags: ["module", "physical-ai", "foundations", "embodied-intelligence", "robotics"]
 ---
 
-# Module 1: Foundations of Physical AI
+# Module 1: Foundations of Physical AI & Robotics
 
 ## Overview
 
@@ -49,20 +49,20 @@ Before starting this module, students should:
 
 ## Resources
 
-- [Week 1: Introduction to Physical AI](/docs/module-1/week-1/)
-  - [1.1 Foundations of Physical AI](/docs/module-1/week-1/foundations)
-  - [Week 1 Exercises](/docs/module-1/week-1/exercises)
-  - [Week 1 Quiz](/docs/module-1/week-1/quiz)
-- [Week 2: ROS2 Introduction and Core Concepts](/docs/module-1/week-2/)
-  - [1.2 Introduction to ROS2](/docs/module-1/week-2/ros2-intro)
-  - [1.3 ROS2 Core Concepts and Implementation](/docs/module-1/week-2/ros2-core-concepts)
-  - [Week 2 Exercises](/docs/module-1/week-2/exercises)
-  - [Week 2 Quiz](/docs/module-1/week-2/quiz)
-- [Week 3: Embodied Cognition and Environmental Interaction](/docs/module-1/week-3/)
-  - [1.4 Embodied Cognition in Physical AI](/docs/module-1/week-3/embodied-cognition)
-  - [1.5 Environmental Interaction in Physical AI](/docs/module-1/week-3/environmental-interaction)
-  - [Week 3 Exercises](/docs/module-1/week-3/exercises)
-  - [Week 3 Quiz](/docs/module-1/week-3/quiz)
+- [1.1 Physical AI Foundations & Concepts](/docs/module-1/1.1-introduction-to-physical-ai/index.md)
+  - [1.1 Physical AI Foundations](/docs/module-1/1.1-introduction-to-physical-ai/physical-ai-foundations.md)
+  - [1.1 Lab Exercises](/docs/module-1/1.1-introduction-to-physical-ai/physical-ai-lab-exercises.md)
+  - [1.1 Quiz](/docs/module-1/1.1-introduction-to-physical-ai/quiz.md)
+- [1.2 ROS2 Architecture & Communication Patterns](/docs/module-1/1.2-ros2-introduction-and-core-concepts/index.md)
+  - [1.2 ROS2 Overview & Foundations](/docs/module-1/1.2-ros2-introduction-and-core-concepts/ros2-overview-foundations.md)
+  - [1.2 ROS2 Architecture & Communication Patterns](/docs/module-1/1.2-ros2-introduction-and-core-concepts/ros2-architecture-communication-patterns.md)
+  - [1.2 Lab Exercises](/docs/module-1/1.2-ros2-introduction-and-core-concepts/ros2-lab-exercises.md)
+  - [1.2 Quiz](/docs/module-1/1.2-ros2-introduction-and-core-concepts/quiz.md)
+- [1.3 Embodied Cognition & Environmental Interaction](/docs/module-1/1.3-embodied-cognition-and-environmental-interaction/index.md)
+  - [1.3 Embodied Cognition Theory](/docs/module-1/1.3-embodied-cognition-and-environmental-interaction/embodied-cognition-theory.md)
+  - [1.3 Environmental Interaction Principles](/docs/module-1/1.3-embodied-cognition-and-environmental-interaction/environmental-interaction-principles.md)
+  - [1.3 Lab Exercises](/docs/module-1/1.3-embodied-cognition-and-environmental-interaction/embodied-robotics-lab-exercises.md)
+  - [1.3 Quiz](/docs/module-1/1.3-embodied-cognition-and-environmental-interaction/quiz.md)
 - [Module 1 Capstone Project](/docs/module-1/capstone-project)
 
 ## Assessment

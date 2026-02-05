@@ -23,26 +23,40 @@ By the end of this module, students will be able to:
 
 ## Topics Covered
 
-### Week 11: Machine Learning for Humanoid Control
-- Reinforcement learning for motor control
-- Deep learning for motion generation
-- Imitation learning from demonstrations
-- Learning from human feedback
-- Transfer learning between robot platforms
+### 4.1 Humanoid Fundamentals
+- Forward and inverse kinematics for humanoid systems
+- Coordinate systems and transformations
+- Kinematic chains and workspace analysis
+- Mathematical foundations for movement
+- Implementation of kinematic algorithms
 
-### Week 12: Perception Systems and Multimodal Integration
-- Computer vision for humanoid robots
-- Audio processing and speech recognition
-- Tactile sensing and haptic feedback
-- Sensor fusion techniques
-- Attention mechanisms for perception
+### 4.2 Locomotion and Manipulation
+- Bipedal walking mechanics and balance control
+- Gait patterns and walking dynamics
+- Grasping principles and manipulation strategies
+- Dexterous manipulation techniques
+- Integration of locomotion and manipulation
 
-### Week 13: Real-World Applications and Evaluation
-- Human-robot interaction scenarios
-- Performance metrics and evaluation methods
-- Ethical considerations in humanoid AI
-- Future directions and emerging technologies
-- Capstone project presentations
+### 4.3 Vision-Language-Action (VLA) Concepts
+- VLA model architectures and implementation
+- Embodied AI integration principles
+- Practical applications of VLA in robotics
+- Multi-modal learning approaches
+- Deep learning for integrated perception-action
+
+### 4.4 Conversational Robotics
+- Dialogue systems and intent mapping
+- Social interaction principles
+- Human-robot communication design
+- Personality integration and natural interaction
+- Conversational robotics laboratory exercises
+
+### 4.5 Safety Considerations
+- Physical safety in robot design and operation
+- Ethical considerations in humanoid robotics
+- Risk assessment and mitigation strategies
+- Safety standards and compliance
+- Emergency response protocols
 
 ## Prerequisites
 
@@ -53,16 +67,20 @@ Before starting this module, students should:
 
 ## Resources
 
-- [Week 11: Machine Learning for Humanoid Control](./module-4/week-11/)
-- [Week 12: Perception Systems and Multimodal Integration](./module-4/week-12/)
-- [Week 13: Real-World Applications and Evaluation](./module-4/week-13/)
+- [4.1 Humanoid Fundamentals](./4.1-humanoid-fundamentals/index.md)
+- [4.2 Locomotion and Manipulation](./4.2-locomotion-manipulation/index.md)
+- [4.3 VLA Concepts](./4.3-vla-concepts/index.md)
+- [4.4 Conversational Robotics](./4.4-conversational-robotics/index.md)
+- [4.5 Safety Considerations](./4.5-safety-considerations/index.md)
+- [Capstone Project](./capstone-project/index.md)
+- [Module Summary](./module-summary.md)
 
 ## Assessment
 
 - **Capstone Project**: 25% of final grade (includes proposal 5%, presentation 10%, report 10%)
-- **Proposal Due Date**: Week 11
-- **Presentation Due Date**: Week 13
-- **Final Report Due Date**: End of Week 13
+- **Proposal Due Date**: Topic 4.1 completion
+- **Presentation Due Date**: Topic 4.4 completion
+- **Final Report Due Date**: End of Topic 4.5
 
 ## Navigation
 

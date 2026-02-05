@@ -221,6 +221,8 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 - Static files for content, no dynamic storage needed for sidebar configuration (001-sidebar-ia-redesign)
 - Markdown and MDX for Docusaurus content, Python for Isaac ROS nodes + Docusaurus v3.x, React 18+, Node.js v18+ (007-author-module-3)
 - Static files in documentation repository (007-author-module-3)
+- Markdown/MDX for Docusaurus documentation, Python for ROS/Isaac workflows + Docusaurus v3.x, React 18+, Node.js v18+, ROS 2 Humble, Isaac Sim (simulation) (008-humanoid-vla-concepts)
+- Static files in documentation repository, no dynamic storage needed for content (008-humanoid-vla-concepts)
 
 ## Recent Changes
 - 001-docusaurus-book-site: Added JavaScript/Node.js v18 + Docusaurus v3.x, @docusaurus/preset-classic

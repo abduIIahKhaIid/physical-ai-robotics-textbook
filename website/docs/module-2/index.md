@@ -1,12 +1,12 @@
 ---
-title: "Module 2: Robot Simulation with Gazebo"
+title: "Module 2: Advanced Robot Simulation & Gazebo Frameworks"
 sidebar_label: "Module 2"
 slug: "/module-2"
-description: "Learn robot simulation using Gazebo, including model integration, physics simulation, and ROS2 integration"
+description: "Learn advanced robot simulation using Gazebo, including model integration, physics simulation, and ROS2 integration"
 tags: ["gazebo", "simulation", "robotics", "ros2", "physics", "sensors"]
 ---
 
-# Module 2: Robot Simulation with Gazebo
+# Module 2: Advanced Robot Simulation & Gazebo Frameworks
 
 ## Overview
 
@@ -59,10 +59,10 @@ Before starting this module, students should have:
 
 ## Resources
 
-- [Week 1: Gazebo Simulation Fundamentals](/docs/module-2/week-1/)
-- [Week 2: Robot Model Integration](/docs/module-2/week-2/)
-- [Week 3: Physics and Sensor Simulation](/docs/module-2/week-3/)
-- [Week 4: ROS2 Integration](/docs/module-2/week-4/)
+- [2.1 Gazebo Simulation & Environment Setup](/docs/module-2/2.1-gazebo-simulation-fundamentals/)
+- [2.2 Robot Model Design & Integration](/docs/module-2/2.2-robot-model-integration/)
+- [2.3 Physics Engines & Sensor Modeling](/docs/module-2/2.3-physics-and-sensor-simulation/)
+- [2.4 ROS2-Gazebo Integration Framework](/docs/module-2/2.4-gazebo-ros2-integration/)
 - [Module 2 Quiz](/docs/module-2/quiz)
 - [Module 2 Capstone Project](/docs/module-2/capstone-project)
 
@@ -75,13 +75,13 @@ Before starting this module, students should have:
 
 ## Navigation
 
-[← Module 1: Foundations of Physical AI](/docs/module-1/) | [Week 1: Gazebo Simulation Fundamentals →](/docs/module-2/week-1/)
+[← Module 1: Foundations of Physical AI](/docs/module-1/) | [2.1 Gazebo Simulation & Environment Setup →](/docs/module-2/2.1-gazebo-simulation-fundamentals/)
 
 ---
 
 ## Next Steps
 
-Continue to [Week 1: Gazebo Simulation Fundamentals](/docs/module-2/week-1/) to begin learning about robot simulation with Gazebo.
+Continue to [2.1 Gazebo Simulation & Environment Setup](/docs/module-2/2.1-gazebo-simulation-fundamentals/) to begin learning about robot simulation with Gazebo.
 
 ---
 
