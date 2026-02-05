@@ -9,7 +9,7 @@ export default {
   // Set the production url of your site here
   url: 'https://abduIIahKhaIid.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, setting to root '/' for direct domain access
+  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
@@ -55,7 +55,7 @@ export default {
         name: 'postcss-plugin',
         configurePostCss(postcssOptions) {
           // Appends TailwindCSS and AutoPrefixer.
-          postcssOptions.plugins.push(require('@tailwindcss/postcss'));
+          postcssOptions.plugins.push(require('tailwindcss'));
           postcssOptions.plugins.push(require('autoprefixer'));
           return postcssOptions;
         },
@@ -117,8 +117,9 @@ export default {
             title: 'More',
             items: [
               {
+                href: 'https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook',
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                className: 'footer-github-link',
               },
             ],
           },

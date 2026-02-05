@@ -1,11 +1,11 @@
 ---
-title: Module 3 - NVIDIA Isaac Sim / Isaac ROS Lessons
+title: Module 3 - Advanced Isaac Sim & Perception Systems
 sidebar_position: 3
 description: Learn NVIDIA Isaac Sim and Isaac ROS for perception and navigation pipelines
 tags: [isaac-sim, isaac-ros, robotics, perception, navigation, sim-to-real]
 ---
 
-# Module 3: NVIDIA Isaac Sim / Isaac ROS Lessons
+# Module 3: Advanced Isaac Sim & Perception Systems
 
 Welcome to Module 3 of the Physical AI and Humanoid Robotics textbook! This module focuses on NVIDIA Isaac Sim and Isaac ROS for developing perception and navigation pipelines, with emphasis on sim-to-real transfer concepts.
 
@@ -29,27 +29,27 @@ After completing this module, you will be able to:
 
 ## Module Structure
 
-This module is organized into 5 weeks of content:
+This module is organized into 5 topics of content:
 
-- **Week 1**: [Introduction to Isaac Sim Environment](./week-1/introduction-to-isaac-sim.md)
-  - [Isaac Sim Setup](./week-1/isaac-sim-setup.md)
-  - [Lab 1: Isaac Sim Basics](./week-1/lab-1-isaac-sim-basics.md)
+- **Topic 1**: [Introduction to Isaac Sim](/docs/module-3/3.1-introduction-to-isaac-sim/isaac-sim-overview-foundations.md)
+  - [Isaac Sim Setup](/docs/module-3/3.1-introduction-to-isaac-sim/isaac-sim-environment-setup.md)
+  - [Lab 1: Isaac Sim Fundamentals](/docs/module-3/3.1-introduction-to-isaac-sim/lab-1-isaac-sim-fundamentals.md)
 
-- **Week 2**: [Perception Pipelines Overview](./week-2/perception-pipelines-overview.md)
-  - [Camera and LiDAR Processing](./week-2/camera-lidar-processing.md)
-  - [Lab 2: Perception Pipeline Implementation](./week-2/lab-2-perception-pipeline.md)
+- **Topic 2**: [Perception Pipelines](/docs/module-3/3.2-perception-pipelines/perception-systems-overview.md)
+  - [Camera and LiDAR Processing](/docs/module-3/3.2-perception-pipelines/multi-sensor-data-processing.md)
+  - [Lab 2: Perception Pipeline Implementation](/docs/module-3/3.2-perception-pipelines/lab-2-perception-workflow-implementation.md)
 
-- **Week 3**: [Navigation Pipeline Basics](./week-3/navigation-pipeline-basics.md)
-  - [Path Planning and Obstacle Avoidance](./week-3/path-planning-obstacle-avoidance.md)
-  - [Lab 3: Navigation Implementation](./week-3/lab-3-navigation-implementation.md)
+- **Topic 3**: [Navigation Pipelines](/docs/module-3/3.3-navigation-pipelines/navigation-systems-fundamentals.md)
+  - [Path Planning and Obstacle Avoidance](/docs/module-3/3.3-navigation-pipelines/trajectory-planning-obstacle-navigation.md)
+  - [Lab 3: Navigation Implementation](/docs/module-3/3.3-navigation-pipelines/lab-3-navigation-system-implementation.md)
 
-- **Week 4**: [Sim-to-Real Concepts](./week-4/sim-to-real-concepts.md)
-  - [Domain Randomization Techniques](./week-4/domain-randomization.md)
-  - [Lab 4: Sim-to-Real Transfer](./week-4/lab-4-sim-to-real-transfer.md)
+- **Topic 4**: [Sim-to-Real Concepts](/docs/module-3/3.4-sim-to-real-concepts/sim-to-real-transfer-methodologies.md)
+  - [Domain Randomization Techniques](/docs/module-3/3.4-sim-to-real-concepts/domain-adaptation-techniques.md)
+  - [Lab 4: Sim-to-Real Transfer](/docs/module-3/3.4-sim-to-real-concepts/lab-4-sim-to-real-implementation.md)
 
-- **Week 5**: [Integrated Project](./week-5/integrated-project.md)
-  - [Module 3 Assessment](./week-5/module-3-assessment.md)
-  - [Troubleshooting Guide](./week-5/troubleshooting-guide.md)
+- **Topic 5**: [Integrated Project and Assessment](/docs/module-3/3.5-integrated-project-and-assessment/capstone-project-implementation.md)
+  - [Module 3 Assessment](/docs/module-3/3.5-integrated-project-and-assessment/module-assessment-evaluation.md)
+  - [Troubleshooting Guide](/docs/module-3/3.5-integrated-project-and-assessment/troubleshooting-guide.md)
 
 Each week includes theoretical lessons and hands-on lab exercises to reinforce your learning.
 
@@ -63,7 +63,7 @@ Before starting this module, you should have:
 
 ## Getting Started
 
-Begin with the [Introduction to Isaac Sim Environment](./week-1/introduction-to-isaac-sim.md) lesson to familiarize yourself with the simulation platform before diving into perception and navigation pipelines.
+Begin with the [Introduction to Isaac Sim Environment](./3.1-introduction-to-isaac-sim/isaac-sim-overview-foundations.md) lesson to familiarize yourself with the simulation platform before diving into perception and navigation pipelines.
 
 :::info
 Make sure to complete the lab exercises each week to solidify your understanding of the concepts!
