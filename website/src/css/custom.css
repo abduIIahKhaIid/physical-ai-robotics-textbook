@@ -1,10 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /**
  * Custom CSS for Physical AI & Humanoid Robotics textbook
  */
+
+/* Tailwind CSS directives — base is needed for gradient/transform
+   CSS variable scaffolding. preflight is already disabled in
+   tailwind.config.js so the hard reset is off, but @tailwind base
+   still flattens heading sizes. We restore them below. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Smooth scrolling for better UX */
 html {
@@ -50,6 +54,18 @@ html {
   }
 }
 
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out forwards;
 }
@@ -61,6 +77,7 @@ html {
 .animate-pulse-slow {
   animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
 
 .delay-100 {
   animation-delay: 0.1s;
@@ -78,9 +95,364 @@ html {
   animation-delay: 1s;
 }
 
-/* Enhanced gradient backgrounds */
+/* Enhanced gradient backgrounds with dark/light mode support */
 .bg-gradient-overlay {
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 50%, rgba(6, 182, 212, 0.1) 100%);
+}
+
+/* Dark mode specific styles */
+html[data-theme='dark'] {
+  --ifm-color-primary: #3b82f6;
+  --ifm-color-primary-dark: #2563eb;
+  --ifm-color-primary-darker: #1d4ed8;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #60a5fa;
+  --ifm-color-primary-lighter: #93c5fd;
+  --ifm-color-primary-lightest: #dbeafe;
+  --ifm-background-color: #0f172a;
+  --ifm-background-surface-color: #1e293b;
+  --ifm-font-color-base: #e2e8f0;
+  --ifm-border-color: #334155;
+}
+
+/* Light mode specific styles */
+html[data-theme='light'] {
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1a41be;
+  --ifm-color-primary-darkest: #122f80;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #4f95f7;
+  --ifm-color-primary-lightest: #63a8f8;
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f8fafc;
+  --ifm-font-color-base: #1e293b;
+  --ifm-border-color: #e2e8f0;
+}
+
+/* ══════════════════════════════════════════════════════════
+   Docs content typography — headings, prose, code, tables
+   ══════════════════════════════════════════════════════════ */
+
+/* Heading hierarchy with clear visual distinction */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ifm-font-color-base);
+}
+
+.markdown h1 {
+  font-size: 2.25rem;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--ifm-color-primary);
+}
+
+.markdown h2 {
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--ifm-border-color);
+}
+
+.markdown h3 {
+  font-size: 1.375rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown h4 {
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown h5 {
+  font-size: 1rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: var(--ifm-color-primary);
+}
+
+.markdown h6 {
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+
+html[data-theme='dark'] .markdown h6 {
+  color: #94a3b8;
+}
+
+/* Prose body text */
+.markdown p {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+  color: var(--ifm-font-color-base);
+}
+
+/* Lists */
+.markdown ul,
+.markdown ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.75rem;
+}
+
+.markdown li {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  margin-bottom: 0.35rem;
+}
+
+.markdown li > ul,
+.markdown li > ol {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Blockquotes */
+.markdown blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  background: var(--ifm-background-surface-color);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-style: italic;
+  color: var(--ifm-font-color-base);
+}
+
+.markdown blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Inline code */
+.markdown code {
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 0.25rem;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.9em;
+  color: var(--ifm-color-primary-dark);
+}
+
+html[data-theme='dark'] .markdown code {
+  background: rgba(96, 165, 250, 0.1);
+  border-color: rgba(96, 165, 250, 0.2);
+  color: var(--ifm-color-primary-light);
+}
+
+/* Code inside headings shouldn't have background */
+.markdown h1 code,
+.markdown h2 code,
+.markdown h3 code,
+.markdown h4 code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Code blocks */
+.markdown pre {
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid var(--ifm-border-color);
+}
+
+.markdown pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.875rem;
+  color: inherit;
+}
+
+/* Tables */
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--ifm-border-color);
+}
+
+.markdown table thead {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.markdown table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.markdown table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--ifm-border-color);
+}
+
+.markdown table tbody tr:nth-child(even) {
+  background: var(--ifm-background-surface-color);
+}
+
+.markdown table tbody tr:hover {
+  background: rgba(59, 130, 246, 0.05);
+}
+
+html[data-theme='dark'] .markdown table tbody tr:hover {
+  background: rgba(96, 165, 250, 0.08);
+}
+
+/* Horizontal rules */
+.markdown hr {
+  border: none;
+  border-top: 2px solid var(--ifm-border-color);
+  margin: 2.5rem 0;
+}
+
+/* Images in docs */
+.markdown img {
+  border-radius: 0.5rem;
+  border: 1px solid var(--ifm-border-color);
+  margin: 1rem 0;
+}
+
+/* Links in docs */
+.markdown a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.markdown a:hover {
+  border-bottom-color: var(--ifm-color-primary);
+}
+
+/* Admonitions / callouts enhancement */
+.admonition {
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Table of contents sidebar */
+.table-of-contents__link {
+  font-size: 0.875rem;
+  color: #64748b;
+  transition: color 0.2s ease;
+}
+
+html[data-theme='dark'] .table-of-contents__link {
+  color: #94a3b8;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: var(--ifm-color-primary);
+}
+
+/* Sidebar styling */
+.menu__link {
+  font-size: 0.9375rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+}
+
+.menu__link--active {
+  font-weight: 600;
+}
+
+/* Consistent text colors for both modes */
+.text-primary {
+  color: var(--ifm-color-primary);
+}
+
+.text-secondary {
+  color: var(--ifm-font-color-base);
+}
+
+.text-muted {
+  color: #64748b;
+}
+
+html[data-theme='dark'] .text-muted {
+  color: #94a3b8;
+}
+
+/* Card styling with dark/light mode support */
+.card {
+  background-color: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  border: 1px solid var(--ifm-border-color);
+}
+
+/* Button styling with dark/light mode support */
+.btn-primary {
+  background: linear-gradient(135deg, var(--ifm-color-primary), #7e22ce);
+  color: white;
+  font-weight: bold;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 300ms ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+html[data-theme='light'] .btn-primary {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-weight: 500;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 300ms ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html[data-theme='light'] .btn-secondary {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--ifm-font-color-base);
+  border: 1px solid var(--ifm-border-color);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+html[data-theme='light'] .btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 /* Custom scrollbar for better UX */
@@ -103,40 +475,105 @@ html {
   background: #64748b;
 }
 
+html[data-theme='dark'] ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+html[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+html[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* ── Theme Toggle Button ── */
+#theme-toggle-btn {
+  color: #6b7280;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#theme-toggle-btn:hover {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+html[data-theme='dark'] #theme-toggle-btn {
+  color: #9ca3af;
+}
+
+html[data-theme='dark'] #theme-toggle-btn:hover {
+  background-color: rgba(139, 92, 246, 0.1);
+  color: #d1d5db;
+}
+
 /* Focus styles for accessibility */
 .focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
 
-/* Enhanced button states */
-.btn-primary {
-  @apply bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300;
+/* ── navbar and header styling ── */
+.navbar {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95));
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
 }
 
-.btn-secondary {
-  @apply bg-white/10 backdrop-blur-sm text-white font-medium rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300;
+html[data-theme='dark'] .navbar {
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(10, 10, 15, 0.95));
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(51, 65, 85, 0.3);
 }
 
 /* Fix external link arrow alignment in navbar */
 .navbar__item {
-  display: inline-flex !important;
-  align-items: center !important;
-  white-space: nowrap !important;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .navbar__link {
-  display: inline-flex !important;
-  align-items: center !important;
-  white-space: nowrap !important;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  color: #1f2937;
+  transition: color 0.3s ease;
+}
+
+html[data-theme='dark'] .navbar__link {
+  color: #e5e7eb;
+}
+
+.navbar__link:hover {
+  color: #3b82f6;
+}
+
+html[data-theme='dark'] .navbar__link:hover {
+  color: #60a5fa;
 }
 
 /* Ensure external link arrows stay inline */
 .navbar__link svg[class*="external-link"] {
-  flex-shrink: 0 !important;
-  margin-left: 0.25rem !important;
-  vertical-align: middle !important;
-  align-self: center !important;
+  flex-shrink: 0;
+  margin-left: 0.25rem;
+  vertical-align: middle;
+  align-self: center;
+}
+
+/* ── Footer styling with dark mode ── */
+.footer {
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+html[data-theme='dark'] .footer {
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
 }
 
 /* Footer GitHub link styling */
@@ -145,11 +582,15 @@ html {
   width: 20px;
   height: 20px;
   display: inline-block;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'/%3E%3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='%23475569'%3E%3Cpath d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
   margin-right: 8px;
   vertical-align: text-bottom;
+}
+
+html[data-theme='dark'] .footer__link.footer-github-link::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='%23cbd5e1'%3E%3Cpath d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'/%3E%3C/svg%3E");
 }
 
 /* Footer link alignment fixes */
@@ -159,19 +600,57 @@ html {
 }
 
 .footer__link-item {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 0.25rem !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .footer__link-item svg {
-  flex-shrink: 0 !important;
-  width: 0.75rem !important;
-  height: 0.75rem !important;
-  min-width: auto !important;
+  flex-shrink: 0;
+  width: 0.75rem;
+  height: 0.75rem;
+  min-width: auto;
+}
+
+/* ── Light mode text colors for footer ── */
+html[data-theme='light'] .footer {
+  color: #1e293b;
+}
+
+html[data-theme='light'] .footer__title {
+  color: #0f172a;
+}
+
+html[data-theme='light'] .footer__link-item {
+  color: #475569;
+}
+
+html[data-theme='light'] .footer__link-item:hover {
+  color: #2563eb;
+}
+
+html[data-theme='light'] .footer__copyright {
+  color: #64748b;
+}
+
+/* ── Dark mode text colors for footer ── */
+html[data-theme='dark'] .footer__title {
+  color: #f0f9ff;
+}
+
+html[data-theme='dark'] .footer__link-item {
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .footer__link-item:hover {
+  color: #f0f9ff;
+}
+
+html[data-theme='dark'] .footer__copyright {
+  color: #94a3b8;
 }
 
 /* Responsive adjustments for GitHub icons only */
@@ -188,7 +667,12 @@ html {
 
 /* Card hover effects */
 .card-hover {
-  @apply hover:shadow-2xl hover:scale-105 transition-all duration-300;
+  transition: all 300ms ease;
+}
+
+.card-hover:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
 }
 
 /* Improved text selection */
@@ -216,9 +700,412 @@ html {
 
 /* Enhanced responsive typography */
 .text-hero {
-  @apply text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold;
+  font-size: 2.25rem;
+}
+
+@media (min-width: 768px) {
+  .text-hero {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-hero {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .text-hero {
+    font-size: 6rem;
+  }
+}
+
+.text-hero,
+.text-subhero {
+  font-weight: 800;
 }
 
 .text-subhero {
-  @apply text-xl md:text-2xl lg:text-3xl;
+  font-size: 1.25rem;
 }
+
+@media (min-width: 768px) {
+  .text-subhero {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-subhero {
+    font-size: 1.875rem;
+  }
+}
+
+
+/* Feature card styling */
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.feature-description {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+html[data-theme='dark'] .feature-description {
+  color: #94a3b8;
+}
+
+
+
+/* Container styling */
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Padding and margin utilities */
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+/* Flexbox utilities */
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Grid utilities */
+.grid {
+  display: grid;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Responsive breakpoints */
+@media (min-width: 768px) {
+  .md\:w-80 {
+    width: 20rem;
+  }
+
+  .md\:h-80 {
+    height: 20rem;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
+  .lg\:w-2\/5 {
+    width: 40%;
+  }
+
+  .lg\:mb-0 {
+    margin-bottom: 0;
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Additional UI/UX enhancements */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-ping {
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Enhanced button states with shimmer effect */
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: 0.5s;
+}
+
+.btn-secondary:hover::before {
+  left: 100%;
+}
+
+/* Enhanced card hover effects */
+.card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(59, 130, 246, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.card-hover:hover::before {
+  opacity: 1;
+}
+
+.card-hover:hover {
+  transform: scale(1.02) translateY(-5px);
+}
+
+/* Hover state utilities */
+.group:hover .group-hover\:scale-110 {
+  transform: scale(1.1);
+}
+
+.group:hover .group-hover\:rotate-1 {
+  transform: rotate(1deg);
+}
+
+.group:hover .group-hover\:rotate-3 {
+  transform: rotate(3deg);
+}
+
+.group:hover .group-hover\:-translate-y-2 {
+  transform: translateY(-0.5rem);
+}
+
+.group:hover .group-hover\:opacity-30 {
+  opacity: 0.3;
+}
+
+/* Enhanced hover states for better UX */
+.hover\:transform {
+  transition: transform 0.3s ease;
+}
+
+.hover\:-translate-y-1 {
+  transform: translateY(-0.25rem);
+}
+
+.hover\:-translate-y-2 {
+  transform: translateY(-0.5rem);
+}
+
+.hover\:shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.hover\:shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Smooth transitions for better UX */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+/* Improved hero section with scroll effect */
+.hero-section {
+  transition: all 0.3s ease;
+}
+
+/* Dynamic hero padding based on scroll */
+.scrolled-hero {
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+}
+
+
+/* Enhanced stat items */
+.stat-item {
+  position: relative;
+}
+
+.stat-number {
+  position: relative;
+  z-index: 2;
+}
+
+.stat-label {
+  position: relative;
+  z-index: 2;
+}
+
+/* Enhanced CTA button */
+.cta-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+

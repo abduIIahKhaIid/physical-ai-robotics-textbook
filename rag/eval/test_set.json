@@ -1,0 +1,160 @@
+{
+  "version": "1.0",
+  "description": "Evaluation test set for Physical AI textbook RAG pipeline",
+  "queries": [
+    {
+      "id": "eval-001",
+      "question": "What are the core principles of Physical AI?",
+      "mode": "normal",
+      "expected_modules": ["module-1"],
+      "expected_keywords": ["embodiment", "real-time"],
+      "category": "factual"
+    },
+    {
+      "id": "eval-002",
+      "question": "How does Physical AI differ from Digital AI?",
+      "mode": "normal",
+      "expected_modules": ["module-1"],
+      "expected_keywords": ["physical", "digital", "environment"],
+      "category": "comparison"
+    },
+    {
+      "id": "eval-003",
+      "question": "What is embodiment in the context of Physical AI?",
+      "mode": "normal",
+      "expected_modules": ["module-1"],
+      "expected_keywords": ["physical", "form", "presence"],
+      "category": "definitional"
+    },
+    {
+      "id": "eval-004",
+      "question": "How do ROS2 publisher nodes work?",
+      "mode": "normal",
+      "expected_keywords": ["publisher", "topic", "node"],
+      "category": "technical"
+    },
+    {
+      "id": "eval-005",
+      "question": "What are the real-time constraints in Physical AI?",
+      "mode": "normal",
+      "expected_modules": ["module-1"],
+      "expected_keywords": ["real-time", "operation"],
+      "category": "factual"
+    },
+    {
+      "id": "eval-006",
+      "question": "Explain the concept of embodiment",
+      "mode": "selected_text_only",
+      "selected_text": "Physical AI systems have a physical presence and form. This embodiment is not merely cosmetic—it fundamentally shapes how the system perceives, acts, and learns.",
+      "source_doc_path": "module-1/1.1-introduction-to-physical-ai/physical-ai-foundations.md",
+      "source_section": "Principle 1: Embodiment",
+      "expected_keywords": ["physical", "presence", "form"],
+      "category": "selection_normal"
+    },
+    {
+      "id": "eval-007",
+      "question": "What programming language is used in this code?",
+      "mode": "selected_text_only",
+      "selected_text": "import rclpy\nfrom rclpy.node import Node\n\nclass PhysicalAINode(Node):\n    pass",
+      "expected_keywords": ["python", "rclpy"],
+      "category": "selection_code"
+    },
+    {
+      "id": "eval-008",
+      "question": "What is quantum computing?",
+      "mode": "selected_text_only",
+      "selected_text": "Physical AI operates in real-time environments.",
+      "expected_refuse": true,
+      "category": "selection_leak_test"
+    },
+    {
+      "id": "eval-009",
+      "question": "Tell me about Bitcoin and blockchain",
+      "mode": "selected_text_only",
+      "selected_text": "ROS2 uses a publish-subscribe communication pattern.",
+      "expected_refuse": true,
+      "category": "selection_leak_test"
+    },
+    {
+      "id": "eval-010",
+      "question": "What topics are covered in Module 1?",
+      "mode": "normal",
+      "expected_modules": ["module-1"],
+      "category": "structural"
+    },
+    {
+      "id": "eval-011",
+      "question": "What is the difference between batch and real-time processing?",
+      "mode": "normal",
+      "expected_keywords": ["batch", "real-time"],
+      "category": "comparison"
+    },
+    {
+      "id": "eval-012",
+      "question": "What lab exercises are available for ROS2?",
+      "mode": "normal",
+      "expected_keywords": ["publisher", "subscriber", "exercise"],
+      "category": "structural"
+    },
+    {
+      "id": "eval-013",
+      "question": "Summarize this text",
+      "mode": "selected_text_only",
+      "selected_text": "Physical AI represents a paradigm shift from traditional AI approaches. It emphasizes real-time interaction with the physical world.",
+      "expected_keywords": ["paradigm", "real-time", "physical"],
+      "category": "selection_summary"
+    },
+    {
+      "id": "eval-014",
+      "question": "What are the quiz topics for Week 1?",
+      "mode": "normal",
+      "expected_keywords": ["physical ai", "foundations"],
+      "category": "structural"
+    },
+    {
+      "id": "eval-015",
+      "question": "Tell me about deep learning architectures",
+      "mode": "selected_text_only",
+      "selected_text": "The timer callback runs every 0.1 seconds.",
+      "expected_refuse": true,
+      "category": "selection_leak_test"
+    },
+    {
+      "id": "eval-016",
+      "question": "Explain the comparison table in this section",
+      "mode": "selected_text_only",
+      "selected_text": "| Feature | Digital AI | Physical AI |\n|---------|-----------|-------------|\n| Environment | Virtual | Physical |\n| Timing | Batch | Real-time |",
+      "expected_keywords": ["virtual", "physical", "batch", "real-time"],
+      "category": "selection_table"
+    },
+    {
+      "id": "eval-017",
+      "question": "What physical constraints affect Physical AI systems?",
+      "mode": "normal",
+      "expected_keywords": ["physical", "constraints"],
+      "category": "factual"
+    },
+    {
+      "id": "eval-018",
+      "question": "How do you create a timer in ROS2?",
+      "mode": "normal",
+      "expected_keywords": ["timer", "create_timer", "callback"],
+      "category": "technical"
+    },
+    {
+      "id": "eval-019",
+      "question": "Write me a poem about robots",
+      "mode": "selected_text_only",
+      "selected_text": "Physical AI systems must operate in real-time.",
+      "expected_refuse": true,
+      "category": "selection_leak_test"
+    },
+    {
+      "id": "eval-020",
+      "question": "What are learning objectives for Physical AI foundations?",
+      "mode": "normal",
+      "expected_keywords": ["principles", "physical ai"],
+      "category": "structural"
+    }
+  ]
+}
