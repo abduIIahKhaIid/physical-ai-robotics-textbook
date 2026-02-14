@@ -2,61 +2,33 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./docs/**/*.{md,mdx}",
-    "./src/**/*.{md,mdx}",
-    "./docusaurus.config.js",
-    "./pages/**/*.{js,jsx,ts,tsx}",
-    "./components/**/*.{js,jsx,ts,tsx}",
-    "./**/*.mdx",
-    "!./node_modules/**/*",
   ],
+  darkMode: ['class', '[data-theme="dark"]'], // Activate dark: variants when Docusaurus sets data-theme="dark"
   theme: {
     extend: {
       animation: {
         'float': 'float 6s ease-in-out infinite',
-        'pulse-slow': 'pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
+        'blob': 'blob 20s ease-in-out infinite',
       },
       keyframes: {
         float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
         },
-        'pulse-slow': {
-          '0%, 100%': {
-            transform: 'scale(1)',
-            opacity: '0.7',
-          },
-          '50%': {
-            transform: 'scale(1.05)',
-            opacity: '0.9',
-          },
+        blob: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '25%': { transform: 'translate(20px, -20px) scale(1.1)' },
+          '50%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+          '75%': { transform: 'translate(10px, 10px) scale(1.05)' },
         },
-        'fade-in-up': {
-          from: {
-            opacity: '0',
-            transform: 'translateY(30px)',
-          },
-          to: {
-            opacity: '1',
-            transform: 'translateY(0)',
-          },
-        },
-      },
-      boxShadow: {
-        'glow-blue': '0 0 20px rgba(59, 130, 246, 0.3)',
-        'glow-purple': '0 0 20px rgba(147, 51, 234, 0.3)',
-        'glow-cyan': '0 0 20px rgba(6, 182, 212, 0.3)',
-        'glow-pink': '0 0 20px rgba(244, 114, 182, 0.3)',
       },
       backdropBlur: {
-        'xs': '2px',
-        'sm': '4px',
+        xs: '2px',
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-  ],
+  corePlugins: {
+    preflight: false, // Disable Tailwind's CSS reset to avoid conflicts with Docusaurus/Infima
+  },
+  plugins: [],
 }

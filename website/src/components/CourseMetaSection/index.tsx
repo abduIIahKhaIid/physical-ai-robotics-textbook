@@ -1,124 +1,97 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import Heading from '@theme/Heading';
+import { Calendar, Target, CheckSquare, HardDrive, ArrowRight } from 'lucide-react';
+import { RESOURCES } from '../../data/courseData';
 
-type MetaItemProps = {
-  title: string;
-  description: string;
-  to: string;
-  icon: string;
+const iconMap = {
+  calendar: Calendar,
+  target: Target,
+  checkmark: CheckSquare,
+  harddrive: HardDrive,
 };
 
-type MetaItemComponentProps = {
-  item: MetaItemProps;
+const colorStyles = {
+  blue: 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400',
+  purple: 'bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400',
+  cyan: 'bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400',
+  indigo: 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400',
 };
 
-type CourseMetaSectionProps = {
-  className?: string;
-};
+export default function CourseMetaSection() {
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-const MetaItems: MetaItemProps[] = [
-  {
-    title: 'Course Overview',
-    description: 'Explore the complete structure, goals, and learning pathway of the Physical AI & Humanoid Robotics program',
-    to: '/docs/course-overview',
-    icon: '📚',
-  },
-  {
-    title: 'Learning Objectives',
-    description: 'Discover the specific skills, knowledge, and competencies you will develop throughout the course',
-    to: '/docs/learning-objectives',
-    icon: '🎯',
-  },
-  {
-    title: 'Weekly Breakdown',
-    description: 'Follow the detailed 13-week schedule with topics, assignments, and milestones for each module',
-    to: '/docs/syllabus',
-    icon: '📅',
-  },
-  {
-    title: 'Assessments',
-    description: 'Understand the diverse evaluation methods, grading criteria, and project requirements',
-    to: '/docs/assessments',
-    icon: '✅',
-  },
-  {
-    title: 'Hardware Requirements',
-    description: 'Get detailed specifications for computing, robotics kits, and tools needed for hands-on learning',
-    to: '/docs/hardware-requirements',
-    icon: '💻',
-  },
-];
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
 
-function MetaItem({ item }: MetaItemComponentProps): React.JSX.Element {
   return (
-    <Link
-      to={item.to}
-      className="block bg-white dark:bg-slate-800/60 backdrop-blur-sm rounded-2xl p-6 hover:shadow-2xl transition-all duration-500 h-full border border-slate-200 dark:border-slate-700/50 hover:border-blue-500 dark:hover:border-blue-400 hover:bg-white/95 dark:hover:bg-slate-700/80 group relative overflow-hidden"
-    >
-      {/* Animated background effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-purple-50/30 dark:from-blue-900/10 dark:to-purple-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-      {/* Content with z-index to stay above background */}
-      <div className="relative z-10">
-        <div className="flex items-start gap-5">
-          <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white text-2xl group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
-            {item.icon}
-          </div>
-          <div className="flex-1 min-w-0">
-            <Heading as="h3" className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-              {item.title}
-            </Heading>
-            <p className="text-slate-600 dark:text-slate-300 text-base mb-5 leading-relaxed">
-              {item.description}
-            </p>
-            <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold text-sm group-hover:gap-3 transition-all duration-300">
-              <span>Explore</span>
-              <svg
-                className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Link>
-  );
-}
-
-function CourseMetaSection({ className }: CourseMetaSectionProps = {}): React.JSX.Element {
-  return (
-    <section className={`py-24 bg-gradient-to-br from-slate-50 to-white dark:from-slate-900 dark:to-slate-950 ${className || ''}`}>
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl mb-6 shadow-2xl mx-auto">
-            <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-            </svg>
-          </div>
-          <Heading as="h2" className="text-4xl md:text-5xl font-bold text-center text-slate-900 dark:text-white mb-4">
-            Course Essentials
-          </Heading>
-          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Explore the essential components of your Physical AI & Humanoid Robotics learning journey
+    <section id="resources" className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-950 dark:to-gray-900">
+      <div ref={sectionRef} className="container mx-auto px-6 lg:px-8">
+        <div className={clsx(
+          'max-w-3xl mx-auto text-center mb-16 transition-all duration-700',
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+        )}>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400 mb-3">
+            Getting Started
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Course Resources
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400">
+            Everything you need to begin your journey in Physical AI and Robotics.
           </p>
         </div>
 
-        {/* Enhanced grid layout with better spacing and visual hierarchy */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {MetaItems.map((item, idx) => (
-            <MetaItem key={idx} item={item} />
-          ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {RESOURCES.map((item, index) => {
+            const Icon = iconMap[item.icon] || Calendar;
+            return (
+              <Link
+                key={item.title}
+                to={item.to}
+                className={clsx(
+                  'group block p-6 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200/80 dark:border-gray-800',
+                  'transition-all duration-300 hover:shadow-xl dark:hover:shadow-lg hover:-translate-y-1.5',
+                  'overflow-hidden no-underline',
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
+                )}
+                style={{
+                  transitionDelay: isVisible ? `${100 + index * 100}ms` : '0ms',
+                }}
+              >
+                <div className={clsx(
+                  'inline-flex items-center justify-center w-14 h-14 rounded-xl mb-4',
+                  colorStyles[item.color] || colorStyles.blue
+                )}>
+                  <Icon className="h-6 w-6" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                  {item.description}
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 dark:text-blue-400 group-hover:gap-2 transition-all">
+                  View
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
-
-export default CourseMetaSection;

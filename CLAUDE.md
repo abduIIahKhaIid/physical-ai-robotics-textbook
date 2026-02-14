@@ -223,6 +223,8 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 - Static files in documentation repository (007-author-module-3)
 - Markdown/MDX for Docusaurus documentation, Python for ROS/Isaac workflows + Docusaurus v3.x, React 18+, Node.js v18+, ROS 2 Humble, Isaac Sim (simulation) (008-humanoid-vla-concepts)
 - Static files in documentation repository, no dynamic storage needed for content (008-humanoid-vla-concepts)
+- Python 3.11+ + `qdrant-client` (Qdrant Cloud SDK), `openai` (embeddings via OpenAI API), `python-frontmatter` (YAML frontmatter parsing), `tiktoken` (token counting for chunking), `hashlib` (content hashing, stdlib), `pydantic` (data models and validation) (009-rag-ingestion-retrieval)
+- Qdrant Cloud (vector store), local filesystem (source markdown) (009-rag-ingestion-retrieval)
 
 ## Recent Changes
 - 001-docusaurus-book-site: Added JavaScript/Node.js v18 + Docusaurus v3.x, @docusaurus/preset-classic
