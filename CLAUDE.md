@@ -227,6 +227,8 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 - Qdrant Cloud (vector store), local filesystem (source markdown) (009-rag-ingestion-retrieval)
 - Python 3.11+ + FastAPI, uvicorn, asyncpg, sse-starlette, openai (existing), pydantic (existing) (010-fastapi-chat-backend)
 - Neon Postgres (asyncpg), Qdrant Cloud (via existing `rag.store`) (010-fastapi-chat-backend)
+- TypeScript/JSX (React 18) within Docusaurus 3.6.3 + React 18, @docusaurus/core 3.6.3, @docusaurus/theme-common, Tailwind CSS 3.x (existing) (011-embed-chatkit-ui)
+- `sessionStorage` (session_id), React Context (conversation state) — no new server-side storage (011-embed-chatkit-ui)
 
 ## Recent Changes
 - 001-docusaurus-book-site: Added JavaScript/Node.js v18 + Docusaurus v3.x, @docusaurus/preset-classic
