@@ -10,10 +10,10 @@ class Settings(BaseModel):
 
     qdrant_url: str = Field(default="http://localhost:6333")
     qdrant_api_key: str = Field(default="")
-    openai_api_key: str = Field(default="")
-    embedding_model: str = Field(default="text-embedding-3-small")
+    gemini_api_key: str = Field(default="")
+    embedding_model: str = Field(default="gemini-embedding-001")
     qdrant_collection: str = Field(default="textbook_chunks")
-    embedding_dimensions: int = Field(default=1536)
+    embedding_dimensions: int = Field(default=768)
     chunk_min_tokens: int = Field(default=200)
     chunk_max_tokens: int = Field(default=800)
     chunk_target_tokens: int = Field(default=500)
@@ -28,7 +28,8 @@ def load_settings() -> Settings:
     return Settings(
         qdrant_url=os.environ.get("QDRANT_URL", "http://localhost:6333"),
         qdrant_api_key=os.environ.get("QDRANT_API_KEY", ""),
-        openai_api_key=os.environ.get("OPENAI_API_KEY", ""),
-        embedding_model=os.environ.get("EMBEDDING_MODEL", "text-embedding-3-small"),
+        gemini_api_key=os.environ.get("GEMINI_API_KEY", ""),
+        embedding_model=os.environ.get("EMBEDDING_MODEL", "gemini-embedding-001"),
         qdrant_collection=os.environ.get("QDRANT_COLLECTION", "textbook_chunks"),
+        embedding_dimensions=int(os.environ.get("EMBEDDING_DIMENSIONS", "768")),
     )

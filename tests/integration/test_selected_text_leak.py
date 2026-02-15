@@ -40,8 +40,8 @@ class TestSelectedTextNoQdrantAccess:
         assert result.chunks[0].chunk_id == "selection"
 
     def test_no_embedding_call_for_selection(self):
-        """Verify no OpenAI embedding call for selected-text mode."""
-        mock_openai = MagicMock()
+        """Verify no Gemini embedding call for selected-text mode."""
+        mock_gemini = MagicMock()
 
         q = Query(
             question="Explain this",
@@ -49,8 +49,8 @@ class TestSelectedTextNoQdrantAccess:
             selected_text="Some selected text.",
         )
 
-        result = retrieve(q, openai_client=mock_openai)
-        mock_openai.embeddings.create.assert_not_called()
+        result = retrieve(q, gemini_client=mock_gemini)
+        mock_gemini.models.embed_content.assert_not_called()
 
     def test_cross_contamination_prevention(self):
         """Ensure selected-text result only contains user's selected text."""
