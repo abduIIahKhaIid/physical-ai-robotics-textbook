@@ -1,0 +1,103 @@
+# Client-to-Backend API Contract for ChatKit Widget
+# This documents the client's usage of the spec 010 backend API.
+# The backend API itself is defined in specs/010-fastapi-chat-backend/contracts/chat-api.yaml.
+# This file documents the CLIENT perspective: what the widget sends and expects.
+
+# ────────────────────────────────────────────────────────────────
+# Endpoint: POST {BACKEND_BASE_URL}/api/v1/chat
+# Content-Type: application/json
+# Accept: text/event-stream
+# ────────────────────────────────────────────────────────────────
+
+request:
+  method: POST
+  path: /api/v1/chat
+  headers:
+    Content-Type: application/json
+    Accept: text/event-stream
+  body:
+    # Normal mode (full-book query)
+    normal_mode_example:
+      message: "What is sim-to-real transfer?"
+      session_id: "550e8400-e29b-41d4-a716-446655440000"  # null for first message
+      mode: "normal"
+      selected_text: null
+      source_doc_path: "/docs/module-2/week-5/sim-to-real"  # current page path
+      source_section: "Sim-to-Real Transfer Techniques"      # current page title
+
+    # Selected-text-only mode
+    selected_text_mode_example:
+      message: "Can you explain this in simpler terms?"
+      session_id: "550e8400-e29b-41d4-a716-446655440000"
+      mode: "selected_text_only"
+      selected_text: "Domain randomization involves training a policy across a wide distribution of simulated environments..."
+      source_doc_path: "/docs/module-2/week-5/sim-to-real"
+      source_section: "Sim-to-Real Transfer Techniques"
+
+  field_mapping:
+    # spec 011 field → backend ChatRequest field
+    message: message              # required, 1-4000 chars
+    session_id: session_id        # optional UUID
+    mode: mode                    # "normal" | "selected_text_only"
+    selected_text: selected_text  # optional, max 10000 chars
+    page_url: source_doc_path     # strip baseUrl, send relative path
+    page_title: source_section    # page title as section identifier
+
+response:
+  content_type: text/event-stream
+  events:
+    - event: token
+      data_schema:
+        content: string  # partial text chunk
+      example:
+        event: token
+        data: '{"content": "Sim-to-real transfer is"}'
+
+    - event: token
+      data_schema:
+        content: string
+      example:
+        event: token
+        data: '{"content": " a technique used to"}'
+
+    - event: done
+      data_schema:
+        message_id: string   # UUID of the assistant message
+        session_id: string   # UUID of the session (important for first message)
+        citations:           # array of citation objects
+          - title: string
+            section: string
+            url: string
+            module: string
+            chapter: string
+        persistence_warning: boolean  # optional, true if DB write failed
+      example:
+        event: done
+        data: '{"message_id":"uuid","session_id":"uuid","citations":[{"title":"Sim-to-Real","section":"Overview","url":"/docs/module-2/week-5/sim-to-real","module":"module-2","chapter":"sim-to-real"}]}'
+
+    - event: error
+      data_schema:
+        code: string      # error code: "generation_failed", "retrieval_failed", etc.
+        message: string   # human-readable error message
+      example:
+        event: error
+        data: '{"code":"generation_failed","message":"Response generation failed"}'
+
+error_responses:
+  - status: 422
+    description: Validation error (bad request body)
+    action: Show form validation message
+
+  - status: 429
+    description: Rate limited
+    headers:
+      Retry-After: seconds_to_wait
+    action: Show rate limit message with countdown
+
+  - status: 404
+    description: Session not found
+    action: Clear session_id, start new session
+
+  - status: 500
+    description: Server error
+    action: Show generic error with retry option

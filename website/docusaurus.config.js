@@ -18,6 +18,10 @@ export default {
   deploymentBranch: 'gh-pages', // The branch to deploy to GitHub Pages
   trailingSlash: false,
 
+  customFields: {
+    chatApiUrl: process.env.REACT_APP_CHAT_API_URL || 'https://your-backend.example.com',
+  },
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 

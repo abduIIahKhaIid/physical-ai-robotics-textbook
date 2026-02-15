@@ -5,7 +5,7 @@ from qdrant_client.models import Distance, PayloadSchemaType, VectorParams
 COLLECTION_NAME = "textbook_chunks"
 
 VECTOR_CONFIG = VectorParams(
-    size=1536,
+    size=768,
     distance=Distance.COSINE,
 )
 

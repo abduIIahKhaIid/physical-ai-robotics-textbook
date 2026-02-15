@@ -225,6 +225,10 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 - Static files in documentation repository, no dynamic storage needed for content (008-humanoid-vla-concepts)
 - Python 3.11+ + `qdrant-client` (Qdrant Cloud SDK), `openai` (embeddings via OpenAI API), `python-frontmatter` (YAML frontmatter parsing), `tiktoken` (token counting for chunking), `hashlib` (content hashing, stdlib), `pydantic` (data models and validation) (009-rag-ingestion-retrieval)
 - Qdrant Cloud (vector store), local filesystem (source markdown) (009-rag-ingestion-retrieval)
+- Python 3.11+ + FastAPI, uvicorn, asyncpg, sse-starlette, openai (existing), pydantic (existing) (010-fastapi-chat-backend)
+- Neon Postgres (asyncpg), Qdrant Cloud (via existing `rag.store`) (010-fastapi-chat-backend)
+- TypeScript/JSX (React 18) within Docusaurus 3.6.3 + React 18, @docusaurus/core 3.6.3, @docusaurus/theme-common, Tailwind CSS 3.x (existing) (011-embed-chatkit-ui)
+- `sessionStorage` (session_id), React Context (conversation state) — no new server-side storage (011-embed-chatkit-ui)
 
 ## Recent Changes
 - 001-docusaurus-book-site: Added JavaScript/Node.js v18 + Docusaurus v3.x, @docusaurus/preset-classic

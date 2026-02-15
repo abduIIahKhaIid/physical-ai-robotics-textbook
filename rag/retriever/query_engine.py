@@ -1,6 +1,6 @@
 """Query engine that routes between normal and selected-text modes."""
 
-from openai import OpenAI
+from google import genai
 
 from rag.config import load_settings
 from rag.models import Query, RetrievalResult
@@ -9,7 +9,7 @@ from rag.retriever.selected_text import retrieve_from_selection
 
 def retrieve(
     query: Query,
-    openai_client: OpenAI | None = None,
+    gemini_client: genai.Client | None = None,
     qdrant_client=None,
 ) -> RetrievalResult:
     """Route query to appropriate retrieval mode.
@@ -20,12 +20,12 @@ def retrieve(
     if query.mode == "selected_text_only":
         return retrieve_from_selection(query)
 
-    return _retrieve_normal(query, openai_client, qdrant_client)
+    return _retrieve_normal(query, gemini_client, qdrant_client)
 
 
 def _retrieve_normal(
     query: Query,
-    openai_client: OpenAI | None = None,
+    gemini_client: genai.Client | None = None,
     qdrant_client=None,
 ) -> RetrievalResult:
     """Full-book retrieval via Qdrant vector search."""
@@ -37,14 +37,15 @@ def _retrieve_normal(
     settings = load_settings()
 
     # Embed the question
-    if openai_client is None:
-        openai_client = OpenAI(api_key=settings.openai_api_key)
+    if gemini_client is None:
+        gemini_client = genai.Client(api_key=settings.gemini_api_key)
 
-    response = openai_client.embeddings.create(
-        input=[query.question],
+    response = gemini_client.models.embed_content(
         model=settings.embedding_model,
+        contents=query.question,
+        config={"output_dimensionality": settings.embedding_dimensions},
     )
-    query_vector = response.data[0].embedding
+    query_vector = response.embeddings[0].values
 
     # Build filters
     top_k = query.filters.top_k if query.filters else 5
