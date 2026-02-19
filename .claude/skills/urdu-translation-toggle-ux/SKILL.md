@@ -7,7 +7,15 @@ description: Implement a stable UX pattern for translating Docusaurus book chapt
 
 Implement a reliable, user-controlled Urdu translation experience for documentation chapters. This skill provides patterns, components, and validation tools for adding translation functionality to Docusaurus-based books.
 
-## Overview of the Implementation Process
+## Quick Start
+
+```text
+/urdu-translation-toggle-ux
+```
+
+Provide the chapter path to add Urdu translation toggle. The skill produces a React component with RTL support, caching, and API integration.
+
+## Core Implementation Workflow
 
 The translation feature requires coordination across multiple layers:
 
@@ -286,7 +294,7 @@ OpenAI API costs for translation:
 - **Mitigation**: Aggressive caching is essential
 - **Alternative**: Consider GPT-3.5-turbo for 10x lower cost with acceptable quality
 
-## Acceptance Criteria
+## Acceptance Checklist
 
 ✅ Translation button exists on every chapter page
 ✅ Clicking button translates content to Urdu via API

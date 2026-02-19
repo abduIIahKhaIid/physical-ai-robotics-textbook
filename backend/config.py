@@ -3,7 +3,10 @@
 import json
 import os
 
+from dotenv import load_dotenv
 from pydantic import BaseModel, Field
+
+load_dotenv()
 
 
 class BackendSettings(BaseModel):
@@ -21,6 +24,9 @@ class BackendSettings(BaseModel):
     max_selected_text_length: int = Field(default=10000)
     max_history_messages: int = Field(default=10)
     log_level: str = Field(default="INFO")
+    router_timeout_s: int = Field(default=5)
+    llm_timeout_s: int = Field(default=30)
+    retrieval_timeout_s: int = Field(default=10)
 
 
 def load_backend_settings() -> BackendSettings:
@@ -46,4 +52,7 @@ def load_backend_settings() -> BackendSettings:
         ),
         max_history_messages=int(os.environ.get("MAX_HISTORY_MESSAGES", "10")),
         log_level=os.environ.get("LOG_LEVEL", "INFO"),
+        router_timeout_s=int(os.environ.get("ROUTER_TIMEOUT_S", "5")),
+        llm_timeout_s=int(os.environ.get("LLM_TIMEOUT_S", "30")),
+        retrieval_timeout_s=int(os.environ.get("RETRIEVAL_TIMEOUT_S", "10")),
     )

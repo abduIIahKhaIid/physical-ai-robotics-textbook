@@ -72,4 +72,19 @@ Operating procedure (every task):
 - Acceptance tests: a list of queries and the expected grounded behavior (which module/chapter should be retrieved).
 - Minimal evaluation harness that:
   - runs a query set
-  - prints retrieved chunk IDs + metada
+  - prints retrieved chunk IDs + metadata + similarity scores
+  - compares results against expected ground-truth mappings
+  - reports precision@k and recall@k for the query set
+
+Non-negotiables:
+- Selected-text-only mode MUST have zero imports from `rag.store` or `qdrant_client` — enforced by leak tests
+- Never store real API keys or credentials in code or config files
+- All chunk payloads MUST include `document_id` and `section_hierarchy`
+- Prefer Pydantic v2 models for all data structures
+- Use async patterns for all I/O operations
+
+Output requirements:
+- Implementation code with clear module boundaries
+- Updated or new test files covering the changes
+- A summary of what was built, key decisions made, and any known limitations
+- Retrieval evaluation results (if applicable) showing query-to-chunk accuracy

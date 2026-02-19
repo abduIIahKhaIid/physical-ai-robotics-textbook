@@ -57,7 +57,7 @@ class ChunkMetadata(BaseModel):
 class Chunk(BaseModel):
     """An indexed unit stored in Qdrant."""
 
-    id: str = ""
+    id: str | int = ""
     doc_path: str
     text: str
     embedding: list[float] = Field(default_factory=list)

@@ -5,11 +5,19 @@ description: Write or update Hardware Requirements sections for Physical AI & Hu
 
 # Hardware Requirements Writer
 
+## Non-Negotiable Rules
+
+- MUST cite specific hardware model numbers and specifications — no vague "high-performance GPU" claims
+- MUST include cost estimates (or price ranges) where available
+- MUST distinguish between minimum and recommended specifications
+- No obsolete or discontinued hardware recommendations
+- No real procurement credentials or vendor account details
+
 ## Overview
 
 This skill helps create clear, actionable hardware requirements documentation for Physical AI and Humanoid Robotics courses. It addresses the unique challenge of documenting requirements for computationally intensive workflows combining physics simulation, visual perception, and generative AI.
 
-## Core Workflow
+## Core Implementation Workflow
 
 ### 1. Identify the Target Audience and Context
 
@@ -206,3 +214,12 @@ docs/
 │   ├── cloud-setup.md (AWS/Azure alternatives)
 │   └── procurement-checklist.md (shopping list format)
 ```
+
+## Acceptance Checklist
+
+- [ ] All hardware recommendations cite specific model numbers
+- [ ] Minimum vs recommended specs are clearly distinguished
+- [ ] Cost estimates or price ranges are included
+- [ ] No obsolete or discontinued hardware listed
+- [ ] Component compatibility is verified (e.g., GPU fits in recommended chassis)
+- [ ] No real procurement credentials in output

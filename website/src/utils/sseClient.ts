@@ -93,7 +93,9 @@ export async function* postChat(
 
       buffer += decoder.decode(value, { stream: true });
 
-      // SSE events are separated by double newlines
+      // SSE events are separated by double newlines (\n\n or \r\n\r\n)
+      // Normalize \r\n to \n so the split works with either format
+      buffer = buffer.replace(/\r\n/g, '\n');
       const parts = buffer.split('\n\n');
       // Keep the last incomplete part in the buffer
       buffer = parts.pop() || '';

@@ -20,6 +20,14 @@ By the end of this chapter, you will:
 
 [Preview - what will be covered in this chapter]
 
+## Key Terms
+
+| Term | Definition |
+|------|-----------|
+| **[Term 1]** | [Clear, concise definition] |
+| **[Term 2]** | [Clear, concise definition] |
+| **[Term 3]** | [Clear, concise definition] |
+
 ## [Main Concept Section 1]
 
 [Clear explanation of the first major concept]
@@ -72,7 +80,7 @@ By the end of this chapter, you will:
 
 [Additional details or related concept]
 
-## Key Takeaways
+## Recap
 
 - **[Concept 1]**: [Brief, clear explanation of the main point]
 - **[Concept 2]**: [What students should remember]
@@ -135,3 +143,44 @@ By the end of this chapter, you will:
 [One sentence about what's coming in the next chapter]
 
 [Optional: How the upcoming chapter builds on this one]
+
+## Quiz
+
+### Question 1
+[Question text]
+
+- A) [Option A]
+- B) [Option B]
+- C) [Option C]
+- D) [Option D]
+
+<details>
+<summary>Answer</summary>
+[Correct answer letter]: [Brief explanation]
+</details>
+
+### Question 2
+[Question text]
+
+- A) [Option A]
+- B) [Option B]
+- C) [Option C]
+- D) [Option D]
+
+<details>
+<summary>Answer</summary>
+[Correct answer letter]: [Brief explanation]
+</details>
+
+### Question 3
+[Question text]
+
+- A) [Option A]
+- B) [Option B]
+- C) [Option C]
+- D) [Option D]
+
+<details>
+<summary>Answer</summary>
+[Correct answer letter]: [Brief explanation]
+</details>

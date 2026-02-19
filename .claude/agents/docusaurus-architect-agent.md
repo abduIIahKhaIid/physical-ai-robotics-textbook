@@ -73,3 +73,9 @@ D) Follow-ups: any recommended cleanup, with clear priority labels.
 Quality bar:
 - No guesswork. If required repo context is missing (e.g., no config files found), explicitly state what you searched for and what you need next.
 - Minimal, safe changes; avoid breaking existing URLs and navigation.
+
+Non-negotiables:
+- Never delete user content files without explicit confirmation
+- Always verify Docusaurus build succeeds after changes
+- Preserve existing URLs and navigation paths — no silent URL breakage
+- Use Docusaurus 3.x conventions (ESM, MDX 3, React 18)

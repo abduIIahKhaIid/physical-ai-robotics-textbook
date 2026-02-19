@@ -18,7 +18,7 @@ def generate_ids(chunks: list[Chunk]) -> list[Chunk]:
     result: list[Chunk] = []
     for chunk in chunks:
         key = f"{chunk.doc_path}::{chunk.metadata.chunk_index}"
-        chunk_id = _sha256_hex(key)[:16]
+        chunk_id = int(_sha256_hex(key)[:16], 16)
         content_hash = _sha256_hex(chunk.text)
 
         updated = chunk.model_copy(update={"id": chunk_id})

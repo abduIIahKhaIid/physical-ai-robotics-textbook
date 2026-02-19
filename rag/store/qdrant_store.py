@@ -58,7 +58,7 @@ def upsert_chunks(chunks: list[Chunk], client: QdrantClient | None = None) -> in
         PointStruct(
             id=chunk.id,
             vector=chunk.embedding,
-            payload=chunk.metadata.model_dump(),
+            payload={**chunk.metadata.model_dump(), "text": chunk.text},
         )
         for chunk in chunks
     ]
@@ -78,7 +78,7 @@ def upsert_chunks(chunks: list[Chunk], client: QdrantClient | None = None) -> in
 
 def delete_stale_chunks(
     doc_path: str,
-    current_ids: set[str],
+    current_ids: set,
     client: QdrantClient | None = None,
 ) -> int:
     """Delete chunks for a doc_path that are not in current_ids.
@@ -92,7 +92,7 @@ def delete_stale_chunks(
     doc_filter = Filter(
         must=[FieldCondition(key="doc_path", match=MatchValue(value=doc_path))]
     )
-    existing_ids: list[str] = []
+    existing_ids: list = []
     offset = None
     while True:
         points, offset = qdrant.scroll(
@@ -101,7 +101,7 @@ def delete_stale_chunks(
             limit=100,
             offset=offset,
         )
-        existing_ids.extend(str(p.id) for p in points)
+        existing_ids.extend(p.id for p in points)
         if offset is None:
             break
 
@@ -126,12 +126,13 @@ def search_chunks(
     Returns ScoredChunk objects with citations built.
     """
     qdrant = _get_client(client)
-    hits = qdrant.search(
+    response = qdrant.query_points(
         collection_name=COLLECTION_NAME,
-        query_vector=vector,
+        query=vector,
         query_filter=query_filter,
         limit=top_k,
     )
+    hits = response.points
 
     scored: list[ScoredChunk] = []
     for hit in hits:

@@ -7,7 +7,23 @@ description: Convert course outlines (modules → weeks → chapters/lessons) in
 
 Transforms hierarchical course outlines into production-ready Docusaurus documentation structure with automated sidebar generation, consistent naming conventions, and proper file organization.
 
-## Workflow Overview
+## Non-Negotiable Rules
+
+- MUST produce valid Docusaurus sidebar configuration (ESM export format)
+- MUST create matching folder structure for all chapters
+- MUST use kebab-case for all directory and file names
+- MUST preserve existing content when updating sidebar — never delete user files
+- No real credentials or API keys in generated configuration
+
+## Quick Start
+
+```text
+/course-outline-to-sidebar
+```
+
+Provide a course outline (see `assets/outline-template.txt`) and the skill will generate `sidebars.ts`, folder structure, and stub MDX files.
+
+## Core Implementation Workflow
 
 1. **Parse course outline** - Extract modules, weeks, and chapters
 2. **Generate file structure** - Create organized docs directories
@@ -256,3 +272,12 @@ Python utilities for automated sidebar and structure generation:
 ### assets/
 - `outline-template.txt` - Template for course outline format
 - `frontmatter-template.md` - MDX frontmatter template
+
+## Acceptance Checklist
+
+- [ ] Generated `sidebars.ts` is valid ESM and exports correct structure
+- [ ] All folders match the module/week hierarchy from the outline
+- [ ] Stub MDX files have correct frontmatter (`title`, `sidebar_position`)
+- [ ] All file and directory names use kebab-case
+- [ ] Navigation renders correctly in Docusaurus dev server
+- [ ] No orphan files or missing sidebar entries

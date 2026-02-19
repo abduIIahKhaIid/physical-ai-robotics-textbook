@@ -19,7 +19,7 @@ export default {
   trailingSlash: false,
 
   customFields: {
-    chatApiUrl: process.env.REACT_APP_CHAT_API_URL || 'https://your-backend.example.com',
+    chatApiUrl: process.env.REACT_APP_CHAT_API_URL || 'http://localhost:8000',
   },
 
   onBrokenLinks: 'throw',
