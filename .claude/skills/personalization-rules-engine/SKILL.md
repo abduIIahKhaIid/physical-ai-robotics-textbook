@@ -9,7 +9,7 @@ description: Define deterministic personalization rules for chapters based on on
 
 Create a rule-based personalization layer that transforms chapter presentation using a stored user profile while maintaining technical accuracy and providing deterministic, testable output.
 
-## Core Principles
+## Non-Negotiable Rules
 
 1. **Deterministic**: Same profile + same chapter → same output every time
 2. **Truthful**: Never rewrite technical truth; only adjust depth, pacing, examples, and tooling paths
@@ -144,7 +144,7 @@ Rules are stored in `config/personalization_rules.json`:
 }
 ```
 
-## Implementation Workflow
+## Core Implementation Workflow
 
 ### Step 1: Define Rules Configuration
 
@@ -233,7 +233,7 @@ Implement frontend components (see `references/ui_patterns.md`):
 - Add bilingual glossary
 - Keep technical terms in English with Urdu context
 
-## Acceptance Criteria
+## Acceptance Checklist
 
 ✅ **Determinism**: Run test suite with `scripts/test_determinism.py`
 

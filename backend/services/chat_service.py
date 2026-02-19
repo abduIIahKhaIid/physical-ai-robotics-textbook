@@ -12,17 +12,26 @@ from typing import Any, AsyncGenerator
 from backend.config import BackendSettings
 from backend.db import queries
 
-from rag.models import Query as RagQuery, QueryFilters as RagQueryFilters
+from rag.models import GroundedResponse, Query as RagQuery, QueryFilters as RagQueryFilters
 from rag.retriever.query_engine import retrieve
 from rag.response.grounding import apply_grounding_policy
+
+from backend.services.retrieval_router import should_retrieve
 
 logger = logging.getLogger(__name__)
 
 _SYSTEM_PROMPT = (
     "You are RoboTutor, an AI teaching assistant for a Physical AI & Humanoid Robotics textbook. "
     "You help students understand concepts from the textbook. "
-    "Always base your answers on the provided textbook excerpts. "
-    "Be clear, concise, and educational."
+    "When textbook excerpts are provided, base your answers on them. "
+    "Be professional, warm, and concise. Keep responses short unless the student asks for detail."
+)
+
+_CONVERSATIONAL_INSTRUCTION = (
+    "The student sent a conversational message (greeting, thanks, follow-up, etc.) "
+    "that does not require a textbook lookup. Respond naturally and briefly. "
+    "For greetings, reply with a short friendly greeting and let the student know "
+    "you can help with topics from the textbook. Do not lecture or repeat yourself."
 )
 
 
@@ -102,29 +111,51 @@ async def stream_chat_response(
     except Exception:
         logger.exception("Failed to load conversation history")
 
-    # 4. Construct RAG query and retrieve
-    rag_filters = None
-    if filters:
-        rag_filters = RagQueryFilters(**filters)
+    # 3.5 Route: decide if retrieval is needed
+    needs_retrieval = True
+    if mode == "normal" and not filters:
+        try:
+            needs_retrieval = await should_retrieve(
+                message, history_messages, gemini_client, settings.llm_model,
+                timeout_s=settings.router_timeout_s,
+            )
+        except Exception:
+            logger.warning("Router classification failed, defaulting to retrieve")
+            needs_retrieval = True
 
-    rag_query = RagQuery(
-        question=message,
-        mode=mode,
-        selected_text=selected_text,
-        source_doc_path=source_doc_path,
-        source_section=source_section,
-        filters=rag_filters,
-    )
+    # 4. Construct RAG query and retrieve (conditionally)
+    if needs_retrieval:
+        rag_filters = None
+        if filters:
+            rag_filters = RagQueryFilters(**filters)
 
-    try:
-        retrieval_result = await asyncio.to_thread(
-            retrieve, rag_query, gemini_client
+        rag_query = RagQuery(
+            question=message,
+            mode=mode,
+            selected_text=selected_text,
+            source_doc_path=source_doc_path,
+            source_section=source_section,
+            filters=rag_filters,
         )
-        grounded = apply_grounding_policy(retrieval_result, message)
-    except Exception:
-        logger.exception("Retrieval failed")
-        from backend.models.errors import RetrievalError
-        raise RetrievalError()
+
+        try:
+            retrieval_result = await asyncio.wait_for(
+                asyncio.to_thread(retrieve, rag_query, gemini_client),
+                timeout=settings.retrieval_timeout_s,
+            )
+            grounded = apply_grounding_policy(retrieval_result, message)
+        except Exception:
+            logger.exception("Retrieval failed")
+            from backend.models.errors import RetrievalError
+            raise RetrievalError()
+    else:
+        grounded = GroundedResponse(
+            context="",
+            system_instruction=_CONVERSATIONAL_INSTRUCTION,
+            citations=[],
+            mode="normal",
+            sufficient_context=True,
+        )
 
     # 5. Build LLM prompt
     llm_contents = _build_llm_contents(
@@ -151,19 +182,46 @@ async def stream_chat_response(
             from backend.models.errors import GenerationError
             raise GenerationError("LLM client not configured")
 
-        response = gemini_client.models.generate_content_stream(
-            model=settings.llm_model,
-            contents=llm_contents,
-        )
+        queue: asyncio.Queue[str | None] = asyncio.Queue()
+        loop = asyncio.get_running_loop()
 
-        for chunk in response:
-            if chunk.text:
-                full_response.append(chunk.text)
-                yield {
-                    "event": "token",
-                    "data": json.dumps({"content": chunk.text}),
-                }
+        async def _produce():
+            await asyncio.to_thread(
+                _stream_llm_to_queue, gemini_client, settings.llm_model, llm_contents, queue, loop
+            )
 
+        producer = asyncio.create_task(_produce())
+
+        deadline = asyncio.get_event_loop().time() + settings.llm_timeout_s
+        while True:
+            remaining = deadline - asyncio.get_event_loop().time()
+            if remaining <= 0:
+                producer.cancel()
+                raise asyncio.TimeoutError()
+            try:
+                text = await asyncio.wait_for(queue.get(), timeout=remaining)
+            except asyncio.TimeoutError:
+                producer.cancel()
+                raise
+            if text is None:
+                break
+            full_response.append(text)
+            yield {
+                "event": "token",
+                "data": json.dumps({"content": text}),
+            }
+
+        # Re-raise any exception from the producer thread
+        if producer.done() and producer.exception():
+            raise producer.exception()
+
+    except asyncio.TimeoutError:
+        logger.warning("LLM generation timed out after %ds", settings.llm_timeout_s)
+        yield {
+            "event": "error",
+            "data": json.dumps({"code": "generation_timeout", "message": "Response generation timed out"}),
+        }
+        return
     except asyncio.CancelledError:
         logger.warning("Client disconnected mid-stream")
     except Exception as exc:
@@ -207,6 +265,26 @@ async def stream_chat_response(
         "event": "done",
         "data": json.dumps(done_data),
     }
+
+
+def _stream_llm_to_queue(
+    gemini_client: Any,
+    model: str,
+    contents: list[str],
+    queue: asyncio.Queue,
+    loop: asyncio.AbstractEventLoop,
+) -> None:
+    """Run synchronous LLM streaming in a thread, pushing chunks to a queue.
+
+    Uses call_soon_threadsafe because asyncio.Queue is not thread-safe.
+    """
+    response = gemini_client.models.generate_content_stream(
+        model=model, contents=contents,
+    )
+    for chunk in response:
+        if chunk.text:
+            loop.call_soon_threadsafe(queue.put_nowait, chunk.text)
+    loop.call_soon_threadsafe(queue.put_nowait, None)  # sentinel: stream finished
 
 
 def _auto_title(message: str) -> str:

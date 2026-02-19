@@ -7,6 +7,14 @@ description: Create and manage Qdrant collections for textbook RAG pipelines. Us
 
 Provision and manage Qdrant vector collections for RAG-powered textbook chatbots.
 
+## Non-Negotiable Rules
+
+1. **Validate collection existence before create** - Always check if a collection exists before attempting to create it; use `--validate-only` or equivalent check
+2. **Use environment-specific naming** - Collections must include environment suffix (e.g., `_dev`, `_staging`) to prevent cross-environment conflicts
+3. **No real API keys in code or config** - Use environment variables (`$QDRANT_API_KEY`) for all credentials; never hardcode keys in scripts or configuration files
+4. **Match vector dimensions to embedding model** - Vector size must exactly match the chosen embedding model's output dimensions
+5. **Backup before destructive operations** - Always create a backup before using `--recreate` or deleting collections
+
 ## When to Use This Skill
 
 Use this skill when:
@@ -41,11 +49,11 @@ python scripts/setup_collection.py \
 ### Common Vector Dimensions
 
 - `text-embedding-ada-002`: 1536
-- `text-embedding-3-small`: 1536  
+- `text-embedding-3-small`: 1536
 - `text-embedding-3-large`: 3072
 - `all-MiniLM-L6-v2`: 384
 
-## Core Workflows
+## Core Implementation Workflow
 
 ### 1. First-Time Setup
 
@@ -123,7 +131,7 @@ client.create_payload_index(
 
 **Recommended indexes** (created automatically by setup script):
 - `chapter`: keyword (chapter filtering)
-- `section`: keyword (section filtering)  
+- `section`: keyword (section filtering)
 - `page`: integer (page range queries)
 - `type`: keyword (content type filtering)
 
@@ -167,11 +175,11 @@ payload = {
     # Required fields
     "text": "The actual chunk text...",
     "chapter": "chapter-1",
-    "section": "1.1", 
+    "section": "1.1",
     "page": 42,
     "chunk_id": "unique-id",
     "type": "text",  # or "code", "heading", "list", "table"
-    
+
     # Optional but recommended
     "title": "Section heading",
     "module": "module-1-ros",
@@ -207,7 +215,7 @@ python scripts/setup_collection.py \
 # Output shows:
 # ✓ Collection exists
 #   Vector size: 1536
-#   Distance: COSINE  
+#   Distance: COSINE
 #   Points count: 45231
 # ✅ Validation passed
 ```
@@ -218,7 +226,7 @@ python scripts/setup_collection.py \
 
 **Error**: `vector dimension mismatch, expected 1536 got 384`
 
-**Solution**: 
+**Solution**:
 ```bash
 # Check collection config
 python scripts/setup_collection.py \
@@ -379,3 +387,14 @@ migrate_collection.py migrate \
 6. **Test in dev first** before applying to production
 7. **Use deterministic IDs** to prevent duplicate points
 8. **Monitor collection health** with regular validation checks
+
+## Acceptance Checklist
+
+- [ ] Collection created with correct vector dimensions matching embedding model
+- [ ] Collection existence validated before and after creation
+- [ ] Environment-specific naming convention applied (e.g., `_dev`, `_staging`, `_prod`)
+- [ ] Payload indexes created for all filtered fields
+- [ ] Test vector insertion and search verified
+- [ ] No real API keys hardcoded in scripts or configuration
+- [ ] Backup created before any destructive operation (`--recreate` or delete)
+- [ ] Health check passes with `--validate-only`

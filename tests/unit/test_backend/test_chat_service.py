@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import time
 import uuid
 from unittest.mock import AsyncMock, MagicMock, patch
 
@@ -301,3 +302,105 @@ class TestStreamChatResponse:
             prompt_text = contents[0] if isinstance(contents, list) else contents
             assert "Previous question" in prompt_text
             assert "Previous answer" in prompt_text
+
+    @pytest.mark.asyncio
+    async def test_llm_timeout_yields_error_event(
+        self, mock_pool, mock_user,
+    ):
+        """When LLM streaming times out, yield a timeout error event."""
+        settings = BackendSettings(
+            database_url="postgresql://test",
+            gemini_api_key="test-key",
+            llm_model="gemini-2.0-flash",
+            llm_timeout_s=0,  # immediate timeout
+        )
+
+        client = MagicMock()
+
+        def slow_stream(**kwargs):
+            time.sleep(2)
+            return []
+
+        client.models.generate_content_stream.side_effect = slow_stream
+
+        mock_pool.fetchrow = AsyncMock(side_effect=[
+            {"id": uuid.uuid4()},
+            {"id": uuid.uuid4()},
+        ])
+        mock_pool.fetch = AsyncMock(return_value=[])
+        mock_pool.execute = AsyncMock()
+
+        mock_grounded = MagicMock()
+        mock_grounded.system_instruction = "Answer."
+        mock_grounded.context = ""
+        mock_grounded.citations = []
+
+        mock_retrieval_result = MagicMock()
+        mock_retrieval_result.chunks = []
+        mock_retrieval_result.mode = "normal"
+
+        with patch("backend.services.chat_service.retrieve", return_value=mock_retrieval_result), \
+             patch("backend.services.chat_service.apply_grounding_policy", return_value=mock_grounded):
+            events = []
+            async for event in stream_chat_response(
+                message="Hello",
+                session_id=None,
+                mode="normal",
+                selected_text=None,
+                source_doc_path=None,
+                source_section=None,
+                filters=None,
+                pool=mock_pool,
+                gemini_client=client,
+                user=mock_user,
+                settings=settings,
+            ):
+                events.append(event)
+
+            error_events = [e for e in events if e["event"] == "error"]
+            assert len(error_events) == 1
+            error_data = json.loads(error_events[0]["data"])
+            assert error_data["code"] == "generation_timeout"
+
+    @pytest.mark.asyncio
+    async def test_retrieval_timeout_raises(
+        self, mock_pool, mock_gemini_client, mock_user,
+    ):
+        """When retrieval times out, a RetrievalError is raised."""
+        settings = BackendSettings(
+            database_url="postgresql://test",
+            gemini_api_key="test-key",
+            llm_model="gemini-2.0-flash",
+            retrieval_timeout_s=0,  # immediate timeout
+        )
+
+        session_id = uuid.uuid4()
+        mock_pool.fetchrow = AsyncMock(side_effect=[
+            {"id": session_id, "user_id": mock_user["id"], "status": "active"},
+            {"id": uuid.uuid4()},
+        ])
+        mock_pool.fetch = AsyncMock(return_value=[])
+        mock_pool.execute = AsyncMock()
+
+        def slow_retrieve(*args, **kwargs):
+            time.sleep(2)
+
+        with patch("backend.services.chat_service.retrieve", side_effect=slow_retrieve), \
+             patch("backend.services.chat_service.should_retrieve", return_value=True):
+            from backend.models.errors import RetrievalError
+            with pytest.raises(RetrievalError):
+                events = []
+                async for event in stream_chat_response(
+                    message="What is ROS2?",
+                    session_id=session_id,
+                    mode="normal",
+                    selected_text=None,
+                    source_doc_path=None,
+                    source_section=None,
+                    filters=None,
+                    pool=mock_pool,
+                    gemini_client=mock_gemini_client,
+                    user=mock_user,
+                    settings=settings,
+                ):
+                    events.append(event)

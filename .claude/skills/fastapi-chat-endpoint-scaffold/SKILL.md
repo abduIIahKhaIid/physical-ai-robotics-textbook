@@ -7,6 +7,14 @@ description: Scaffold FastAPI backends for RAG chat applications with request/re
 
 Generate production-ready FastAPI backends for RAG-powered chat applications with database persistence, vector search, and flexible query modes.
 
+## Quick Start
+
+```text
+/fastapi-chat-endpoint-scaffold
+```
+
+Expected output: A complete FastAPI backend scaffold with streaming chat endpoint, Pydantic v2 models, session persistence, and Qdrant retrieval integration.
+
 ## Core Features
 
 This skill scaffolds:
@@ -19,7 +27,7 @@ This skill scaffolds:
 - Optional authentication integration (Better Auth)
 - Multilingual support (English/Urdu)
 
-## Scaffold Procedure
+## Core Implementation Workflow
 
 ### 1. Project Structure Setup
 
@@ -277,5 +285,14 @@ curl -X POST http://localhost:8000/chat \
 - ✅ Sessions persist across requests
 - ✅ RAG retrieval works (normal mode)
 - ✅ Selected text bypasses RAG (selection_only mode)
+
+## Acceptance Checklist
+
+- [ ] Route uses `sse_starlette.EventSourceResponse` with dict yields
+- [ ] Pydantic v2 models for request/response
+- [ ] Async database calls via asyncpg
+- [ ] Session persistence hooks present
+- [ ] No real secrets or API keys in output
+- [ ] `.env.example` uses placeholder values only
 - ✅ Streaming works if enabled
 - ✅ Error handling is robust

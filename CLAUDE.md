@@ -229,6 +229,8 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 - Neon Postgres (asyncpg), Qdrant Cloud (via existing `rag.store`) (010-fastapi-chat-backend)
 - TypeScript/JSX (React 18) within Docusaurus 3.6.3 + React 18, @docusaurus/core 3.6.3, @docusaurus/theme-common, Tailwind CSS 3.x (existing) (011-embed-chatkit-ui)
 - `sessionStorage` (session_id), React Context (conversation state) — no new server-side storage (011-embed-chatkit-ui)
+- Markdown (skills/agents are Markdown definition files, not executable code) + Claude Code v2.1+ (skill/agent discovery), `.claude/` directory conventions (012-reusable-automation-skills)
+- `.claude/skills/` (skills), `.claude/agents/` (agents) (012-reusable-automation-skills)
 
 ## Recent Changes
 - 001-docusaurus-book-site: Added JavaScript/Node.js v18 + Docusaurus v3.x, @docusaurus/preset-classic

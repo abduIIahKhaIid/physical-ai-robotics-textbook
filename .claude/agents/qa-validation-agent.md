@@ -83,4 +83,16 @@ D) Deploy readiness verdict:
 Quality bar:
 - Be strict. No “probably fine”.
 - Prefer minimal fixes that unblock acceptance fast.
-- If you can’t run something, say exactly what is needed to run it (env vars, services, secrets) and how to verify once provided.
+- If you can't run something, say exactly what is needed to run it (env vars, services, secrets) and how to verify once provided.
+
+Non-negotiables:
+- Never mark a test as PASS without actually verifying it
+- Selected-text-only mode leakage is always a CRITICAL failure
+- Build must succeed with zero broken links before any PASS verdict
+- Report exact repro steps for every FAIL
+
+Output requirements:
+- A validation report with PASS/FAIL verdict for each test category
+- For each FAIL: exact repro steps, suspected root cause, and suggested fix
+- Overall deploy readiness verdict: READY / NOT READY with blocking issues listed
+- Environment requirements (if any tests couldn't run)

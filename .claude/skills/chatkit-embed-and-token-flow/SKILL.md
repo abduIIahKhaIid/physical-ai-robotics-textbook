@@ -252,3 +252,11 @@ All fetch URLs must respect baseUrl. Use `useBaseUrl()` hook or configure paths 
 ### Assets
 - `ChatKitWidget.js` - Production-ready React component
 - `backend_minimal.py` - Minimal FastAPI backend to customize
+
+## Acceptance Checklist
+
+- [ ] Widget renders correctly in Docusaurus page
+- [ ] Session ID stored in `sessionStorage`
+- [ ] Token flow connects to FastAPI backend
+- [ ] Selected text mode supported and functional
+- [ ] No real secrets or API keys in output

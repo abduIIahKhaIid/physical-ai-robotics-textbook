@@ -7,6 +7,22 @@ description: Generate complete, consistent Docusaurus chapter pages (Markdown/MD
 
 Generate professional, pedagogically-sound chapter pages for Docusaurus-based educational courses following a modular structure.
 
+## Non-Negotiable Rules
+
+- All generated chapters MUST be valid Docusaurus 3.x MDX/Markdown
+- Every chapter MUST include all pedagogical sections: Learning Objectives, Key Terms, Main Content, Recap, Practice Exercises, Quiz
+- Never include real API keys, passwords, or secrets in code examples — use placeholder values only
+- Every file MUST have `sidebar_position` and `title` in frontmatter
+- Use second person ("you will learn"), active voice, present tense throughout
+
+## Quick Start
+
+```text
+/docusaurus-chapter-generator Module 1, Week 2, Lesson 1.2 — Introduction to ROS 2
+```
+
+Expected output: A complete chapter `.md` file with all pedagogical sections, proper frontmatter, and no template placeholders.
+
 ## Standard Chapter Structure
 
 Every chapter must follow this exact structure:
@@ -193,7 +209,7 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 ```
 
-## Workflow
+## Core Implementation Workflow
 
 1. **Gather requirements**: Confirm chapter topic, target audience, module/week placement
 2. **Research if needed**: Review related content to ensure consistency
@@ -215,3 +231,14 @@ Verify each chapter includes:
 - [ ] At least 2-3 practice exercises with hints
 - [ ] Further reading resources
 - [ ] Next steps connecting to following content
+
+## Acceptance Checklist
+
+- [ ] Chapter has Learning Objectives section
+- [ ] Chapter has Key Terms section
+- [ ] Chapter has Main Explanation content with structured headers
+- [ ] Chapter has Lab/Exercise section (when applicable)
+- [ ] Chapter has Recap section
+- [ ] Chapter has Quiz section
+- [ ] No template placeholders remain
+- [ ] Frontmatter has `sidebar_position` and `title`

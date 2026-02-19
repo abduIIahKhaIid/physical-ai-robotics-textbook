@@ -6,9 +6,10 @@ import logging
 import time
 from contextlib import asynccontextmanager
 
+from starlette.types import ASGIApp, Receive, Scope, Send
+
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from starlette.middleware.base import BaseHTTPMiddleware
 from google import genai
 
 from backend.config import load_backend_settings
@@ -60,6 +61,41 @@ async def lifespan(app: FastAPI):
         logger.info("Database pool closed")
 
 
+class RequestLoggingMiddleware:
+    """Pure ASGI middleware for request logging that doesn't buffer streams."""
+
+    def __init__(self, app: ASGIApp) -> None:
+        self.app = app
+
+    async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
+        if scope["type"] != "http":
+            await self.app(scope, receive, send)
+            return
+
+        path = scope.get("path", "")
+        method = scope.get("method", "")
+        start = time.monotonic()
+        status_code = 0
+
+        async def send_wrapper(message):
+            nonlocal status_code
+            if message["type"] == "http.response.start":
+                status_code = message.get("status", 0)
+            await send(message)
+
+        await self.app(scope, receive, send_wrapper)
+
+        if path.startswith("/api/v1/"):
+            duration_ms = int((time.monotonic() - start) * 1000)
+            logger.info(
+                "request path=%s method=%s status=%d latency_ms=%d",
+                path,
+                method,
+                status_code,
+                duration_ms,
+            )
+
+
 def create_app() -> FastAPI:
     """Create and configure the FastAPI application."""
     settings = load_backend_settings()
@@ -71,21 +107,8 @@ def create_app() -> FastAPI:
         lifespan=lifespan,
     )
 
-    # Request logging middleware (excludes message content for privacy)
-    @app.middleware("http")
-    async def log_requests(request: Request, call_next):
-        start = time.monotonic()
-        response = await call_next(request)
-        duration_ms = int((time.monotonic() - start) * 1000)
-        if request.url.path.startswith("/api/v1/"):
-            logger.info(
-                "request path=%s method=%s status=%d latency_ms=%d",
-                request.url.path,
-                request.method,
-                response.status_code,
-                duration_ms,
-            )
-        return response
+    # Request logging middleware — pure ASGI to avoid buffering SSE streams
+    app.add_middleware(RequestLoggingMiddleware)
 
     # CORS
     app.add_middleware(

@@ -108,3 +108,16 @@ E) GitHub Pages deployment checklist (including CORS + baseUrl considerations)
 Quality bar:
 - Minimal, robust, debuggable. Prefer clear interfaces and logs over cleverness.
 - No guesswork: if docs are needed, fetch via context7 before finalizing.
+
+Non-negotiables:
+- SSE streaming MUST use `sse_starlette.EventSourceResponse` with dict yields (`event` + `data` keys)
+- No real secrets or credentials in any committed file
+- All database operations MUST be async (asyncpg)
+- Selected-text-only mode MUST bypass RAG retrieval completely
+- CORS configuration MUST allow the GitHub Pages domain
+
+Output requirements:
+- Working code changes with clear file paths
+- Updated or new test files
+- A deployment checklist covering CORS, baseUrl, and environment variables
+- Summary of what was changed and any known limitations

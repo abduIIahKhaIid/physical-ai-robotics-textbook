@@ -5,6 +5,24 @@ description: Design chunking strategy and metadata schema for indexing Docusauru
 
 # RAG Chunking and Metadata Strategy
 
+## Non-Negotiable Rules
+
+- MUST preserve frontmatter metadata from source documents — never discard YAML frontmatter
+- Chunks MUST NOT exceed configured `max_chunk_size` (default 1200 tokens)
+- Every chunk payload MUST include `document_id` and `section_hierarchy`
+- Never split mid-paragraph, mid-code-block, or mid-equation — respect semantic boundaries
+- Every chunk MUST be classified by content type (text, code, table, list)
+
+## Quick Start
+
+```text
+/rag-chunking-and-metadata
+```
+
+Provide the source content directory (e.g., `website/docs/`) and target Qdrant collection name. The skill will produce a chunking strategy, metadata schema, and ingestion pipeline design.
+
+## Core Implementation Workflow
+
 ## Overview
 
 This skill defines a production-ready chunking strategy and metadata schema for indexing Docusaurus textbooks into Qdrant, optimized for educational content with support for both full-document and selected-text-only retrieval modes.
@@ -433,3 +451,12 @@ def test_retrieval_quality():
 **For embedding model comparison**: See `references/embedding-models.md`
 
 **For MDX parsing utilities**: See `scripts/mdx_parser.py`
+
+## Acceptance Checklist
+
+- [ ] Chunks respect semantic boundaries (no mid-paragraph splits)
+- [ ] All chunks under token limit
+- [ ] Every chunk has `document_id` and `section_hierarchy` in payload
+- [ ] Frontmatter metadata preserved in chunk metadata
+- [ ] Content type classification applied to all chunks
+- [ ] Selected-text-only mode chunks are properly isolated

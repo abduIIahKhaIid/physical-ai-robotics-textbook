@@ -7,6 +7,14 @@ description: Define Neon Postgres schema and migration workflow for chatbot sess
 
 Production-ready Postgres schema and migration toolkit for RAG chatbot applications on Neon serverless Postgres.
 
+## Non-Negotiable Rules
+
+1. **Must use asyncpg for queries** - All database operations must use asyncpg for async Postgres access; do not use synchronous drivers in production code
+2. **Must support rollback** - Every migration must include rollback SQL (DOWN section) to enable safe reversion
+3. **No raw credentials** - Never hardcode database passwords or connection strings; use environment variables (`$DATABASE_URL`) and `.env` files
+4. **Test on branch first** - All migrations must be tested on a Neon branch or dev database before applying to production
+5. **Use transactions for multi-step changes** - Wrap multi-statement migrations in transactions to ensure atomicity
+
 ## Core Schema
 
 The schema supports:
@@ -85,7 +93,7 @@ CREATE INDEX idx_messages_user_id ON messages(user_id);
 
 **Add foreign key:**
 ```sql
-ALTER TABLE messages ADD CONSTRAINT fk_messages_user 
+ALTER TABLE messages ADD CONSTRAINT fk_messages_user
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE;
 ```
 
@@ -104,7 +112,7 @@ VALUES ($1, 'user', 'What does this mean?', 'ROS 2 uses DDS for communication');
 Track document chunks used in responses:
 ```sql
 INSERT INTO message_citations (message_id, document_id, chunk_id, score, citation_index)
-VALUES 
+VALUES
   ($1, 'module-1-ros2', 'chunk_023', 0.89, 1),
   ($1, 'module-2-gazebo', 'chunk_045', 0.82, 2);
 ```
@@ -112,9 +120,9 @@ VALUES
 ### User Personalization
 Store onboarding data for content customization:
 ```sql
-INSERT INTO user_profiles 
+INSERT INTO user_profiles
   (user_id, software_background, hardware_background, experience_level, preferred_language)
-VALUES 
+VALUES
   ($1, 'Python, JavaScript', 'Raspberry Pi', 'intermediate', 'en');
 ```
 
@@ -122,17 +130,17 @@ VALUES
 Flexible metadata for sessions and messages:
 ```sql
 -- Session metadata
-UPDATE chat_sessions 
+UPDATE chat_sessions
 SET metadata = metadata || '{"personalized": true, "chapter": "module-1"}'::jsonb
 WHERE id = $1;
 
 -- Message metadata
-UPDATE messages 
+UPDATE messages
 SET metadata = metadata || '{"translated_to": "ur", "tokens": 1250}'::jsonb
 WHERE id = $1;
 ```
 
-## Workflow Selection
+## Core Implementation Workflow
 
 **Choose based on your stack:**
 
@@ -175,7 +183,7 @@ neonctl connection-string test-migration
 # If bad → delete branch
 ```
 
-**Auto-suspend:** 
+**Auto-suspend:**
 First query after idle may be slower (~1-2s) due to database wake-up.
 
 ## Migration Safety
@@ -200,7 +208,7 @@ For production migrations:
 
 Get conversation with citations:
 ```sql
-SELECT 
+SELECT
   m.id, m.role, m.content, m.created_at,
   json_agg(mc.document_id) FILTER (WHERE mc.id IS NOT NULL) as cited_docs
 FROM messages m
@@ -211,3 +219,14 @@ ORDER BY m.created_at ASC;
 ```
 
 See `references/queries.md` for 30+ production-ready queries.
+
+## Acceptance Checklist
+
+- [ ] Schema initialized successfully with chosen scope (all/chat/auth)
+- [ ] All migrations include rollback SQL (DOWN section)
+- [ ] asyncpg used for all async database operations
+- [ ] No raw credentials in code or config files; `$DATABASE_URL` used via environment variables
+- [ ] Migration tested on Neon branch or dev database before production
+- [ ] Multi-step migrations wrapped in transactions
+- [ ] SSL required in connection string (`sslmode=require`)
+- [ ] Indexes created for frequently queried columns (session_id, user_id)

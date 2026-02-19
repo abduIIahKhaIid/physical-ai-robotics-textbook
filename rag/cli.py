@@ -30,7 +30,7 @@ def ingest(docs_dir: str):
     from rag.chunker.heading_chunker import chunk_blocks
     from rag.chunker.overlap import add_overlaps
     from rag.chunker.id_generator import generate_ids
-    from rag.embedder.openai_embedder import batch_embed
+    from rag.embedder.gemini_embedder import batch_embed
     from rag.store.qdrant_store import ensure_collection, upsert_chunks, delete_stale_chunks
 
     start = time.time()
@@ -93,7 +93,7 @@ def ingest_doc(doc_path: str, docs_dir: str):
     from rag.chunker.heading_chunker import chunk_blocks
     from rag.chunker.overlap import add_overlaps
     from rag.chunker.id_generator import generate_ids
-    from rag.embedder.openai_embedder import batch_embed
+    from rag.embedder.gemini_embedder import batch_embed
     from rag.store.qdrant_store import ensure_collection, upsert_chunks, delete_stale_chunks
 
     abs_path = Path(docs_dir) / doc_path
