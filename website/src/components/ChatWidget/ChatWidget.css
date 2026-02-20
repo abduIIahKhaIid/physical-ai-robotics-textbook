@@ -1,5 +1,158 @@
 /* Chat Widget Styles */
 
+/* ── Auth Forms ── */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  width: 100%;
+}
+.auth-form-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+.auth-form-error {
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+.auth-form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.auth-form-input {
+  padding: 8px 12px;
+  border: 1px solid var(--ifm-color-emphasis-300, #d1d5db);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: var(--ifm-background-surface-color, #fff);
+  color: var(--ifm-font-color-base, #1f2937);
+}
+.auth-form-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+.auth-form-button {
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.auth-form-button:hover { opacity: 0.9; }
+.auth-form-button:disabled { opacity: 0.5; cursor: not-allowed; }
+.auth-form-switch {
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 0;
+}
+.auth-form-link {
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: inherit;
+  text-decoration: underline;
+  padding: 0;
+}
+
+/* ── Welcome Auth Section ── */
+.welcome-auth-section {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0;
+  flex-wrap: wrap;
+}
+.welcome-auth-btn {
+  padding: 6px 16px;
+  border: 1px solid var(--ifm-color-emphasis-300, #d1d5db);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ifm-font-color-base, #374151);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.welcome-auth-btn:hover {
+  background: var(--ifm-color-emphasis-100, #f3f4f6);
+}
+.welcome-auth-btn-primary {
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  border: none;
+}
+.welcome-auth-btn-primary:hover {
+  opacity: 0.9;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+}
+.welcome-signout-btn {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  color: #6b7280;
+  border-color: #e5e7eb;
+}
+.welcome-user-email {
+  font-size: 0.85rem;
+  color: var(--ifm-font-color-secondary, #6b7280);
+}
+
+/* ── Onboarding Form ── */
+.onboarding-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.onboarding-subtitle {
+  font-size: 0.85rem;
+  color: var(--ifm-font-color-secondary, #6b7280);
+  text-align: center;
+  margin: 0;
+}
+.onboarding-fieldset {
+  border: 1px solid var(--ifm-color-emphasis-200, #e5e7eb);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0;
+}
+.onboarding-fieldset legend {
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0 4px;
+}
+.onboarding-radio,
+.onboarding-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  padding: 3px 0;
+  cursor: pointer;
+}
+.onboarding-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
 /* ── Floating Action Button ── */
 .chat-button {
   position: fixed;

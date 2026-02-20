@@ -19,7 +19,7 @@ from backend.models.errors import (
     chat_backend_error_handler,
     generic_error_handler,
 )
-from backend.routers import chat, health, sessions
+from backend.routers import auth_migration, chat, health, profile, sessions
 from backend.services.rate_limiter import SlidingWindowRateLimiter
 
 logger = logging.getLogger(__name__)
@@ -110,12 +110,16 @@ def create_app() -> FastAPI:
     # Request logging middleware — pure ASGI to avoid buffering SSE streams
     app.add_middleware(RequestLoggingMiddleware)
 
-    # CORS
+    # CORS — include Better-Auth service origin alongside configured origins
+    cors_origins = list(settings.cors_origins)
+    if settings.better_auth_url and settings.better_auth_url not in cors_origins:
+        cors_origins.append(settings.better_auth_url)
+
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=settings.cors_origins,
+        allow_origins=cors_origins,
         allow_credentials=True,
-        allow_methods=["GET", "POST", "OPTIONS"],
+        allow_methods=["GET", "POST", "PATCH", "OPTIONS"],
         allow_headers=["*"],
         expose_headers=["Retry-After"],
     )
@@ -127,6 +131,8 @@ def create_app() -> FastAPI:
     # Routers
     app.include_router(chat.router, prefix="/api/v1", tags=["chat"])
     app.include_router(sessions.router, prefix="/api/v1", tags=["sessions"])
+    app.include_router(profile.router, prefix="/api/v1", tags=["profile"])
+    app.include_router(auth_migration.router, prefix="/api/v1", tags=["auth"])
     app.include_router(health.router, prefix="/api/v1", tags=["operations"])
 
     return app

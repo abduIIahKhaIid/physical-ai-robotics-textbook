@@ -48,6 +48,7 @@ jspm_packages
 # Environment variables
 .env*
 !.env.example
+!auth-service/.env.example
 
 # Editor specific files
 .vscode/

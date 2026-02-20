@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useChatContext } from './ChatProvider';
 
 const SUGGESTIONS = [
@@ -6,6 +6,81 @@ const SUGGESTIONS = [
   'Explain inverse kinematics',
   'How does SLAM work?',
 ];
+
+// Auth components loaded conditionally to avoid SSR issues
+function AuthSection() {
+  const [authView, setAuthView] = useState<'none' | 'login' | 'register'>('none');
+
+  // Lazy-load auth components (they use browser-only APIs)
+  let authUser: any = null;
+  let isAuthenticated = false;
+  let signOut: (() => Promise<void>) | null = null;
+  let onboardingCompleted: boolean | null = null;
+
+  try {
+    const { useAuth } = require('../AuthProvider');
+    const auth = useAuth();
+    authUser = auth.user;
+    isAuthenticated = auth.isAuthenticated;
+    signOut = auth.signOut;
+    onboardingCompleted = auth.onboardingCompleted;
+  } catch {
+    // AuthProvider not available
+  }
+
+  if (isAuthenticated && authUser) {
+    return (
+      <div className="welcome-auth-section">
+        <span className="welcome-user-email">{authUser.email}</span>
+        {signOut && (
+          <button
+            className="welcome-auth-btn welcome-signout-btn"
+            onClick={() => signOut!()}
+          >
+            Sign Out
+          </button>
+        )}
+      </div>
+    );
+  }
+
+  if (authView === 'login') {
+    const { LoginForm } = require('../LoginForm');
+    return (
+      <LoginForm
+        onSuccess={() => setAuthView('none')}
+        onSwitchToRegister={() => setAuthView('register')}
+      />
+    );
+  }
+
+  if (authView === 'register') {
+    const { RegisterForm } = require('../RegisterForm');
+    return (
+      <RegisterForm
+        onSuccess={() => setAuthView('none')}
+        onSwitchToLogin={() => setAuthView('login')}
+      />
+    );
+  }
+
+  return (
+    <div className="welcome-auth-section">
+      <button
+        className="welcome-auth-btn"
+        onClick={() => setAuthView('login')}
+      >
+        Sign In
+      </button>
+      <button
+        className="welcome-auth-btn welcome-auth-btn-primary"
+        onClick={() => setAuthView('register')}
+      >
+        Sign Up
+      </button>
+    </div>
+  );
+}
 
 export function WelcomeScreen() {
   const { sendMessage } = useChatContext();
@@ -31,6 +106,7 @@ export function WelcomeScreen() {
       <div className="welcome-subtitle">
         Ask me about any topic in the textbook
       </div>
+      <AuthSection />
       <div className="welcome-chips">
         {SUGGESTIONS.map((text) => (
           <button

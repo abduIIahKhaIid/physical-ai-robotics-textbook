@@ -231,6 +231,8 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 - `sessionStorage` (session_id), React Context (conversation state) — no new server-side storage (011-embed-chatkit-ui)
 - Markdown (skills/agents are Markdown definition files, not executable code) + Claude Code v2.1+ (skill/agent discovery), `.claude/` directory conventions (012-reusable-automation-skills)
 - `.claude/skills/` (skills), `.claude/agents/` (agents) (012-reusable-automation-skills)
+- TypeScript/Node.js 18+ (auth service), Python 3.11 (FastAPI backend), React 18 (Docusaurus frontend) + `better-auth` (auth service), `pg` (Node.js Postgres), FastAPI + asyncpg (existing), `better-auth/react` (client) (013-authentication-and-onboarding)
+- Neon Postgres (shared — Better-Auth tables + application tables) (013-authentication-and-onboarding)
 
 ## Recent Changes
 - 001-docusaurus-book-site: Added JavaScript/Node.js v18 + Docusaurus v3.x, @docusaurus/preset-classic

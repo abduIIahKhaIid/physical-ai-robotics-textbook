@@ -153,11 +153,25 @@ export function ChatProvider({ children }: { children: React.ReactNode }) {
         ?? (typeof document !== 'undefined' ? document.title : null),
     };
 
+    // Attach bearer token if available, store anon token for migration
+    let bearerToken: string | null = null;
+    try {
+      bearerToken = localStorage.getItem('bearer_token');
+      if (!bearerToken && currentSessionId) {
+        // Store session as anonymous for potential migration on login
+        const { setAnonToken } = require('../../utils/authClient');
+        const anonKey = `anon-${typeof window !== 'undefined' && window.location ? window.location.hostname : 'unknown'}`;
+        setAnonToken(anonKey);
+      }
+    } catch {
+      // localStorage unavailable
+    }
+
     let accumulated = '';
     let finalCitations: Citation[] = [];
 
     try {
-      for await (const event of postChat(backendUrl, request)) {
+      for await (const event of postChat(backendUrl, request, bearerToken)) {
         if (abortRef.current) break;
 
         switch (event.type) {

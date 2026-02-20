@@ -23,6 +23,7 @@ class BackendSettings(BaseModel):
     max_message_length: int = Field(default=4000)
     max_selected_text_length: int = Field(default=10000)
     max_history_messages: int = Field(default=10)
+    better_auth_url: str = Field(default="http://localhost:4000")
     log_level: str = Field(default="INFO")
     router_timeout_s: int = Field(default=5)
     llm_timeout_s: int = Field(default=30)
@@ -51,6 +52,7 @@ def load_backend_settings() -> BackendSettings:
             os.environ.get("MAX_SELECTED_TEXT_LENGTH", "10000")
         ),
         max_history_messages=int(os.environ.get("MAX_HISTORY_MESSAGES", "10")),
+        better_auth_url=os.environ.get("BETTER_AUTH_URL", "http://localhost:4000"),
         log_level=os.environ.get("LOG_LEVEL", "INFO"),
         router_timeout_s=int(os.environ.get("ROUTER_TIMEOUT_S", "5")),
         llm_timeout_s=int(os.environ.get("LLM_TIMEOUT_S", "30")),

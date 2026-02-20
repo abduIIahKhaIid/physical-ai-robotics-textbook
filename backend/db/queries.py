@@ -7,6 +7,24 @@ import uuid
 import asyncpg
 
 
+async def get_ba_session_by_token(
+    pool: asyncpg.Pool, token: str
+) -> asyncpg.Record | None:
+    """Look up a Better-Auth session by bearer token.
+
+    Better-Auth uses camelCase column names, so we must double-quote them.
+    Returns the session row if valid and not expired, else None.
+    """
+    return await pool.fetchrow(
+        """
+        SELECT "userId", "expiresAt", "token"
+        FROM "session"
+        WHERE "token" = $1 AND "expiresAt" > now()
+        """,
+        token,
+    )
+
+
 async def create_user(
     pool: asyncpg.Pool, token: str, tier: str = "anonymous", ip: str | None = None
 ) -> uuid.UUID:
@@ -157,3 +175,145 @@ async def update_session_title(
     await pool.execute(
         "UPDATE sessions SET title = $1 WHERE id = $2", title, session_id
     )
+
+
+# --- Profile CRUD queries ---
+
+
+async def create_profile(
+    pool: asyncpg.Pool,
+    user_id: str,
+    software_level: str = "beginner",
+    programming_languages: str = "",
+    hardware_level: str = "none",
+    available_hardware: list[str] | None = None,
+    learning_goal: str = "",
+    preferred_pace: str = "self_paced",
+) -> asyncpg.Record:
+    """Insert a new user profile and return the created row."""
+    return await pool.fetchrow(
+        """
+        INSERT INTO user_profiles
+            (user_id, software_level, programming_languages, hardware_level,
+             available_hardware, learning_goal, preferred_pace,
+             onboarding_completed, created_at, updated_at)
+        VALUES ($1, $2, $3, $4, $5, $6, $7, true, now(), now())
+        RETURNING *
+        """,
+        user_id,
+        software_level,
+        programming_languages,
+        hardware_level,
+        available_hardware or [],
+        learning_goal,
+        preferred_pace,
+    )
+
+
+async def get_profile_by_user_id(
+    pool: asyncpg.Pool, user_id: str
+) -> asyncpg.Record | None:
+    """Get a user profile by Better-Auth user ID."""
+    return await pool.fetchrow(
+        "SELECT * FROM user_profiles WHERE user_id = $1",
+        user_id,
+    )
+
+
+async def upsert_profile(
+    pool: asyncpg.Pool,
+    user_id: str,
+    software_level: str = "beginner",
+    programming_languages: str = "",
+    hardware_level: str = "none",
+    available_hardware: list[str] | None = None,
+    learning_goal: str = "",
+    preferred_pace: str = "self_paced",
+) -> asyncpg.Record:
+    """Insert or replace a user profile (full upsert)."""
+    return await pool.fetchrow(
+        """
+        INSERT INTO user_profiles
+            (user_id, software_level, programming_languages, hardware_level,
+             available_hardware, learning_goal, preferred_pace,
+             onboarding_completed, created_at, updated_at)
+        VALUES ($1, $2, $3, $4, $5, $6, $7, true, now(), now())
+        ON CONFLICT (user_id)
+        DO UPDATE SET
+            software_level = EXCLUDED.software_level,
+            programming_languages = EXCLUDED.programming_languages,
+            hardware_level = EXCLUDED.hardware_level,
+            available_hardware = EXCLUDED.available_hardware,
+            learning_goal = EXCLUDED.learning_goal,
+            preferred_pace = EXCLUDED.preferred_pace,
+            onboarding_completed = true,
+            updated_at = now()
+        RETURNING *
+        """,
+        user_id,
+        software_level,
+        programming_languages,
+        hardware_level,
+        available_hardware or [],
+        learning_goal,
+        preferred_pace,
+    )
+
+
+async def update_profile(
+    pool: asyncpg.Pool,
+    user_id: str,
+    **fields: str | list[str],
+) -> asyncpg.Record | None:
+    """Update only the provided fields on a user profile.
+
+    Returns the updated row, or None if the profile doesn't exist.
+    """
+    if not fields:
+        return await get_profile_by_user_id(pool, user_id)
+
+    allowed = {
+        "software_level", "programming_languages", "hardware_level",
+        "available_hardware", "learning_goal", "preferred_pace",
+    }
+    filtered = {k: v for k, v in fields.items() if k in allowed and v is not None}
+
+    if not filtered:
+        return await get_profile_by_user_id(pool, user_id)
+
+    set_clauses = []
+    params: list = []
+    for i, (col, val) in enumerate(filtered.items(), start=1):
+        set_clauses.append(f"{col} = ${i}")
+        params.append(val)
+
+    set_clauses.append(f"updated_at = now()")
+    params.append(user_id)
+    user_param = f"${len(params)}"
+
+    query = f"""
+        UPDATE user_profiles
+        SET {', '.join(set_clauses)}
+        WHERE user_id = {user_param}
+        RETURNING *
+    """
+    return await pool.fetchrow(query, *params)
+
+
+# --- Session migration queries ---
+
+
+async def migrate_anonymous_sessions(
+    pool: asyncpg.Pool, anon_token: str, ba_user_id: str
+) -> int:
+    """Migrate anonymous sessions to a Better-Auth user.
+
+    Calls the SQL function created in migration 003.
+    Returns the number of migrated sessions.
+    """
+    row = await pool.fetchrow(
+        "SELECT migrate_anonymous_sessions($1, $2) AS count",
+        anon_token,
+        ba_user_id,
+    )
+    return row["count"] if row else 0
