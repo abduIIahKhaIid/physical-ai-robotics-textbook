@@ -73,6 +73,12 @@ class GenerationError(ChatBackendError):
     message = "Response generation failed"
 
 
+class ProfileNotFoundError(ChatBackendError):
+    status_code = 404
+    error_code = "profile_not_found"
+    message = "Profile not found"
+
+
 async def chat_backend_error_handler(
     request: Request, exc: ChatBackendError
 ) -> JSONResponse:

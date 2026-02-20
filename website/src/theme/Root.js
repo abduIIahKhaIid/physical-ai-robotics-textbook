@@ -4,14 +4,19 @@ import { ChatProvider } from '../components/ChatWidget/ChatProvider';
 
 export default function Root({ children }) {
   return (
-    <ChatProvider>
-      {children}
-      <BrowserOnly>
-        {() => {
-          const { ChatWidgetOverlay } = require('../components/ChatWidget');
-          return <ChatWidgetOverlay />;
-        }}
-      </BrowserOnly>
-    </ChatProvider>
+    <BrowserOnly fallback={<>{children}</>}>
+      {() => {
+        const { AuthProvider } = require('../components/AuthProvider');
+        const { ChatWidgetOverlay } = require('../components/ChatWidget');
+        return (
+          <AuthProvider>
+            <ChatProvider>
+              {children}
+              <ChatWidgetOverlay />
+            </ChatProvider>
+          </AuthProvider>
+        );
+      }}
+    </BrowserOnly>
   );
 }

@@ -33,16 +33,22 @@ export type SSEEvent =
 export async function* postChat(
   backendUrl: string,
   request: ChatRequest,
+  bearerToken?: string | null,
 ): AsyncGenerator<SSEEvent> {
   let response: Response;
+
+  const headers: Record<string, string> = {
+    'Content-Type': 'application/json',
+    Accept: 'text/event-stream',
+  };
+  if (bearerToken) {
+    headers['Authorization'] = `Bearer ${bearerToken}`;
+  }
 
   try {
     response = await fetch(`${backendUrl}/api/v1/chat`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'text/event-stream',
-      },
+      headers,
       body: JSON.stringify(request),
     });
   } catch {
@@ -54,6 +60,13 @@ export async function* postChat(
   if (response.status === 429) {
     const retryAfter = parseInt(response.headers.get('Retry-After') || '60', 10);
     yield { type: 'rate_limited', retryAfter };
+    return;
+  }
+
+  if (response.status === 401) {
+    // Token expired or invalid — clear it
+    try { localStorage.removeItem('bearer_token'); } catch { /* noop */ }
+    yield { type: 'error', code: 'auth_expired', message: 'Your session has expired. Please sign in again.' };
     return;
   }
 

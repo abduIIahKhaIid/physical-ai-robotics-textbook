@@ -53,6 +53,16 @@ export default {
     ],
   ],
 
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        indexBlog: false,
+      },
+    ],
+  ],
+
   plugins: [
     async function myPlugin(context, options) {
       return {
@@ -85,11 +95,6 @@ export default {
             position: 'left',
             label: 'Textbook',
           },
-          {
-            href: 'https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook',
-            label: 'GitHub',
-            position: 'right',
-          },
         ],
       },
       footer: {
@@ -102,33 +107,41 @@ export default {
                 label: 'Introduction',
                 to: '/docs/intro',
               },
+              {
+                label: 'Get Started',
+                to: '/docs/module-1',
+              },
             ],
           },
           {
-            title: 'Community',
+            title: 'Resources',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'ROS 2 Documentation',
+                href: 'https://docs.ros.org/en/humble/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'NVIDIA Isaac Sim',
+                href: 'https://developer.nvidia.com/isaac-sim',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Project',
             items: [
               {
                 href: 'https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook',
                 label: 'GitHub',
                 className: 'footer-github-link',
               },
+              {
+                href: 'https://github.com/abduIIahKhaIid/physical-ai-robotics-textbook/issues',
+                label: 'Report an Issue',
+              },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Textbook`,
+        copyright: `Copyright \u00a9 ${new Date().getFullYear()} Physical AI & Humanoid Robotics Textbook`,
       },
       prism: {
         theme: prismThemes.github,
