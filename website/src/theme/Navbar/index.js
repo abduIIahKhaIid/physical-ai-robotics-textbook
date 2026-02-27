@@ -2,11 +2,12 @@ import React, { useState, useRef, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Navbar from '@theme-original/Navbar';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 function AuthButtons() {
   const { useAuth } = require('../../components/AuthProvider');
-  const { LoginForm } = require('../../components/LoginForm');
-  const { RegisterForm } = require('../../components/RegisterForm');
+  const { siteConfig } = useDocusaurusContext();
+  const authNextUrl = siteConfig.customFields?.authNextUrl || 'http://localhost:3001';
 
   const { user, isAuthenticated, isLoading, signOut } = useAuth();
   const [showDropdown, setShowDropdown] = useState(null);
@@ -100,35 +101,18 @@ function AuthButtons() {
     </div>
   ) : (
     <div className="navbar-auth-buttons" ref={dropdownRef}>
-      <button
+      <a
         className="navbar-auth-signin-btn"
-        onClick={() => setShowDropdown(showDropdown === 'login' ? null : 'login')}
+        href={`${authNextUrl}/login`}
       >
         Sign In
-      </button>
-      <button
+      </a>
+      <a
         className="navbar-auth-getstarted-btn"
-        onClick={() => setShowDropdown(showDropdown === 'register' ? null : 'register')}
+        href={`${authNextUrl}/register`}
       >
         Get Started
-      </button>
-
-      {showDropdown === 'login' && (
-        <div className="navbar-auth-dropdown navbar-auth-dropdown--form">
-          <LoginForm
-            onSuccess={() => setShowDropdown(null)}
-            onSwitchToRegister={() => setShowDropdown('register')}
-          />
-        </div>
-      )}
-      {showDropdown === 'register' && (
-        <div className="navbar-auth-dropdown navbar-auth-dropdown--form">
-          <RegisterForm
-            onSuccess={() => setShowDropdown(null)}
-            onSwitchToLogin={() => setShowDropdown('login')}
-          />
-        </div>
-      )}
+      </a>
     </div>
   );
 

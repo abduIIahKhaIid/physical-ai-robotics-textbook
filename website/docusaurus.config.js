@@ -20,6 +20,7 @@ export default {
 
   customFields: {
     chatApiUrl: process.env.REACT_APP_CHAT_API_URL || 'http://localhost:8000',
+    authNextUrl: process.env.REACT_APP_AUTH_NEXT_URL || 'https://auth-next-zeta.vercel.app',
   },
 
   onBrokenLinks: 'throw',
