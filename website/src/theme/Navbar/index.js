@@ -2,12 +2,11 @@ import React, { useState, useRef, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Navbar from '@theme-original/Navbar';
 import BrowserOnly from '@docusaurus/BrowserOnly';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
+const AUTH_NEXT_URL = 'https://auth-next-zeta.vercel.app';
 
 function AuthButtons() {
   const { useAuth } = require('../../components/AuthProvider');
-  const { siteConfig } = useDocusaurusContext();
-  const authNextUrl = siteConfig.customFields?.authNextUrl || 'http://localhost:3001';
 
   const { user, isAuthenticated, isLoading, signOut } = useAuth();
   const [showDropdown, setShowDropdown] = useState(null);
@@ -103,13 +102,13 @@ function AuthButtons() {
     <div className="navbar-auth-buttons" ref={dropdownRef}>
       <a
         className="navbar-auth-signin-btn"
-        href={`${authNextUrl}/login`}
+        href={`${AUTH_NEXT_URL}/login`}
       >
         Sign In
       </a>
       <a
         className="navbar-auth-getstarted-btn"
-        href={`${authNextUrl}/register`}
+        href={`${AUTH_NEXT_URL}/register`}
       >
         Get Started
       </a>
