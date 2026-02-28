@@ -6,9 +6,20 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 const AUTH_NEXT_URL = 'https://auth-next-zeta.vercel.app';
 
 function AuthButtons() {
-  const { useAuth } = require('../../components/AuthProvider');
+  let useAuth;
+  try {
+    useAuth = require('../../components/AuthProvider').useAuth;
+  } catch {
+    return null;
+  }
 
-  const { user, isAuthenticated, isLoading, signOut } = useAuth();
+  let authState;
+  try {
+    authState = useAuth();
+  } catch {
+    return null;
+  }
+  const { user, isAuthenticated, isLoading, signOut } = authState;
   const [showDropdown, setShowDropdown] = useState(null);
   const dropdownRef = useRef(null);
   const [portalTarget, setPortalTarget] = useState(null);
