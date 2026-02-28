@@ -4,7 +4,7 @@ export default {
     'intro',
     {
       type: 'category',
-      label: 'Course Overview',
+      label: 'Getting Started',
       items: [
         'course-overview',
         'learning-objectives',
@@ -15,14 +15,14 @@ export default {
     },
     {
       type: 'category',
-      label: 'Module 1: Foundations of Physical AI & Robotics',
+      label: 'Module 1 — Foundations of Physical AI',
       collapsible: true,
       collapsed: false,
       items: [
         'module-1/index',
         {
           type: 'category',
-          label: '1.1 Physical AI Foundations & Concepts',
+          label: '1.1 Physical AI Foundations',
           items: [
             'module-1/1.1-introduction-to-physical-ai/index',
             'module-1/1.1-introduction-to-physical-ai/physical-ai-foundations',
@@ -32,7 +32,7 @@ export default {
         },
         {
           type: 'category',
-          label: '1.2 ROS2 Architecture & Communication Patterns',
+          label: '1.2 ROS 2 Architecture & Communication',
           items: [
             'module-1/1.2-ros2-introduction-and-core-concepts/index',
             'module-1/1.2-ros2-introduction-and-core-concepts/ros2-overview-foundations',
@@ -43,7 +43,7 @@ export default {
         },
         {
           type: 'category',
-          label: '1.3 Embodied Cognition & Environmental Interaction',
+          label: '1.3 Embodied Cognition & Interaction',
           items: [
             'module-1/1.3-embodied-cognition-and-environmental-interaction/index',
             'module-1/1.3-embodied-cognition-and-environmental-interaction/embodied-cognition-theory',
@@ -57,14 +57,14 @@ export default {
     },
     {
       type: 'category',
-      label: 'Module 2: Advanced Robot Simulation & Gazebo Frameworks',
+      label: 'Module 2 — Robot Simulation & Gazebo',
       collapsible: true,
       collapsed: false,
       items: [
         'module-2/index',
         {
           type: 'category',
-          label: '2.1 Gazebo Simulation & Environment Setup',
+          label: '2.1 Gazebo Simulation Fundamentals',
           items: [
             'module-2/2.1-gazebo-simulation-fundamentals/index',
             'module-2/2.1-gazebo-simulation-fundamentals/gazebo-simulation-basics',
@@ -73,7 +73,7 @@ export default {
         },
         {
           type: 'category',
-          label: '2.2 Robot Model Design & Integration',
+          label: '2.2 Robot Modeling & Integration',
           items: [
             'module-2/2.2-robot-model-integration/index',
             'module-2/2.2-robot-model-integration/robot-model-design-integration',
@@ -82,7 +82,7 @@ export default {
         },
         {
           type: 'category',
-          label: '2.3 Physics Engines & Sensor Modeling',
+          label: '2.3 Physics Engines & Sensors',
           items: [
             'module-2/2.3-physics-and-sensor-simulation/index',
             'module-2/2.3-physics-and-sensor-simulation/physics-engine-sensor-modeling',
@@ -91,7 +91,7 @@ export default {
         },
         {
           type: 'category',
-          label: '2.4 ROS2-Gazebo Integration Framework',
+          label: '2.4 ROS 2–Gazebo Integration',
           items: [
             'module-2/2.4-gazebo-ros2-integration/index',
             'module-2/2.4-gazebo-ros2-integration/ros2-gazebo-integration-framework',
@@ -104,14 +104,14 @@ export default {
     },
     {
       type: 'category',
-      label: 'Module 3: Advanced Isaac Sim & Perception Systems',
+      label: 'Module 3 — Isaac Sim & Perception',
       collapsible: true,
       collapsed: false,
       items: [
         'module-3/index',
         {
           type: 'category',
-          label: '3.1 Isaac Sim Fundamentals & Environment Setup',
+          label: '3.1 Isaac Sim Fundamentals',
           items: [
             'module-3/3.1-introduction-to-isaac-sim/isaac-sim-overview-foundations',
             'module-3/3.1-introduction-to-isaac-sim/isaac-sim-environment-setup',
@@ -120,7 +120,7 @@ export default {
         },
         {
           type: 'category',
-          label: '3.2 Perception Systems & Multi-Sensor Processing',
+          label: '3.2 Perception & Sensor Fusion',
           items: [
             'module-3/3.2-perception-pipelines/perception-systems-overview',
             'module-3/3.2-perception-pipelines/multi-sensor-data-processing',
@@ -129,7 +129,7 @@ export default {
         },
         {
           type: 'category',
-          label: '3.3 Navigation Systems & Trajectory Planning',
+          label: '3.3 Navigation & Path Planning',
           items: [
             'module-3/3.3-navigation-pipelines/navigation-systems-fundamentals',
             'module-3/3.3-navigation-pipelines/trajectory-planning-obstacle-navigation',
@@ -138,7 +138,7 @@ export default {
         },
         {
           type: 'category',
-          label: '3.4 Sim-to-Real Transfer & Domain Adaptation',
+          label: '3.4 Sim-to-Real Transfer',
           items: [
             'module-3/3.4-sim-to-real-concepts/sim-to-real-transfer-methodologies',
             'module-3/3.4-sim-to-real-concepts/domain-adaptation-techniques',
@@ -147,7 +147,7 @@ export default {
         },
         {
           type: 'category',
-          label: '3.5 Capstone Project & Assessment',
+          label: '3.5 Capstone & Assessment',
           items: [
             'module-3/3.5-integrated-project-and-assessment/capstone-project-implementation',
             'module-3/3.5-integrated-project-and-assessment/module-assessment-evaluation',
@@ -158,14 +158,14 @@ export default {
     },
     {
       type: 'category',
-      label: 'Module 4: Advanced Humanoid Robotics Systems',
+      label: 'Module 4 — Humanoid Robotics Systems',
       collapsible: true,
       collapsed: false,
       items: [
         'module-4/intro',
         {
           type: 'category',
-          label: '4.1 Humanoid Kinematics & Mathematical Foundations',
+          label: '4.1 Humanoid Kinematics',
           items: [
             'module-4/4.1-humanoid-fundamentals/index',
             'module-4/4.1-humanoid-fundamentals/forward-kinematics',
@@ -176,7 +176,7 @@ export default {
         },
         {
           type: 'category',
-          label: '4.2 Locomotion & Dexterous Manipulation',
+          label: '4.2 Locomotion & Manipulation',
           items: [
             'module-4/4.2-locomotion-manipulation/index',
             'module-4/4.2-locomotion-manipulation/bipedal-walking',
@@ -188,7 +188,7 @@ export default {
         },
         {
           type: 'category',
-          label: '4.3 Vision-Language-Action (VLA) AI Systems',
+          label: '4.3 Vision-Language-Action Models',
           items: [
             'module-4/4.3-vla-concepts/index',
             'module-4/4.3-vla-concepts/vision-language-action-models',
@@ -199,7 +199,7 @@ export default {
         },
         {
           type: 'category',
-          label: '4.4 Conversational Robotics & Human-Robot Interaction',
+          label: '4.4 Human-Robot Interaction',
           items: [
             'module-4/4.4-conversational-robotics/index',
             'module-4/4.4-conversational-robotics/dialogue-systems',
@@ -210,7 +210,7 @@ export default {
         },
         {
           type: 'category',
-          label: '4.5 Safety, Ethics & Responsible AI in Robotics',
+          label: '4.5 Safety & Ethics',
           items: [
             'module-4/4.5-safety-considerations/index',
             'module-4/4.5-safety-considerations/physical-safety',
@@ -219,7 +219,7 @@ export default {
         },
         {
           type: 'category',
-          label: 'Capstone Project: Integrated Humanoid Robotics Solution',
+          label: 'Capstone — Integrated Humanoid System',
           items: [
             'module-4/capstone-project/index',
             'module-4/capstone-project/project-overview',

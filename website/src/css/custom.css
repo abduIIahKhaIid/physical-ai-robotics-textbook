@@ -109,10 +109,24 @@ html[data-theme='dark'] {
   --ifm-color-primary-light: #60a5fa;
   --ifm-color-primary-lighter: #93c5fd;
   --ifm-color-primary-lightest: #dbeafe;
-  --ifm-background-color: #0f172a;
-  --ifm-background-surface-color: #1e293b;
+  --ifm-background-color: #0a0e1a;
+  --ifm-background-surface-color: #111827;
   --ifm-font-color-base: #e2e8f0;
-  --ifm-border-color: #334155;
+  --ifm-border-color: rgba(148, 163, 184, 0.12);
+  --docusaurus-highlighted-code-line-bg: rgba(96, 165, 250, 0.1);
+}
+
+/* Dark mode doc page gradient matching homepage */
+html[data-theme='dark'] main[class*="docMainContainer"],
+html[data-theme='dark'] .docMainContainer_node_modules-\\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Main-styles-module {
+  background: linear-gradient(180deg, #0a0e1a 0%, #0f172a 100%);
+}
+
+/* Dark mode sidebar matches homepage dark tones */
+html[data-theme='dark'] aside[class*="docSidebar"],
+html[data-theme='dark'] .theme-doc-sidebar-container {
+  background: linear-gradient(180deg, #0a0e1a 0%, #0d1321 100%) !important;
+  border-right-color: rgba(148, 163, 184, 0.08) !important;
 }
 
 /* Light mode specific styles */
@@ -137,6 +151,13 @@ html[data-theme='light'] main[class*="docMainContainer"] {
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
 }
 
+/* Light mode sidebar */
+html[data-theme='light'] aside[class*="docSidebar"],
+html[data-theme='light'] .theme-doc-sidebar-container {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+  border-right: 1px solid #e2e8f0 !important;
+}
+
 /* ══════════════════════════════════════════════════════════
    Docs content typography — headings, prose, code, tables
    ══════════════════════════════════════════════════════════ */
@@ -157,8 +178,9 @@ html[data-theme='light'] main[class*="docMainContainer"] {
   font-size: 2.25rem;
   margin-top: 0;
   margin-bottom: 1.25rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--ifm-color-primary);
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, var(--ifm-color-primary), #6366f1, transparent) 1;
 }
 
 .markdown h2 {
@@ -236,9 +258,16 @@ html[data-theme='dark'] .markdown h6 {
   background: var(--ifm-background-surface-color);
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
-  border-radius: 0 0.5rem 0.5rem 0;
+  border-radius: 0 0.75rem 0.75rem 0;
   font-style: italic;
   color: var(--ifm-font-color-base);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+html[data-theme='dark'] .markdown blockquote {
+  background: rgba(30, 41, 59, 0.5);
+  border-left-color: #60a5fa;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .markdown blockquote p:last-child {
@@ -306,13 +335,19 @@ html[data-theme='dark'] .markdown pre {
   border-collapse: collapse;
   margin: 1.5rem 0;
   font-size: 0.95rem;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   overflow: hidden;
   border: 1px solid var(--ifm-border-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+html[data-theme='dark'] .markdown table {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-color: rgba(148, 163, 184, 0.1);
 }
 
 .markdown table thead {
-  background: var(--ifm-color-primary);
+  background: linear-gradient(135deg, var(--ifm-color-primary), #4f46e5);
   color: white;
 }
 
@@ -650,9 +685,9 @@ html[data-theme='dark'] #theme-toggle-btn:hover {
 }
 
 html[data-theme='dark'] .navbar {
-  background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(10, 10, 15, 0.95));
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(51, 65, 85, 0.3);
+  background: linear-gradient(to right, rgba(10, 14, 26, 0.95), rgba(15, 23, 42, 0.95));
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
 }
 
 /* Fix external link arrow alignment in navbar */
