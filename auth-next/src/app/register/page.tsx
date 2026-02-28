@@ -175,15 +175,18 @@ export default function RegisterPage() {
 
         {/* ── Card ── */}
         <Card
-          className="auth-card rounded-2xl shadow-2xl"
+          className="auth-card rounded-2xl shadow-2xl overflow-hidden"
           style={{
-            background: "rgba(15, 23, 42, 0.6)",
-            border: "1px solid rgba(148, 163, 184, 0.15)",
-            backdropFilter: "blur(12px)",
-            boxShadow: "0 1px 3px rgba(0,0,0,0.3), 0 8px 24px rgba(59,130,246,0.08)",
+            background: "rgba(15, 23, 42, 0.65)",
+            border: "1px solid rgba(148, 163, 184, 0.12)",
+            backdropFilter: "blur(16px)",
+            boxShadow: "0 1px 3px rgba(0,0,0,0.3), 0 12px 40px rgba(59,130,246,0.1)",
           }}
         >
-          <CardHeader className="pb-4">
+          {/* Top accent gradient */}
+          <div style={{ height: 3, background: "linear-gradient(90deg, #3b82f6, #6366f1, #8b5cf6)" }} />
+
+          <CardHeader className="pb-4 pt-6">
             <CardTitle className="text-2xl font-extrabold tracking-tight" style={{ color: "#f0f9ff" }}>
               Create an account
             </CardTitle>
@@ -193,8 +196,8 @@ export default function RegisterPage() {
           </CardHeader>
 
           <CardContent>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-              <div className="flex flex-col gap-1.5">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+              <div className="flex flex-col gap-2">
                 <Label htmlFor="name" className="text-sm font-medium" style={{ color: "#94a3b8" }}>
                   Full name
                 </Label>
@@ -205,12 +208,17 @@ export default function RegisterPage() {
                   value={name}
                   onChange={e => setName(e.target.value)}
                   required
-                  className="rounded-xl h-11 text-white placeholder:text-slate-500 border-0 focus-visible:ring-2 focus-visible:ring-blue-500/50"
-                  style={{ background: "rgba(30, 41, 59, 0.8)" }}
+                  className="rounded-xl h-12 text-white placeholder:text-slate-500 border focus-visible:ring-2 focus-visible:ring-blue-500/50 transition-all duration-200"
+                  style={{
+                    background: "rgba(30, 41, 59, 0.7)",
+                    borderColor: "rgba(148, 163, 184, 0.1)",
+                  }}
+                  onFocus={e => (e.currentTarget.style.borderColor = "rgba(59, 130, 246, 0.5)")}
+                  onBlur={e => (e.currentTarget.style.borderColor = "rgba(148, 163, 184, 0.1)")}
                 />
               </div>
 
-              <div className="flex flex-col gap-1.5">
+              <div className="flex flex-col gap-2">
                 <Label htmlFor="email" className="text-sm font-medium" style={{ color: "#94a3b8" }}>
                   Email
                 </Label>
@@ -221,12 +229,17 @@ export default function RegisterPage() {
                   value={email}
                   onChange={e => setEmail(e.target.value)}
                   required
-                  className="rounded-xl h-11 text-white placeholder:text-slate-500 border-0 focus-visible:ring-2 focus-visible:ring-blue-500/50"
-                  style={{ background: "rgba(30, 41, 59, 0.8)" }}
+                  className="rounded-xl h-12 text-white placeholder:text-slate-500 border focus-visible:ring-2 focus-visible:ring-blue-500/50 transition-all duration-200"
+                  style={{
+                    background: "rgba(30, 41, 59, 0.7)",
+                    borderColor: "rgba(148, 163, 184, 0.1)",
+                  }}
+                  onFocus={e => (e.currentTarget.style.borderColor = "rgba(59, 130, 246, 0.5)")}
+                  onBlur={e => (e.currentTarget.style.borderColor = "rgba(148, 163, 184, 0.1)")}
                 />
               </div>
 
-              <div className="flex flex-col gap-1.5">
+              <div className="flex flex-col gap-2">
                 <Label htmlFor="password" className="text-sm font-medium" style={{ color: "#94a3b8" }}>
                   Password{" "}
                   <span style={{ color: "rgba(148,163,184,0.5)", fontWeight: 400 }}>(min 8 characters)</span>
@@ -239,13 +252,18 @@ export default function RegisterPage() {
                   onChange={e => setPassword(e.target.value)}
                   required
                   minLength={8}
-                  className="rounded-xl h-11 text-white placeholder:text-slate-500 border-0 focus-visible:ring-2 focus-visible:ring-blue-500/50"
-                  style={{ background: "rgba(30, 41, 59, 0.8)" }}
+                  className="rounded-xl h-12 text-white placeholder:text-slate-500 border focus-visible:ring-2 focus-visible:ring-blue-500/50 transition-all duration-200"
+                  style={{
+                    background: "rgba(30, 41, 59, 0.7)",
+                    borderColor: "rgba(148, 163, 184, 0.1)",
+                  }}
+                  onFocus={e => (e.currentTarget.style.borderColor = "rgba(59, 130, 246, 0.5)")}
+                  onBlur={e => (e.currentTarget.style.borderColor = "rgba(148, 163, 184, 0.1)")}
                 />
               </div>
 
               {error && (
-                <p className="text-sm text-red-400 rounded-lg px-3 py-2"
+                <p className="text-sm text-red-400 rounded-xl px-4 py-2.5"
                   style={{ background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.2)" }}>
                   {error}
                 </p>
@@ -254,22 +272,36 @@ export default function RegisterPage() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="h-11 rounded-2xl font-semibold text-white border-0 mt-1 cursor-pointer disabled:opacity-50 transition-all duration-300 hover:scale-[1.02] hover:-translate-y-0.5 focus:ring-4 focus:ring-blue-400/30"
+                className="h-12 rounded-2xl font-semibold text-white border-0 mt-1 cursor-pointer disabled:opacity-50 transition-all duration-300 hover:scale-[1.02] hover:-translate-y-0.5 focus:ring-4 focus:ring-blue-400/30"
                 style={{
                   background: "linear-gradient(135deg, #2563eb, #4f46e5)",
                   boxShadow: "0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(37,99,235,0.3)",
                 }}
               >
-                {loading ? "Creating account…" : "Create account →"}
+                {loading ? (
+                  <span className="flex items-center gap-2">
+                    <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                    </svg>
+                    Creating account…
+                  </span>
+                ) : "Create account →"}
               </Button>
             </form>
           </CardContent>
 
-          <CardFooter className="pt-0 justify-center">
+          <CardFooter className="pt-2 pb-6 justify-center">
             <p className="text-sm" style={{ color: "rgba(148,163,184,0.7)" }}>
               Already have an account?{" "}
-              <Link href="/login" className="font-medium transition-colors" style={{ color: "#93c5fd" }}>
-                Sign in
+              <Link
+                href="/login"
+                className="font-medium transition-all duration-200"
+                style={{ color: "#93c5fd" }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#bfdbfe")}
+                onMouseLeave={e => (e.currentTarget.style.color = "#93c5fd")}
+              >
+                Sign in →
               </Link>
             </p>
           </CardFooter>
