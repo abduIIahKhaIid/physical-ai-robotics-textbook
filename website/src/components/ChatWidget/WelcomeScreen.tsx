@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useChatContext } from './ChatProvider';
+
+const AUTH_NEXT_URL = 'https://auth-next-zeta.vercel.app';
 
 const SUGGESTIONS = [
   'What is sim-to-real transfer?',
@@ -7,77 +9,25 @@ const SUGGESTIONS = [
   'How does SLAM work?',
 ];
 
-// Auth components loaded conditionally to avoid SSR issues
 function AuthSection() {
-  const [authView, setAuthView] = useState<'none' | 'login' | 'register'>('none');
-
-  // Lazy-load auth components (they use browser-only APIs)
-  let authUser: any = null;
-  let isAuthenticated = false;
-  let signOut: (() => Promise<void>) | null = null;
-  let onboardingCompleted: boolean | null = null;
-
-  try {
-    const { useAuth } = require('../AuthProvider');
-    const auth = useAuth();
-    authUser = auth.user;
-    isAuthenticated = auth.isAuthenticated;
-    signOut = auth.signOut;
-    onboardingCompleted = auth.onboardingCompleted;
-  } catch {
-    // AuthProvider not available
-  }
-
-  if (isAuthenticated && authUser) {
-    return (
-      <div className="welcome-auth-section">
-        <span className="welcome-user-email">{authUser.email}</span>
-        {signOut && (
-          <button
-            className="welcome-auth-btn welcome-signout-btn"
-            onClick={() => signOut!()}
-          >
-            Sign Out
-          </button>
-        )}
-      </div>
-    );
-  }
-
-  if (authView === 'login') {
-    const { LoginForm } = require('../LoginForm');
-    return (
-      <LoginForm
-        onSuccess={() => setAuthView('none')}
-        onSwitchToRegister={() => setAuthView('register')}
-      />
-    );
-  }
-
-  if (authView === 'register') {
-    const { RegisterForm } = require('../RegisterForm');
-    return (
-      <RegisterForm
-        onSuccess={() => setAuthView('none')}
-        onSwitchToLogin={() => setAuthView('login')}
-      />
-    );
-  }
-
   return (
     <div className="welcome-auth-section">
-      <button
+      <a
         className="welcome-auth-btn"
-        onClick={() => setAuthView('login')}
+        href={`${AUTH_NEXT_URL}/login`}
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Sign In
-      </button>
-      <button
+      </a>
+      <a
         className="welcome-auth-btn welcome-auth-btn-primary"
-        onClick={() => setAuthView('register')}
+        href={`${AUTH_NEXT_URL}/register`}
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Sign Up
-      </button>
+      </a>
     </div>
   );
 }
