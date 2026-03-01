@@ -1,5 +1,6 @@
 ---
 title: "Module 2 Capstone Project: Complete Simulation Environment"
+sidebar_label: "Capstone Project"
 description: "Integrate all Module 2 concepts into a comprehensive simulation project with robot, sensors, physics, and ROS2 integration."
 tags: [capstone, simulation, gazebo, ros2, integration, robotics, project]
 learning-objectives:

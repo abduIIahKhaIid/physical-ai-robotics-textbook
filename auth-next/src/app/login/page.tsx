@@ -50,238 +50,247 @@ export default function LoginPage() {
   }
 
   return (
-    <main
-      style={{ background: "linear-gradient(180deg, #000000 0%, #0f172a 100%)" }}
-      className="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden"
-    >
-      {/* ── Blobs matching homepage ── */}
-      <div
-        className="absolute rounded-full filter blur-[100px] pointer-events-none"
-        style={{
-          width: 500, height: 500,
-          top: "10%", left: "15%",
-          background: "rgba(139, 92, 246, 0.12)",
-          animation: "blob1 18s ease-in-out infinite",
-        }}
-      />
-      <div
-        className="absolute rounded-full filter blur-[120px] pointer-events-none"
-        style={{
-          width: 600, height: 600,
-          bottom: "10%", right: "10%",
-          background: "rgba(59, 130, 246, 0.10)",
-          animation: "blob2 22s ease-in-out infinite",
-        }}
-      />
-      <div
-        className="absolute rounded-full filter blur-[80px] pointer-events-none"
-        style={{
-          width: 400, height: 400,
-          top: "55%", left: "5%",
-          background: "rgba(6, 182, 212, 0.08)",
-          animation: "blob3 26s ease-in-out infinite",
-        }}
-      />
-      <div
-        className="absolute rounded-full filter blur-[90px] pointer-events-none"
-        style={{
-          width: 350, height: 350,
-          top: "5%", right: "20%",
-          background: "rgba(99, 102, 241, 0.06)",
-          animation: "blob4 20s ease-in-out infinite",
-        }}
-      />
+    <main className="min-h-screen flex relative overflow-hidden"
+      style={{ background: "#f8fafc" }}>
 
-      {/* ── Blob + entrance animations ── */}
+      {/* ── Animations ── */}
       <style>{`
-        @keyframes blob1 {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          33% { transform: translate(30px, -20px) scale(1.05); }
-          66% { transform: translate(-20px, 10px) scale(0.97); }
+        @keyframes float1 {
+          0%, 100% { transform: translate(0, 0) rotate(0deg); }
+          50% { transform: translate(15px, -20px) rotate(3deg); }
         }
-        @keyframes blob2 {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          40% { transform: translate(-25px, 15px) scale(1.04); }
-          70% { transform: translate(15px, -25px) scale(0.98); }
+        @keyframes float2 {
+          0%, 100% { transform: translate(0, 0) rotate(0deg); }
+          50% { transform: translate(-20px, 15px) rotate(-2deg); }
         }
-        @keyframes blob3 {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          50% { transform: translate(20px, 20px) scale(1.06); }
+        @keyframes slideUp {
+          from { opacity: 0; transform: translateY(24px); }
+          to   { opacity: 1; transform: translateY(0); }
         }
-        @keyframes blob4 {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          45% { transform: translate(-15px, -15px) scale(1.03); }
-        }
-        @keyframes heroEnter {
-          from { opacity: 0; transform: translateY(20px) scale(0.98); }
-          to   { opacity: 1; transform: translateY(0)    scale(1);    }
-        }
-        .auth-card { opacity: 0; animation: heroEnter 0.8s cubic-bezier(0.16,1,0.3,1) 0.35s forwards; }
-        .auth-logo { opacity: 0; animation: heroEnter 0.8s cubic-bezier(0.16,1,0.3,1) 0.15s forwards; }
-        .auth-back { opacity: 0; animation: heroEnter 0.8s cubic-bezier(0.16,1,0.3,1) 0.05s forwards; }
+        .anim-1 { opacity: 0; animation: slideUp 0.6s ease-out 0.1s forwards; }
+        .anim-2 { opacity: 0; animation: slideUp 0.6s ease-out 0.2s forwards; }
+        .anim-3 { opacity: 0; animation: slideUp 0.6s ease-out 0.3s forwards; }
       `}</style>
 
-      {/* ── Back to Home ── */}
-      <a
-        href={homeUrl}
-        className="auth-back absolute top-6 left-6 flex items-center gap-1.5 text-sm transition-colors z-10"
-        style={{ color: "rgba(148,163,184,0.7)" }}
-        onMouseEnter={e => (e.currentTarget.style.color = "#93c5fd")}
-        onMouseLeave={e => (e.currentTarget.style.color = "rgba(148,163,184,0.7)")}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-          fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M19 12H5M12 19l-7-7 7-7" />
-        </svg>
-        Back to Home
-      </a>
+      {/* ── Left panel — brand / illustration ── */}
+      <div className="hidden lg:flex lg:w-[45%] relative flex-col justify-between p-10 overflow-hidden"
+        style={{ background: "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #6366f1 100%)" }}>
 
-      <div className="relative z-10 w-full max-w-md">
+        {/* Decorative shapes */}
+        <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full pointer-events-none"
+          style={{ background: "rgba(255,255,255,0.08)", animation: "float1 20s ease-in-out infinite" }} />
+        <div className="absolute -bottom-16 -left-16 w-56 h-56 rounded-full pointer-events-none"
+          style={{ background: "rgba(255,255,255,0.06)", animation: "float2 24s ease-in-out infinite" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full pointer-events-none"
+          style={{ background: "rgba(255,255,255,0.04)" }} />
 
-        {/* ── Logo / Brand ── */}
-        <a href={homeUrl} className="auth-logo flex items-center justify-center gap-2.5 mb-8 no-underline">
-          <div
-            className="w-9 h-9 rounded-xl flex items-center justify-center text-base font-bold text-white"
-            style={{
-              background: "linear-gradient(135deg, #3b82f6, #6366f1)",
-              boxShadow: "0 8px 24px rgba(59,130,246,0.3)",
-            }}
-          >
+        {/* Brand */}
+        <a href={homeUrl} className="relative z-10 flex items-center gap-3 no-underline">
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center text-lg font-bold"
+            style={{ background: "rgba(255,255,255,0.2)", color: "white", backdropFilter: "blur(8px)" }}>
             R
           </div>
-          <span className="font-semibold tracking-tight" style={{ color: "#f0f9ff" }}>
-            Physical AI Robotics
-          </span>
+          <span className="text-white font-semibold text-lg tracking-tight">Physical AI Robotics</span>
         </a>
 
-        {/* ── Badge ── */}
-        <div className="auth-logo flex justify-center mb-6">
-          <span
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium backdrop-blur-md"
-            style={{
-              background: "rgba(30, 58, 138, 0.35)",
-              color: "#93c5fd",
-              border: "1px solid rgba(59, 130, 246, 0.3)",
-            }}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            Sign in to access the textbook
-          </span>
+        {/* Center content */}
+        <div className="relative z-10 flex-1 flex flex-col justify-center">
+          <h2 className="text-white text-3xl font-bold leading-tight mb-4">
+            Your gateway to<br />Physical AI mastery
+          </h2>
+          <p style={{ color: "rgba(255,255,255,0.8)" }} className="text-base leading-relaxed max-w-sm">
+            Access comprehensive robotics courses, hands-on simulations, and an AI-powered learning assistant.
+          </p>
+
+          {/* Stats */}
+          <div className="flex gap-8 mt-10">
+            {[
+              { value: "4", label: "Modules" },
+              { value: "50+", label: "Chapters" },
+              { value: "Free", label: "Open Source" },
+            ].map((s) => (
+              <div key={s.label}>
+                <div className="text-white text-2xl font-bold">{s.value}</div>
+                <div style={{ color: "rgba(255,255,255,0.7)" }} className="text-sm">{s.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* ── Card ── */}
-        <Card
-          className="auth-card rounded-2xl shadow-2xl overflow-hidden"
-          style={{
-            background: "rgba(15, 23, 42, 0.65)",
-            border: "1px solid rgba(148, 163, 184, 0.12)",
-            backdropFilter: "blur(16px)",
-            boxShadow: "0 1px 3px rgba(0,0,0,0.3), 0 12px 40px rgba(59,130,246,0.1)",
-          }}
+        {/* Bottom quote */}
+        <div className="relative z-10">
+          <p style={{ color: "rgba(255,255,255,0.6)" }} className="text-sm italic">
+            &ldquo;The best way to predict the future is to build it.&rdquo;
+          </p>
+        </div>
+      </div>
+
+      {/* ── Right panel — form ── */}
+      <div className="flex-1 flex flex-col items-center justify-center px-6 py-12 relative">
+
+        {/* Back link */}
+        <a href={homeUrl}
+          className="anim-1 absolute top-6 left-6 lg:top-8 lg:left-8 flex items-center gap-1.5 text-sm font-medium no-underline"
+          style={{ color: "#64748b" }}
+          onMouseEnter={e => (e.currentTarget.style.color = "#2563eb")}
+          onMouseLeave={e => (e.currentTarget.style.color = "#64748b")}
         >
-          {/* Top accent gradient */}
-          <div style={{ height: 3, background: "linear-gradient(90deg, #3b82f6, #6366f1, #8b5cf6)" }} />
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          Back to Home
+        </a>
 
-          <CardHeader className="pb-4 pt-6">
-            <CardTitle className="text-2xl font-extrabold tracking-tight" style={{ color: "#f0f9ff" }}>
-              Welcome back
-            </CardTitle>
-            <CardDescription style={{ color: "#cbd5e1" }}>
-              Sign in to continue your learning journey
-            </CardDescription>
-          </CardHeader>
+        <div className="w-full max-w-[420px]">
 
-          <CardContent>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-              <div className="flex flex-col gap-2">
-                <Label htmlFor="email" className="text-sm font-medium" style={{ color: "#94a3b8" }}>
-                  Email
-                </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="you@example.com"
-                  value={email}
-                  onChange={e => setEmail(e.target.value)}
-                  required
-                  className="rounded-xl h-12 text-white placeholder:text-slate-500 border focus-visible:ring-2 focus-visible:ring-blue-500/50 transition-all duration-200"
+          {/* Mobile logo */}
+          <a href={homeUrl} className="anim-1 lg:hidden flex items-center justify-center gap-2.5 mb-8 no-underline">
+            <div className="w-9 h-9 rounded-xl flex items-center justify-center text-base font-bold text-white"
+              style={{ background: "linear-gradient(135deg, #3b82f6, #6366f1)" }}>
+              R
+            </div>
+            <span className="font-semibold tracking-tight" style={{ color: "#0f172a" }}>
+              Physical AI Robotics
+            </span>
+          </a>
+
+          {/* Card */}
+          <Card className="anim-2 rounded-2xl overflow-hidden"
+            style={{
+              background: "white",
+              border: "1px solid #e2e8f0",
+              boxShadow: "0 1px 3px rgba(0,0,0,0.04), 0 8px 32px rgba(0,0,0,0.06)",
+            }}
+          >
+            <div style={{ height: 3, background: "linear-gradient(90deg, #3b82f6, #6366f1, #8b5cf6)" }} />
+
+            <CardHeader className="pb-2 pt-8 px-8">
+              <CardTitle className="text-2xl font-bold tracking-tight" style={{ color: "#0f172a" }}>
+                Welcome back
+              </CardTitle>
+              <CardDescription className="text-sm" style={{ color: "#64748b" }}>
+                Sign in to continue your learning journey
+              </CardDescription>
+            </CardHeader>
+
+            <CardContent className="px-8 pt-4">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                <div className="flex flex-col gap-2">
+                  <Label htmlFor="email" className="text-sm font-medium" style={{ color: "#374151" }}>
+                    Email
+                  </Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    required
+                    className="rounded-xl h-12 border transition-all duration-200 focus-visible:ring-2 focus-visible:ring-blue-500/30"
+                    style={{
+                      background: "#f8fafc",
+                      borderColor: "#e2e8f0",
+                      color: "#0f172a",
+                    }}
+                    onFocus={e => {
+                      e.currentTarget.style.borderColor = "#3b82f6";
+                      e.currentTarget.style.background = "#fff";
+                    }}
+                    onBlur={e => {
+                      e.currentTarget.style.borderColor = "#e2e8f0";
+                      e.currentTarget.style.background = "#f8fafc";
+                    }}
+                  />
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <Label htmlFor="password" className="text-sm font-medium" style={{ color: "#374151" }}>
+                    Password
+                  </Label>
+                  <Input
+                    id="password"
+                    type="password"
+                    placeholder="••••••••"
+                    value={password}
+                    onChange={e => setPassword(e.target.value)}
+                    required
+                    className="rounded-xl h-12 border transition-all duration-200 focus-visible:ring-2 focus-visible:ring-blue-500/30"
+                    style={{
+                      background: "#f8fafc",
+                      borderColor: "#e2e8f0",
+                      color: "#0f172a",
+                    }}
+                    onFocus={e => {
+                      e.currentTarget.style.borderColor = "#3b82f6";
+                      e.currentTarget.style.background = "#fff";
+                    }}
+                    onBlur={e => {
+                      e.currentTarget.style.borderColor = "#e2e8f0";
+                      e.currentTarget.style.background = "#f8fafc";
+                    }}
+                  />
+                </div>
+
+                {error && (
+                  <p className="text-sm rounded-xl px-4 py-2.5"
+                    style={{ color: "#dc2626", background: "#fef2f2", border: "1px solid #fecaca" }}>
+                    {error}
+                  </p>
+                )}
+
+                <Button
+                  type="submit"
+                  disabled={loading}
+                  className="h-12 rounded-xl font-semibold text-white border-0 mt-1 cursor-pointer disabled:opacity-50 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
                   style={{
-                    background: "rgba(30, 41, 59, 0.7)",
-                    borderColor: "rgba(148, 163, 184, 0.1)",
+                    background: "linear-gradient(135deg, #2563eb, #4f46e5)",
+                    boxShadow: "0 2px 8px rgba(37,99,235,0.25)",
                   }}
-                  onFocus={e => (e.currentTarget.style.borderColor = "rgba(59, 130, 246, 0.5)")}
-                  onBlur={e => (e.currentTarget.style.borderColor = "rgba(148, 163, 184, 0.1)")}
-                />
+                >
+                  {loading ? (
+                    <span className="flex items-center gap-2">
+                      <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                      </svg>
+                      Signing in...
+                    </span>
+                  ) : "Sign in"}
+                </Button>
+              </form>
+            </CardContent>
+
+            <CardFooter className="pt-4 pb-8 px-8 justify-center">
+              <p className="text-sm" style={{ color: "#64748b" }}>
+                No account?{" "}
+                <Link href="/register" className="font-semibold no-underline"
+                  style={{ color: "#2563eb" }}
+                  onMouseEnter={e => (e.currentTarget.style.color = "#1d4ed8")}
+                  onMouseLeave={e => (e.currentTarget.style.color = "#2563eb")}
+                >
+                  Create one free
+                </Link>
+              </p>
+            </CardFooter>
+          </Card>
+
+          {/* Trust indicators */}
+          <div className="anim-3 flex items-center justify-center gap-6 mt-6">
+            {[
+              { icon: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z", text: "Secure" },
+              { icon: "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5", text: "Free" },
+            ].map((item) => (
+              <div key={item.text} className="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                  fill="none" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d={item.icon} />
+                </svg>
+                <span className="text-xs" style={{ color: "#94a3b8" }}>{item.text}</span>
               </div>
-
-              <div className="flex flex-col gap-2">
-                <Label htmlFor="password" className="text-sm font-medium" style={{ color: "#94a3b8" }}>
-                  Password
-                </Label>
-                <Input
-                  id="password"
-                  type="password"
-                  placeholder="••••••••"
-                  value={password}
-                  onChange={e => setPassword(e.target.value)}
-                  required
-                  className="rounded-xl h-12 text-white placeholder:text-slate-500 border focus-visible:ring-2 focus-visible:ring-blue-500/50 transition-all duration-200"
-                  style={{
-                    background: "rgba(30, 41, 59, 0.7)",
-                    borderColor: "rgba(148, 163, 184, 0.1)",
-                  }}
-                  onFocus={e => (e.currentTarget.style.borderColor = "rgba(59, 130, 246, 0.5)")}
-                  onBlur={e => (e.currentTarget.style.borderColor = "rgba(148, 163, 184, 0.1)")}
-                />
-              </div>
-
-              {error && (
-                <p className="text-sm text-red-400 rounded-xl px-4 py-2.5"
-                  style={{ background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.2)" }}>
-                  {error}
-                </p>
-              )}
-
-              <Button
-                type="submit"
-                disabled={loading}
-                className="h-12 rounded-2xl font-semibold text-white border-0 mt-1 cursor-pointer disabled:opacity-50 transition-all duration-300 hover:scale-[1.02] hover:-translate-y-0.5 focus:ring-4 focus:ring-blue-400/30"
-                style={{
-                  background: "linear-gradient(135deg, #2563eb, #4f46e5)",
-                  boxShadow: "0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(37,99,235,0.3)",
-                }}
-              >
-                {loading ? (
-                  <span className="flex items-center gap-2">
-                    <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                    </svg>
-                    Signing in…
-                  </span>
-                ) : "Sign in →"}
-              </Button>
-            </form>
-          </CardContent>
-
-          <CardFooter className="pt-2 pb-6 justify-center">
-            <p className="text-sm" style={{ color: "rgba(148,163,184,0.7)" }}>
-              No account?{" "}
-              <Link
-                href="/register"
-                className="font-medium transition-all duration-200"
-                style={{ color: "#93c5fd" }}
-                onMouseEnter={e => (e.currentTarget.style.color = "#bfdbfe")}
-                onMouseLeave={e => (e.currentTarget.style.color = "#93c5fd")}
-              >
-                Create one free →
-              </Link>
-            </p>
-          </CardFooter>
-        </Card>
+            ))}
+          </div>
+        </div>
       </div>
     </main>
   );

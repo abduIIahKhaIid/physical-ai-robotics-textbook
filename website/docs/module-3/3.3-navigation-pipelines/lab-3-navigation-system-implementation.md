@@ -2,7 +2,7 @@
 title: "Lab 3: Navigation Pipeline Implementation"
 description: "Implement a complete navigation pipeline in Isaac Sim using Isaac ROS navigation packages"
 tags: [navigation, path-planning, obstacle-avoidance, isaac-ros]
-sidebar_label: "Lab 3: Navigation Implementation"
+sidebar_label: "3.3.3 Lab Exercises"
 ---
 
 # Lab 3: Navigation Pipeline Implementation

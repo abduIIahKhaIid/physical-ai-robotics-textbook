@@ -1,5 +1,6 @@
 ---
 title: Inverse Kinematics for Humanoid Robots
+sidebar_label: "4.1.2 Inverse Kinematics"
 sidebar_position: 2
 description: Advanced mathematical techniques for determining joint configurations to achieve desired end-effector poses in humanoid systems
 ---

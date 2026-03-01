@@ -2,6 +2,7 @@
 title: "Perception Pipelines Overview"
 description: "Understanding perception pipelines using Isaac ROS"
 tags: [perception, pipeline, isaac-ros, robotics, sensors]
+sidebar_label: "3.2.1 Perception Overview"
 sidebar_position: 1
 ---
 

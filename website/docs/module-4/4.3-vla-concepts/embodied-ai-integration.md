@@ -1,5 +1,6 @@
 ---
 title: Embodied AI and Physical Robotics Integration
+sidebar_label: "4.3.2 Embodied AI Integration"
 sidebar_position: 2
 description: Advanced integration of artificial intelligence systems with physical robotic platforms for intelligent embodied behavior
 ---

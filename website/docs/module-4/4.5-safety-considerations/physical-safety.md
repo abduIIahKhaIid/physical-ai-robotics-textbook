@@ -1,5 +1,6 @@
 ---
 title: Physical Safety Engineering and Risk Mitigation
+sidebar_label: "4.5.1 Physical Safety"
 sidebar_position: 1
 description: Comprehensive engineering safeguards and protection mechanisms for safe humanoid robot operation
 ---

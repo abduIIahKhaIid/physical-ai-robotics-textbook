@@ -2,6 +2,7 @@
 title: "Isaac Sim Setup and Basic Operations"
 description: "Configure and set up NVIDIA Isaac Sim for robotics simulation"
 tags: [isaac-sim, setup, configuration, installation]
+sidebar_label: "3.1.2 Environment Setup"
 sidebar_position: 2
 ---
 

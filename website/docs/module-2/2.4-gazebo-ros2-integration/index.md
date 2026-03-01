@@ -1,6 +1,6 @@
 ---
 title: "2.4 ROS2-Gazebo Integration Framework"
-sidebar_label: "2.4 ROS2-Gazebo Integration Framework"
+sidebar_label: "2.4 Overview"
 slug: "/module-2/2.4-gazebo-ros2-integration/"
 description: "Connecting ROS2 nodes to Gazebo simulation environment for hardware-in-the-loop testing"
 tags: ["ros2", "integration", "gazebo", "plugins", "simulation", "robotics"]

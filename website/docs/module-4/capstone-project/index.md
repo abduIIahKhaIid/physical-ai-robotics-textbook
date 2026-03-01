@@ -1,5 +1,6 @@
 ---
 title: Module 4 Capstone Project
+sidebar_label: "Capstone Overview"
 sidebar_position: 7
 description: Integrating all concepts learned in Module 4 through a comprehensive humanoid robotics project
 ---

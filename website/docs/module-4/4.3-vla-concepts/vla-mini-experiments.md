@@ -1,5 +1,6 @@
 ---
 title: Vision-Language-Action Experimental Framework
+sidebar_label: "4.3.4 Mini Experiments"
 sidebar_position: 4
 description: Laboratory exercises and experimental validation of Vision-Language-Action concepts in humanoid robotics
 ---

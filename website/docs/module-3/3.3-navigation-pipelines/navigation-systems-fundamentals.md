@@ -2,7 +2,7 @@
 title: "Navigation Pipeline Basics"
 description: "Learn the fundamentals of navigation pipelines in Isaac Sim using Isaac ROS navigation packages"
 tags: [navigation, path-planning, obstacle-avoidance, isaac-ros]
-sidebar_label: Navigation Pipeline Basics
+sidebar_label: "3.3.1 Navigation Fundamentals"
 ---
 
 # Navigation Pipeline Basics

@@ -1,6 +1,6 @@
 ---
 title: "2.1 Gazebo Simulation & Environment Setup"
-sidebar_label: "2.1 Gazebo Simulation & Environment Setup"
+sidebar_label: "2.1 Overview"
 slug: "/module-2/2.1-gazebo-simulation-fundamentals/"
 description: "Introduction to Gazebo simulation environment and basic concepts"
 tags: ["gazebo", "simulation", "fundamentals", "robotics", "environment"]

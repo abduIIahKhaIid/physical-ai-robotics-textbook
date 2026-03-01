@@ -2,6 +2,7 @@
 title: "Lab 1: Isaac Sim Basics"
 description: "Hands-on lab exercise to practice Isaac Sim fundamentals"
 tags: [lab, isaac-sim, basics, hands-on, practical]
+sidebar_label: "3.1.3 Lab Exercises"
 sidebar_position: 3
 ---
 

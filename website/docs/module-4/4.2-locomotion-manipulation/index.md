@@ -1,5 +1,6 @@
 ---
 title: Locomotion and Manipulation
+sidebar_label: "4.2 Overview"
 sidebar_position: 3
 description: Principles of walking, balancing, and dexterous manipulation for humanoid robots
 ---

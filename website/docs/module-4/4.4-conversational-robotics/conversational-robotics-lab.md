@@ -1,5 +1,6 @@
 ---
 title: Conversational Robotics Laboratory
+sidebar_label: "4.4.4 Lab Exercises"
 sidebar_position: 4
 description: Advanced laboratory exercises for developing and testing conversational interfaces in humanoid robotics
 ---

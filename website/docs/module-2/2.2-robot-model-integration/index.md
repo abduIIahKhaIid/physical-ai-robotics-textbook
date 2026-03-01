@@ -1,6 +1,6 @@
 ---
 title: "2.2 Robot Model Design & Integration"
-sidebar_label: "2.2 Robot Model Design & Integration"
+sidebar_label: "2.2 Overview"
 slug: "/module-2/2.2-robot-model-integration/"
 description: "Learn how to import and configure robot models in Gazebo simulation environment"
 tags: ["robot-model", "integration", "urdf", "sdf", "gazebo", "simulation"]

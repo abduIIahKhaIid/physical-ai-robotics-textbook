@@ -1,5 +1,6 @@
 ---
 title: "1.3 Physics and Sensor Simulation in Gazebo"
+sidebar_label: "2.3.1 Physics & Sensors"
 description: "Configure physics properties and sensor models for realistic simulation in Gazebo."
 tags: [physics, sensors, simulation, gazebo, robot-models, sensors, robotics]
 learning-objectives:

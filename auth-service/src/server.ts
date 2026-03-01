@@ -24,6 +24,12 @@ app.get("/health", (_req, res) => {
   res.json({ status: "ok", service: "auth-service" });
 });
 
-app.listen(env.BETTER_AUTH_PORT, () => {
-  console.log(`Auth service listening on port ${env.BETTER_AUTH_PORT}`);
-});
+// Export for Vercel serverless
+export default app;
+
+// Start server only when running directly (not on Vercel)
+if (process.env.VERCEL !== "1") {
+  app.listen(env.BETTER_AUTH_PORT, () => {
+    console.log(`Auth service listening on port ${env.BETTER_AUTH_PORT}`);
+  });
+}

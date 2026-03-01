@@ -1,5 +1,6 @@
 ---
 title: Real-World VLA Applications and Deployments
+sidebar_label: "4.3.3 Applications"
 sidebar_position: 3
 description: Commercial and research applications of Vision-Language-Action models in practical humanoid robotics systems
 ---

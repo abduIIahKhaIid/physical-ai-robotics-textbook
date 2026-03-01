@@ -2,7 +2,7 @@
 title: "Integrated Project: End-to-End Isaac Sim Pipeline"
 description: "Build an end-to-end robotics pipeline using Isaac Sim and Isaac ROS combining perception, navigation, and sim-to-real concepts"
 tags: [integration, perception, navigation, sim-to-real, robotics, isaac-sim, isaac-ros]
-sidebar_label: "Integrated Project"
+sidebar_label: "3.5.1 Capstone Project"
 ---
 
 # Integrated Project: End-to-End Isaac Sim Pipeline

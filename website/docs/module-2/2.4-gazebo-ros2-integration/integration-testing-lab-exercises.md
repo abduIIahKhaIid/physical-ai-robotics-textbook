@@ -1,5 +1,6 @@
 ---
 title: "Week 4 Exercises: Gazebo-ROS2 Integration"
+sidebar_label: "2.4.2 Lab Exercises"
 description: "Practical exercises to reinforce understanding of Gazebo-ROS2 integration for hardware-in-the-loop testing."
 tags: [ros2, integration, gazebo, plugins, simulation, exercises, robotics]
 learning-objectives:

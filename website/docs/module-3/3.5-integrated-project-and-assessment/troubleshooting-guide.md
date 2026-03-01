@@ -2,6 +2,7 @@
 title: "Troubleshooting Guide"
 description: "Common issues and solutions for Isaac Sim and Isaac ROS"
 tags: [troubleshooting, debugging, issues, solutions]
+sidebar_label: "3.5.3 Troubleshooting"
 sidebar_position: 3
 ---
 

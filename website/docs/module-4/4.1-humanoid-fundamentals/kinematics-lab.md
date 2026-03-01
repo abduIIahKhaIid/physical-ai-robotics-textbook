@@ -1,5 +1,6 @@
 ---
 title: Kinematic Analysis and Control Laboratory
+sidebar_label: "4.1.4 Lab Exercises"
 sidebar_position: 4
 description: Comprehensive laboratory exercises for implementing and analyzing kinematic systems in humanoid robotics
 ---

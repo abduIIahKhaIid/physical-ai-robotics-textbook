@@ -1,5 +1,6 @@
 ---
 title: Implementation Guidelines
+sidebar_label: "Implementation Guide"
 sidebar_position: 2
 description: Step-by-step approach to developing the comprehensive humanoid robotics capstone project
 ---

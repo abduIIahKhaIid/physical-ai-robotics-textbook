@@ -1,5 +1,6 @@
 ---
 title: "1.3 ROS2 Core Concepts and Implementation"
+sidebar_label: "1.2.2 Communication Patterns"
 description: "Deep dive into ROS2 core concepts with practical implementation details for Physical AI systems."
 tags: [ros2, core-concepts, implementation, robotics, physical-ai]
 learning-objectives:

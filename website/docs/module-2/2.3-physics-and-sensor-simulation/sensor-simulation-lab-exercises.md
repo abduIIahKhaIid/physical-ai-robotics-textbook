@@ -1,5 +1,6 @@
 ---
 title: "Week 3 Exercises: Physics and Sensor Simulation"
+sidebar_label: "2.3.2 Lab Exercises"
 description: "Practical exercises to reinforce understanding of physics and sensor simulation in Gazebo."
 tags: [physics, sensors, simulation, gazebo, exercises, robotics]
 learning-objectives:

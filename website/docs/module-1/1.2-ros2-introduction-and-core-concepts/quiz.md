@@ -1,5 +1,6 @@
 ---
 title: "Week 2 Quiz: ROS2 Introduction and Core Concepts"
+sidebar_label: "1.2.4 Quiz"
 description: "Test your understanding of ROS2 concepts and implementation for Physical AI systems."
 tags: [ros2, quiz, robotics, implementation, physical-ai]
 learning-objectives:

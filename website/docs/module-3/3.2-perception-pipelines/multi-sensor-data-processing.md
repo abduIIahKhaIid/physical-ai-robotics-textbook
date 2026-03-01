@@ -2,6 +2,7 @@
 title: "Camera and LiDAR Processing"
 description: "Processing camera feeds and LiDAR data for perception tasks"
 tags: [camera, lidar, processing, perception, sensors, isaac-ros]
+sidebar_label: "3.2.2 Sensor Processing"
 sidebar_position: 2
 ---
 

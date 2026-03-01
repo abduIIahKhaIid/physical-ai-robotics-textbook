@@ -1,5 +1,6 @@
 ---
 title: "1.5 Environmental Interaction in Physical AI"
+sidebar_label: "1.3.2 Interaction Principles"
 description: "Explore how Physical AI systems interact with and adapt to their environments."
 tags: [environmental-interaction, physical-ai, robotics, adaptation, interaction]
 learning-objectives:

@@ -2,7 +2,7 @@
 title: "Domain Randomization Techniques"
 description: "Advanced techniques for domain randomization to improve sim-to-real transfer in robotics"
 tags: [domain-randomization, sim-to-real, transfer-learning, robotics, synthetic-data]
-sidebar_label: "Domain Randomization Techniques"
+sidebar_label: "3.4.2 Domain Adaptation"
 ---
 
 # Domain Randomization Techniques

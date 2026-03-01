@@ -1,5 +1,6 @@
 ---
 title: Capstone Project Overview
+sidebar_label: "Project Brief"
 sidebar_position: 1
 description: Understanding the full scope and requirements for Module 4's comprehensive humanoid robotics project
 ---

@@ -1,5 +1,6 @@
 ---
 title: Integrated Locomotion and Manipulation Laboratory
+sidebar_label: "4.2.5 Lab Exercises"
 sidebar_position: 5
 description: Advanced laboratory exercises for coordinated locomotion and manipulation in humanoid robotics
 ---

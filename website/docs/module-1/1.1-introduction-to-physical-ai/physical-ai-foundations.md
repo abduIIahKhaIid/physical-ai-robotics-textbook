@@ -1,5 +1,6 @@
 ---
 title: "1.1 Foundations of Physical AI"
+sidebar_label: "1.1.1 Core Concepts"
 description: "Deep dive into the core principles of Physical AI and how intelligence differs when operating in physical systems."
 tags: [physical-ai, foundations, robotics, ai]
 learning-objectives:

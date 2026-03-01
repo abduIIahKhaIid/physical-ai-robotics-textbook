@@ -1,5 +1,6 @@
 ---
 title: "1.4 Gazebo-ROS2 Integration"
+sidebar_label: "2.4.1 Integration Framework"
 description: "Connect ROS2 nodes to Gazebo simulation environment for hardware-in-the-loop testing."
 tags: [ros2, integration, gazebo, plugins, simulation, robotics, control]
 learning-objectives:

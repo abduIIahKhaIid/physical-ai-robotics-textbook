@@ -1,5 +1,6 @@
 ---
 title: "1.1 Gazebo Simulation Fundamentals"
+sidebar_label: "2.1.1 Simulation Basics"
 description: "Introduction to Gazebo simulation environment and core concepts for robotics development."
 tags: [gazebo, simulation, fundamentals, robotics, environment]
 learning-objectives:

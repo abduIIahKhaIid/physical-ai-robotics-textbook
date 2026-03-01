@@ -1,5 +1,6 @@
 ---
 title: "1.2 Introduction to ROS2"
+sidebar_label: "1.2.1 ROS 2 Foundations"
 description: "Learn about the Robot Operating System version 2, its architecture, and core concepts for robotics development."
 tags: [ros2, robotics, middleware, nodes, topics, services]
 learning-objectives:

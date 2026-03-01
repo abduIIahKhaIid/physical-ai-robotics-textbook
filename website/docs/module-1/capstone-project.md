@@ -1,5 +1,6 @@
 ---
 title: "Module 1 Capstone Project: Physical AI System Integration"
+sidebar_label: "Capstone Project"
 description: "Integrate all Module 1 concepts into a comprehensive Physical AI system demonstrating embodied cognition and environmental interaction."
 tags: [capstone, physical-ai, integration, embodied-cognition, environmental-interaction]
 learning-objectives:

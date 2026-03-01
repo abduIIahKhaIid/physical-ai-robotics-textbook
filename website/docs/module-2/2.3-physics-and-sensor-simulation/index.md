@@ -1,6 +1,6 @@
 ---
 title: "2.3 Physics Engines & Sensor Modeling"
-sidebar_label: "2.3 Physics Engines & Sensor Modeling"
+sidebar_label: "2.3 Overview"
 slug: "/module-2/2.3-physics-and-sensor-simulation/"
 description: "Understanding physics engines and sensor models in Gazebo simulation environment"
 tags: ["physics", "sensors", "simulation", "gazebo", "robotics", "engines"]

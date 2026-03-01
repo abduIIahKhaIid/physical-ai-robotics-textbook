@@ -1,5 +1,6 @@
 ---
 title: Natural Language Understanding and Dialogue Systems
+sidebar_label: "4.4.1 Dialogue Systems"
 sidebar_position: 1
 description: Advanced intent recognition and action mapping systems for humanoid robot communication
 ---

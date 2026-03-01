@@ -1,5 +1,6 @@
 ---
 title: "Module 2 Quiz: Robot Simulation with Gazebo"
+sidebar_label: "Module Quiz"
 description: "Test your understanding of Gazebo simulation fundamentals, robot integration, physics, and ROS2 integration."
 tags: [gazebo, simulation, quiz, robotics, ros2, physics, sensors]
 learning-objectives:

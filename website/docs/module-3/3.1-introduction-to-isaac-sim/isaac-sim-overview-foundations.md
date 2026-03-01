@@ -2,6 +2,7 @@
 title: "Introduction to Isaac Sim Environment"
 description: "Learn the fundamentals of NVIDIA Isaac Sim for robotics simulation"
 tags: [isaac-sim, simulation, robotics, environment]
+sidebar_label: "3.1.1 Isaac Sim Overview"
 sidebar_position: 1
 ---
 

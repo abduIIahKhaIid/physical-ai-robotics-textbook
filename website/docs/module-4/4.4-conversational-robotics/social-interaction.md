@@ -1,5 +1,6 @@
 ---
 title: Social Interaction and Human-Robot Relations
+sidebar_label: "4.4.2 Social Interaction"
 sidebar_position: 2
 description: Advanced behavioral frameworks and interaction protocols for effective human-robot collaboration
 ---

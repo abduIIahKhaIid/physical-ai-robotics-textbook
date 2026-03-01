@@ -1,5 +1,6 @@
 ---
 title: Gait Pattern Generation and Control
+sidebar_label: "4.2.2 Gait Patterns"
 sidebar_position: 2
 description: Advanced walking pattern synthesis and adaptive gait control for humanoid robotics
 ---

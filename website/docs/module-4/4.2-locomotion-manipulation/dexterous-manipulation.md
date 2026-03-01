@@ -1,5 +1,6 @@
 ---
 title: Dexterous Manipulation Systems
+sidebar_label: "4.2.4 Dexterous Manipulation"
 sidebar_position: 4
 description: Advanced fine motor control and complex object interaction systems for humanoid robotics
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Week 2 Exercises: ROS2 Introduction and Core Concepts"
+sidebar_label: "1.2.3 Lab Exercises"
 description: "Practical exercises to implement and understand ROS2 concepts for Physical AI systems."
 tags: [ros2, exercises, robotics, implementation, physical-ai]
 learning-objectives:

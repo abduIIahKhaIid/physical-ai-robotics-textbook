@@ -1,6 +1,6 @@
 ---
 title: "1.3 Embodied Cognition & Environmental Interaction"
-sidebar_label: "1.3 Embodied Cognition & Environmental Interaction"
+sidebar_label: "1.3 Overview"
 slug: "/module-1/1.3-embodied-cognition-and-environmental-interaction/"
 description: "Embodied cognition and environmental interaction in physical AI"
 tags: ["embodied-cognition", "environmental-interaction", "physical-ai"]

@@ -1,5 +1,6 @@
 ---
 title: "1.2 Robot Model Integration in Gazebo"
+sidebar_label: "2.2.1 Model Design"
 description: "Import and configure robot models in Gazebo using URDF and SDF formats."
 tags: [robot-model, integration, urdf, sdf, gazebo, simulation, robotics]
 learning-objectives:

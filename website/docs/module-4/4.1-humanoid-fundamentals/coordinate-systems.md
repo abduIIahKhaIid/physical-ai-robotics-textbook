@@ -1,5 +1,6 @@
 ---
 title: Coordinate Systems and Spatial Transformations
+sidebar_label: "4.1.3 Coordinate Systems"
 sidebar_position: 3
 description: Mathematical foundations for spatial reasoning and reference frame management in humanoid robotics
 ---

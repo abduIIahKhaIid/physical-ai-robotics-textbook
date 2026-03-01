@@ -2,7 +2,7 @@
 title: "Module 3 Assessment"
 description: "Assessment covering Isaac Sim, Isaac ROS, perception pipelines, navigation, and sim-to-real transfer concepts"
 tags: [assessment, isaac-sim, isaac-ros, perception, navigation, sim-to-real, robotics]
-sidebar_label: "Module 3 Assessment"
+sidebar_label: "3.5.2 Assessment"
 ---
 
 # Module 3 Assessment

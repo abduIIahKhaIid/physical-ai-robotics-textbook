@@ -1,5 +1,6 @@
 ---
 title: Safety Considerations
+sidebar_label: "4.5 Overview"
 sidebar_position: 6
 description: Critical safety aspects in humanoid robot design, deployment, and operation
 ---

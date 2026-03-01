@@ -1,5 +1,6 @@
 ---
 title: Conversational Robotics
+sidebar_label: "4.4 Overview"
 sidebar_position: 5
 description: Systems for human-robot interaction through dialogue and communication
 ---

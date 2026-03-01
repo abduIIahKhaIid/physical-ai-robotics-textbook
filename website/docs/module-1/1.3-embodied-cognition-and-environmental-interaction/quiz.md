@@ -1,5 +1,6 @@
 ---
 title: "Week 3 Quiz: Embodied Cognition and Environmental Interaction"
+sidebar_label: "1.3.4 Quiz"
 description: "Test your understanding of embodied cognition and environmental interaction in Physical AI systems."
 tags: [embodied-cognition, environmental-interaction, quiz, physical-ai, robotics]
 learning-objectives:

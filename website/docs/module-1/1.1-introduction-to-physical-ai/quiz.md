@@ -1,5 +1,6 @@
 ---
 title: "Week 1 Quiz: Foundations of Physical AI"
+sidebar_label: "1.1.3 Quiz"
 description: "Test your understanding of Physical AI concepts and principles."
 tags: [physical-ai, quiz, foundations, robotics, ai]
 learning-objectives:

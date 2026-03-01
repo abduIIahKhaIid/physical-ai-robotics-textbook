@@ -2,7 +2,7 @@
 title: "Path Planning and Obstacle Avoidance"
 description: "Advanced concepts in path planning and obstacle avoidance for robotics navigation"
 tags: [path-planning, obstacle-avoidance, navigation, isaac-ros, robotics]
-sidebar_label: Path Planning and Obstacle Avoidance
+sidebar_label: "3.3.2 Trajectory Planning"
 ---
 
 # Path Planning and Obstacle Avoidance

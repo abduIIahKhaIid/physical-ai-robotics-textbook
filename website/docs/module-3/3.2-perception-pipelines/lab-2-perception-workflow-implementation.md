@@ -2,6 +2,7 @@
 title: "Lab 2: Perception Pipeline Implementation"
 description: "Hands-on lab to implement a perception pipeline using Isaac ROS"
 tags: [lab, perception, pipeline, isaac-ros, robotics, sensors, camera, lidar]
+sidebar_label: "3.2.3 Lab Exercises"
 sidebar_position: 3
 ---
 

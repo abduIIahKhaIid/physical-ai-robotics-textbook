@@ -1,5 +1,6 @@
 ---
 title: "Week 3 Exercises: Embodied Cognition and Environmental Interaction"
+sidebar_label: "1.3.3 Lab Exercises"
 description: "Practical exercises to implement and understand embodied cognition and environmental interaction principles."
 tags: [embodied-cognition, environmental-interaction, physical-ai, exercises, robotics]
 learning-objectives:

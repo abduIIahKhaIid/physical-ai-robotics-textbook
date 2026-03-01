@@ -1,5 +1,6 @@
 ---
 title: Vision-Language-Action AI Architectures
+sidebar_label: "4.3.1 VLA Models"
 sidebar_position: 1
 description: Advanced multimodal AI systems integrating computer vision, natural language processing, and robotic action for humanoid robotics
 ---

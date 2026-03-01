@@ -1,6 +1,6 @@
 ---
 title: "Module 1: Foundations of Physical AI & Robotics"
-sidebar_label: "Module 1"
+sidebar_label: "Module Overview"
 slug: "/module-1"
 description: "Foundations of Physical AI and embodied intelligence"
 tags: ["module", "physical-ai", "foundations", "embodied-intelligence", "robotics"]

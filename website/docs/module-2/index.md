@@ -1,6 +1,6 @@
 ---
 title: "Module 2: Advanced Robot Simulation & Gazebo Frameworks"
-sidebar_label: "Module 2"
+sidebar_label: "Module Overview"
 slug: "/module-2"
 description: "Learn advanced robot simulation using Gazebo, including model integration, physics simulation, and ROS2 integration"
 tags: ["gazebo", "simulation", "robotics", "ros2", "physics", "sensors"]

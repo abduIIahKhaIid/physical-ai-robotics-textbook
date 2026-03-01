@@ -1,5 +1,6 @@
 ---
 title: "Week 2 Exercises: Robot Model Integration"
+sidebar_label: "2.2.2 Lab Exercises"
 description: "Practical exercises to reinforce understanding of robot model integration in Gazebo."
 tags: [robot-model, integration, urdf, sdf, simulation, exercises, robotics]
 learning-objectives:

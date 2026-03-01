@@ -1,5 +1,6 @@
 ---
 title: Evaluation Criteria
+sidebar_label: "Evaluation Criteria"
 sidebar_position: 3
 description: Specific criteria for assessing the comprehensive humanoid robotics capstone project
 ---

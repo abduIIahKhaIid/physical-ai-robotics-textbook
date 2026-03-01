@@ -1,5 +1,6 @@
 ---
 title: Introduction to Humanoid Robotics
+sidebar_label: "Module Overview"
 sidebar_position: 1
 description: Explore the fundamentals of humanoid robotics including kinematics, locomotion, manipulation, VLA models, and conversational robotics
 ---

@@ -1,5 +1,6 @@
 ---
 title: Module 4 Summary
+sidebar_label: "Module Summary"
 sidebar_position: 8
 description: Comprehensive summary of all concepts covered in Module 4 on humanoid robotics
 ---

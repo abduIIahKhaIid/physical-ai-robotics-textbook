@@ -1,5 +1,6 @@
 ---
 title: Forward Kinematics in Humanoid Systems
+sidebar_label: "4.1.1 Forward Kinematics"
 sidebar_position: 1
 description: Advanced mathematical foundations for determining end-effector positions from joint configurations in humanoid robotics
 ---

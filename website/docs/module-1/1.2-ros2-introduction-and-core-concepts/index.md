@@ -1,6 +1,6 @@
 ---
 title: "1.2 ROS2 Architecture & Communication Patterns"
-sidebar_label: "1.2 ROS2 Architecture & Communication Patterns"
+sidebar_label: "1.2 Overview"
 slug: "/module-1/1.2-ros2-introduction-and-core-concepts/"
 description: "ROS2 architecture and communication patterns in physical AI systems"
 tags: ["ros2", "architecture", "communication", "patterns", "physical-ai"]

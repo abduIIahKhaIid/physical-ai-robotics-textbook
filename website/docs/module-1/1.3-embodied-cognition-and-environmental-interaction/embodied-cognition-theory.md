@@ -1,5 +1,6 @@
 ---
 title: "1.4 Embodied Cognition in Physical AI"
+sidebar_label: "1.3.1 Cognition Theory"
 description: "Explore the principles of embodied cognition and how physical form influences intelligent behavior in robotics."
 tags: [embodied-cognition, physical-ai, robotics, cognition, intelligence]
 learning-objectives:

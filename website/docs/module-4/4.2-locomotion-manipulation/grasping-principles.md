@@ -1,5 +1,6 @@
 ---
 title: Advanced Grasping and Manipulation Techniques
+sidebar_label: "4.2.3 Grasping Principles"
 sidebar_position: 3
 description: Comprehensive object interaction and dexterous manipulation strategies for humanoid robotics
 ---

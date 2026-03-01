@@ -1,5 +1,6 @@
 ---
 title: "Week 1 Exercises: Foundations of Physical AI"
+sidebar_label: "1.1.2 Lab Exercises"
 description: "Practical exercises to reinforce understanding of Physical AI concepts and principles."
 tags: [physical-ai, exercises, foundations, robotics, ai]
 learning-objectives:

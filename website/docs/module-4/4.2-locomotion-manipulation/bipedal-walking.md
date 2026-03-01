@@ -1,5 +1,6 @@
 ---
 title: Bipedal Locomotion Control
+sidebar_label: "4.2.1 Bipedal Walking"
 sidebar_position: 1
 description: Advanced biomechanics and control systems for stable human-like walking in humanoid robotics
 ---

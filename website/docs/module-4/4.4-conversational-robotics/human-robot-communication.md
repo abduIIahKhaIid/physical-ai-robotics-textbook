@@ -1,5 +1,6 @@
 ---
 title: Natural Human-Robot Communication Interfaces
+sidebar_label: "4.4.3 Communication"
 sidebar_position: 3
 description: Advanced multimodal communication systems for intuitive human-robot interaction
 ---

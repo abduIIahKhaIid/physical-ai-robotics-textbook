@@ -2,7 +2,7 @@
 title: "Sim-to-Real Transfer Concepts"
 description: "Understanding the challenges and techniques for transferring robotics algorithms from simulation to real-world deployment"
 tags: [simulation, sim-to-real, domain-randomization, robotics, transfer-learning]
-sidebar_label: "Sim-to-Real Transfer Concepts"
+sidebar_label: "3.4.1 Transfer Methods"
 ---
 
 # Sim-to-Real Transfer Concepts

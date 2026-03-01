@@ -1,5 +1,6 @@
 ---
 title: Ethical Frameworks and Societal Implications
+sidebar_label: "4.5.2 Ethics & Responsibility"
 sidebar_position: 2
 description: Advanced ethical considerations and societal impact of humanoid robotics in human environments
 ---

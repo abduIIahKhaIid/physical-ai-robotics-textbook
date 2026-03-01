@@ -1,6 +1,6 @@
 ---
 title: "1.1 Physical AI Foundations & Concepts"
-sidebar_label: "1.1 Physical AI Foundations & Concepts"
+sidebar_label: "1.1 Overview"
 slug: "/module-1/1.1-introduction-to-physical-ai/"
 description: "Introduction to Physical AI and embodied intelligence concepts"
 tags: ["physical-ai", "foundations", "introduction", "embodied-intelligence"]

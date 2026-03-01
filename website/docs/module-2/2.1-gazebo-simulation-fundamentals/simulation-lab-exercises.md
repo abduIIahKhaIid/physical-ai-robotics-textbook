@@ -1,5 +1,6 @@
 ---
 title: "Week 1 Exercises: Gazebo Simulation Fundamentals"
+sidebar_label: "2.1.2 Lab Exercises"
 description: "Practical exercises to reinforce understanding of Gazebo simulation fundamentals."
 tags: [gazebo, simulation, fundamentals, exercises, robotics]
 learning-objectives:

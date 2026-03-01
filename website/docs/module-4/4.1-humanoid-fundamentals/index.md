@@ -1,5 +1,6 @@
 ---
 title: Humanoid Fundamentals
+sidebar_label: "4.1 Overview"
 sidebar_position: 2
 description: Core mathematical and kinematic foundations for humanoid robots
 ---

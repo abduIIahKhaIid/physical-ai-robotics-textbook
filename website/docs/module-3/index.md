@@ -1,5 +1,6 @@
 ---
 title: Module 3 - Advanced Isaac Sim & Perception Systems
+sidebar_label: "Module Overview"
 sidebar_position: 3
 description: Learn NVIDIA Isaac Sim and Isaac ROS for perception and navigation pipelines
 tags: [isaac-sim, isaac-ros, robotics, perception, navigation, sim-to-real]

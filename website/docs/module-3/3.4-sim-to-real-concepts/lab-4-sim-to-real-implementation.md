@@ -2,7 +2,7 @@
 title: "Lab 4: Sim-to-Real Transfer"
 description: "Implement domain randomization techniques and test sim-to-real transfer for a robotic navigation task"
 tags: [sim-to-real, domain-randomization, navigation, transfer-learning, robotics]
-sidebar_label: "Lab 4: Sim-to-Real Transfer"
+sidebar_label: "3.4.3 Lab Exercises"
 ---
 
 # Lab 4: Sim-to-Real Transfer

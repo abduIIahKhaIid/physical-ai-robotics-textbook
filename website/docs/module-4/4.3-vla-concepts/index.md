@@ -1,5 +1,6 @@
 ---
 title: Vision-Language-Action (VLA) Concepts
+sidebar_label: "4.3 Overview"
 sidebar_position: 4
 description: Modern AI integration combining vision, language, and action in humanoid robots
 ---
