@@ -37,11 +37,25 @@ export default function RegisterPage() {
     setError("");
     setLoading(true);
     try {
-      const result = await signUp.email({ name, email, password });
+      let token = "";
+      const result = await signUp.email({
+        name,
+        email,
+        password,
+        fetchOptions: {
+          onSuccess: (ctx: { response: Response }) => {
+            token = ctx.response.headers.get("set-auth-token") || "";
+          },
+        },
+      });
       if (result.error) {
         setError(result.error.message || "Registration failed. Please try again.");
       } else {
-        router.push(redirectUrl);
+        const userName = result.data?.user?.name || name;
+        const params = new URLSearchParams();
+        if (token) params.set("token", token);
+        if (userName) params.set("name", userName);
+        window.location.href = `${redirectUrl}${params.toString() ? "?" + params.toString() : ""}`;
       }
     } catch {
       setError("Something went wrong. Please try again.");

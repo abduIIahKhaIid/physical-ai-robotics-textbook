@@ -36,11 +36,24 @@ export default function LoginPage() {
     setError("");
     setLoading(true);
     try {
-      const result = await signIn.email({ email, password });
+      let token = "";
+      const result = await signIn.email({
+        email,
+        password,
+        fetchOptions: {
+          onSuccess: (ctx: { response: Response }) => {
+            token = ctx.response.headers.get("set-auth-token") || "";
+          },
+        },
+      });
       if (result.error) {
         setError(result.error.message || "Invalid email or password.");
       } else {
-        router.push(redirectUrl);
+        const name = result.data?.user?.name || "";
+        const params = new URLSearchParams();
+        if (token) params.set("token", token);
+        if (name) params.set("name", name);
+        window.location.href = `${redirectUrl}${params.toString() ? "?" + params.toString() : ""}`;
       }
     } catch {
       setError("Something went wrong. Please try again.");
